@@ -1,5 +1,8 @@
+import org.antlr.runtime.*;
+import org.antlr.runtime.tree.*;
+
 public class msc2gen {
-    public static void main( String[] args ) {
+    public static void main( String[] args ) throws Exception {
         String input =  "msc example1; \n" +
                         "i1 : instance; \n" +
                         "i2 : instance; \n" +
@@ -22,11 +25,14 @@ public class msc2gen {
             System.out.println( usage );
             return;
         }
-        
-        //if( args.length > 0 ) {
-        //    input = args[1];
-        //}
-        
-         System.out.println( "Output:\n\n" + input );
+
+        System.out.println( "Output:\n\n" + input );
+
+	ANTLRFileStream char_stream = new ANTLRFileStream( "msc_example.msc" );
+        msc_grammarLexer lexer = new msc_grammarLexer( char_stream );
+        CommonTokenStream tokens = new CommonTokenStream( lexer );
+        msc_grammarParser parser = new msc_grammarParser( tokens );
+	CommonTree tree = (CommonTree)parser.messageSequenceChart().getTree();	
+	System.out.println( tree.toStringTree() );
     }
 }
