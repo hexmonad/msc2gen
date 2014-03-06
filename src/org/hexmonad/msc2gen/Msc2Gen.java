@@ -1,8 +1,10 @@
-import org.antlr.runtime.*;
-import org.antlr.runtime.tree.*;
+package org.hexmonad.msc2gen;
 
-public class msc2gen {
-    public static void main( String[] args ) throws Exception {
+import java.io.IOException;
+import org.antlr.runtime.RecognitionException;
+
+public class Msc2Gen {
+    public static void main( String[] args ) {
         String input =  "msc example1; \n" +
                         "i1 : instance; \n" +
                         "i2 : instance; \n" +
@@ -19,20 +21,21 @@ public class msc2gen {
         String usage = "msc2gen <in_file.msc> <out_file.mscgen>\n" +
                        " where\n" +
                        "  <in_file.msc> - the file that represents input MSC (event-oriented syntax)\n" +
-                       "  <out_file.msc> - the file that is the result of translation input MSC format to format of mscgen app";
+                       "  <out_file.mscgen> - the file that is the result of translation input MSC format to format of mscgen app";
 
         if( args.length > 0 && args[0].equals("--help") ) {
             System.out.println( usage );
             return;
         }
-
-        System.out.println( "Output:\n\n" + input );
-
-	ANTLRFileStream char_stream = new ANTLRFileStream( "msc_example.msc" );
-        msc_grammarLexer lexer = new msc_grammarLexer( char_stream );
-        CommonTokenStream tokens = new CommonTokenStream( lexer );
-        msc_grammarParser parser = new msc_grammarParser( tokens );
-	CommonTree tree = (CommonTree)parser.messageSequenceChart().getTree();	
-	System.out.println( tree.toStringTree() );
+        
+        MscParser msc = new MscParser();
+        try {
+            String mscOutput = msc.parse( "msc_example.msc" );
+            System.out.println( "Output:\n\n" + mscOutput );
+        } catch(IOException e) {
+            System.out.println("Error! Reading of input MSC file failed.");
+        } catch(RecognitionException e) {
+            System.out.println("Error! Parsing of input MSC file failed.");
+        }
     }
 }
