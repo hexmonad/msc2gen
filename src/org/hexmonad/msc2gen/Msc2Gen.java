@@ -30,8 +30,7 @@ public class Msc2Gen {
         
         MscParser msc = new MscParser();
         try {
-            String mscOutput = msc.parse( "msc_example.msc" );
-            System.out.println( "Output:\n\n" + mscOutput );
+            msc.parse( "msc_example.msc", null );
         } catch(IOException e) {
             System.out.println("Error! Reading of input MSC file failed.");
         } catch(RecognitionException e) {
