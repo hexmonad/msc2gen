@@ -1,0 +1,16 @@
+msc msc_stop_and_wait;
+    Sender   : instance;
+    Receiver : instance;
+
+    Sender   : in 'sEnv(buffer)' from env;
+    Sender   : out 'sFrame(buffer =: frData)' to Receiver;
+    Receiver : in 'sFrame(buffer =: frData)' from Sender;
+
+    Receiver : out 'rEnv(frData)' to env;
+
+    Receiver : out rFrame to Sender;
+    Sender   : in  rFrame from Receiver;
+
+    Sender   : endinstance;
+    Receiver : endinstance;
+endmsc;
