@@ -2,8 +2,7 @@ package org.hexmonad.msc2gen;
 
 import java.io.IOException;
 import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 
 import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;
@@ -41,11 +40,11 @@ public class MscParser {
         outStream.close();
     }
     
-    private void parseTree(Tree tree, String lifeline, String indentLevel) {
+    private void parseTree(Tree tree, List<String> instList, String indentLevel) {
         String token = tree.getText();
         
         if (token.equals("MSCBody")) {
-            parseChildTree(tree, lifeline, indentLevel);
+            parseChildTree(tree, instList, indentLevel);
             
         } else if (token.equals("Instance")) {
             String instName = tree.getChild(0).getText();
@@ -59,9 +58,22 @@ public class MscParser {
                 outStream.println(";\n");
                 instFlag = false;
             }
-            parseChildTree(tree, instName, indentLevel);
+            
+            instList = new ArrayList<String>();
+            instList.add(instName);
+            parseChildTree(tree, instList, indentLevel);
+        
+        } else if (token.equals("InstanceList")) {
+            instList = new ArrayList<String>();
+            Tree instNameTree = tree.getChild(0);
+            
+            for(int i = 0; i < instNameTree.getChildCount(); i++) {
+                instList.add(instNameTree.getChild(i).getText());
+            }
+            parseChildTree(tree, instList, indentLevel);
         
         } else if (token.equals("MSGIn")) {
+            String lifeline = instList.get(0);
             String msg = tree.getChild(0).getText().replaceAll("^\'|\'$", "");
             
             if (tree.getChild(1).getText().equals("MsgGate")) {                 // message input from ENV
@@ -76,6 +88,7 @@ public class MscParser {
             }
             
         } else if (token.equals("MSGOut")) {
+            String lifeline = instList.get(0);
             String msg = tree.getChild(0).getText().replaceAll("^\'|\'$", "");
             String receiver = tree.getChild(1).getText();
             
@@ -94,15 +107,46 @@ public class MscParser {
             }
         
         } else if (token.equals("Action")) {
+            String lifeline = instList.get(0);
             String text = tree.getChild(0).getText().replaceAll("^\'|\'$", "");
             outStream.println(lifeline + "--" + lifeline + ": " + text + ";");
+                
+        } else if (token.equals("Condition")) {
+            String condTypeStr = "";
+            String condTextStr = "";
+            if (!tree.getChild(0).equals("ElseCond")) {
+                condTextStr = tree.getChild(1).getText().replaceAll("^\'|\'$", "");
+                if (tree.getChild(0).equals("GuardCond")) {
+                    condTypeStr = " \bwhen\b";
+                }
+            } else {
+                condTypeStr = " \botherwise\b";
+            }
+            outStream.println(listJoin(instList, "--") + ":" + condTypeStr + " " + condTextStr
+                    + " [line.radius=15, line.corner=bevel];");
+            
+        } else if (token.equals("Ref")) {
+            String refText = tree.getChild(0).getText().replaceAll("^\'|\'$", "");
+            outStream.println(listJoin(instList, "--") + ": " + refText + " [line.radius=10];");
         }
     }
     
-    private void parseChildTree(Tree tree, String lifeline, String indentLevel) {
+    private void parseChildTree(Tree tree, List<String> instList, String indentLevel) {
         int num = tree.getChildCount();
         for(int i = 0; i < num; i++) {
-            parseTree(tree.getChild(i), lifeline, indentLevel);
+            parseTree(tree.getChild(i), instList, indentLevel);
         }
     }
+    
+    private static String listJoin(Collection<String> collection, String delim) {
+        StringBuilder sb = new StringBuilder();
+        String loopDelim = "";
+        
+        for (String str : collection) {
+            sb.append(loopDelim);
+            sb.append(str);
+            loopDelim = delim;
+        }
+        return sb.toString();
+    }    
 }

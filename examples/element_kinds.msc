@@ -9,11 +9,15 @@ i2 : in m1 from i1;
 
 i1 : in Env1 from env;
 
+i1, i2: condition 'X, Y, Z';
+
 i1, i2 : par begin;
 i1, i2 : alt begin;
+      i2 : condition when '(flag=true)';
       i1 : out alt_m1 to i2;
       i2 : in alt_m1 from i1;
       alt;
+      i2 : condition when '(flag=false)';
       i1 : out alt_m2 to i2;
       i2 : in alt_m2 from i1;
       alt end;
@@ -26,6 +30,8 @@ i1 : action 'a';
 i2 : action 'b';
 
 i2 : out Env2 to env;
+
+i1, i2: reference 'FirstMsc alt SecondMsc';
 
 i1 : endinstance;
 i2 : endinstance;

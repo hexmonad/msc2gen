@@ -1,7 +1,7 @@
 About msc2gen
 =======
 
-Msc2gen is a simple translator from MSC textual representation format (event-oriented, standardized by ITU-Z.120) into `Msc-generator <http://sourceforge.net/projects/msc-generator/>` textual representation.
+Msc2gen is a simple translator from MSC textual representation format (event-oriented, standardized by ITU-Z.120) into [Msc-generator](<http://sourceforge.net/projects/msc-generator/>) textual representation.
 
 Usage
 =====
