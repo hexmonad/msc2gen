@@ -8,26 +8,32 @@ i1 : out m1 to i2;
 i2 : in m1 from i1;
 
 i1 : in Env1 from env;
+i1 : starttimer T1;
+i2 : starttimer T2;
 
 i1, i2: condition 'X, Y, Z';
 
 i1, i2 : par begin;
-i1, i2 : alt begin;
-      i2 : condition when '(flag=true)';
-      i1 : out alt_m1 to i2;
-      i2 : in alt_m1 from i1;
-      alt;
-      i2 : condition when '(flag=false)';
-      i1 : out alt_m2 to i2;
-      i2 : in alt_m2 from i1;
-      alt end;
-    par;
-      i1 : out par_m2 to i2;
-      i2 : in par_m2 from i1;
-    par end;
+    i1, i2 : alt begin;
+        i2 : condition when '(flag=true)';
+        i1 : out alt_m1 to i2;
+        i2 : in alt_m1 from i1;
+    alt;
+        i2 : condition when '(flag=false)';
+        i1 : out alt_m2 to i2;
+        i2 : in alt_m2 from i1;
+    alt end;
+par;
+    i1, i2 : loop<10, inf> begin;
+        i1 : out par_m2 to i2;
+        i2 : in par_m2 from i1;
+    loop end;
+par end;
 
+i1 : timeout T1;
 i1 : action 'a';
 i2 : action 'b';
+i2 : stoptimer T2;
 
 i2 : out Env2 to env;
 

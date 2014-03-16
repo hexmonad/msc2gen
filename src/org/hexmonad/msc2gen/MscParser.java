@@ -11,6 +11,7 @@ public class MscParser {
     private PrintStream outStream;
     private ArrayList<String> lifelines = new ArrayList<String>();
     private boolean instFlag = true;    // true while parsing of instance declarations
+    private String tab = "    ";
     
     // contains tuple (message name --> message sender name)
     private HashMap<String, String> msgSender = new HashMap<String, String>();
@@ -35,7 +36,7 @@ public class MscParser {
         outStream.println("hscale=auto;");        
         
         //parse MSC Body only
-        parseTree( tree.getChild(1), null, "    " );
+        parseTree( tree.getChild(1), null, tab );
         
         outStream.close();
     }
@@ -64,70 +65,79 @@ public class MscParser {
             parseChildTree(tree, instList, indentLevel);
         
         } else if (token.equals("InstanceList")) {
+            if (instFlag) {
+                outStream.println(";\n");
+                instFlag = false;
+            }
             instList = new ArrayList<String>();
             Tree instNameTree = tree.getChild(0);
             
             for(int i = 0; i < instNameTree.getChildCount(); i++) {
                 instList.add(instNameTree.getChild(i).getText());
             }
+            
+            if (instList.size() == 1) {     // minimum size of instList must be 2
+                instList.add(instList.get(0));
+            }
+            
             parseChildTree(tree, instList, indentLevel);
         
         } else if (token.equals("MSGIn")) {
-            String lifeline = instList.get(0);
             String msg = tree.getChild(0).getText().replaceAll("^\'|\'$", "");
-            
-            if (tree.getChild(1).getText().equals("MsgGate")) {                 // message input from ENV
-                outStream.println("->" + lifeline + ": " + msg + ";");
-            
-            } else if (msgSender.get(msg) != null) {
-                outStream.println(msgSender.get(msg) + "->" + lifeline + ": " + msg + ";");
-                msgSender.put(msg, null);
-            
-            } else {
-                msgReceiver.put(msg, lifeline);
-            }
-            
+            String msgType = tree.getChild(1).getText();
+            processMessageIn(instList.get(0), msg, msgType, indentLevel);
+
         } else if (token.equals("MSGOut")) {
-            String lifeline = instList.get(0);
             String msg = tree.getChild(0).getText().replaceAll("^\'|\'$", "");
-            String receiver = tree.getChild(1).getText();
-            
-            if (receiver.equals("MsgGate")) {                 // message output to ENV
-                outStream.println(lifeline + "->: " + msg + ";");
-            
-            } else if (tree.getChild(2).getText().equals("IncompleteMsg")) {    // lost of message
-                outStream.println(lifeline + "->*" + receiver + ": " + msg + " [text.ident = left];");
-            
-            } else if (msgReceiver.get(msg) != null) {
-                outStream.println(lifeline + "->" + msgReceiver.get(msg) + ": " + msg + ";");
-                msgReceiver.put(msg, null);
-            
-            } else {
-                msgSender.put(msg, lifeline);
-            }
+            String msgType = tree.getChild(2).getText();
+            processMessageOut(instList.get(0), msg, tree.getChild(1).getText(), msgType, indentLevel);
         
         } else if (token.equals("Action")) {
             String lifeline = instList.get(0);
             String text = tree.getChild(0).getText().replaceAll("^\'|\'$", "");
-            outStream.println(lifeline + "--" + lifeline + ": " + text + ";");
-                
+            outStream.println(indentLevel + lifeline + "--" + lifeline + ": " + text + ";");
+            
+        } else if (token.equals("Timer")) {
+            String lifeline = instList.get(0);
+            String timerType = tree.getChild(0).getText();
+            String timerName = tree.getChild(1).getText();
+            outStream.println(indentLevel + lifeline + ".." + lifeline + ": \\b" + timerType 
+                    + "\\b " + timerName + ";");
+        
         } else if (token.equals("Condition")) {
             String condTypeStr = "";
             String condTextStr = "";
-            if (!tree.getChild(0).equals("ElseCond")) {
+            if (!tree.getChild(0).getText().equals("ElseCond")) {
                 condTextStr = tree.getChild(1).getText().replaceAll("^\'|\'$", "");
-                if (tree.getChild(0).equals("GuardCond")) {
-                    condTypeStr = " \bwhen\b";
+                if (tree.getChild(0).getText().equals("GuardCond")) {
+                    condTypeStr = " \\bwhen\\b";
                 }
             } else {
-                condTypeStr = " \botherwise\b";
+                condTypeStr = " \\botherwise\\b";
             }
-            outStream.println(listJoin(instList, "--") + ":" + condTypeStr + " " + condTextStr
-                    + " [line.radius=15, line.corner=bevel];");
-            
+            outStream.println(indentLevel + listJoin(instList, "--") + ":" + condTypeStr 
+                    + " " + condTextStr + " [line.radius=15, line.corner=bevel];");
+        
         } else if (token.equals("Ref")) {
             String refText = tree.getChild(0).getText().replaceAll("^\'|\'$", "");
-            outStream.println(listJoin(instList, "--") + ": " + refText + " [line.radius=10];");
+            outStream.println(indentLevel + listJoin(instList, "--") + ": " 
+                    + refText + " [line.radius=10];");
+        
+        } else if (token.equals("Loop") || token.equals("Opt") || token.equals("Exc")) {
+            String bounds = "";
+            if (tree.getChildCount() > 1) {
+                bounds = "<" + treeJoin(tree.getChild(1), ",") + ">";                
+            }
+            outStream.println(indentLevel + listJoin(instList, "--") + ": \\b\\i" 
+                    + token + "\\i\\_" + bounds + " {");
+            parseChildTree(tree, instList, indentLevel + tab);
+            outStream.println(indentLevel + "};");
+        
+        } else if (token.equals("Alt") || token.equals("Par")) {
+            outStream.println(indentLevel + listJoin(instList, "--") + ": \\b\\i" 
+                    + token + " \\b\\i" + " {");
+            parseInlineBranches(tree, instList, indentLevel);
+            outStream.println(indentLevel + "};");
         }
     }
     
@@ -138,6 +148,49 @@ public class MscParser {
         }
     }
     
+    private void parseInlineBranches(Tree tree, List<String> instList, String indentLevel) {
+        int num = tree.getChildCount();
+        for(int i = 0; i < num - 1; i++) {
+            parseTree(tree.getChild(i), instList, indentLevel + tab);
+            outStream.println(indentLevel + "}");
+            outStream.println(indentLevel + "..: {");
+        }
+        parseTree(tree.getChild(num - 1), instList, indentLevel + tab);
+    }
+    
+    private void processMessageIn(String lifeline, String message, String msgType, 
+            String indentation) {
+        
+        if (msgType.equals("MsgGate")) {                 // message input from ENV
+            outStream.println(indentation + "->" + lifeline + ": " + message + ";");
+        
+        } else if (msgSender.get(message) != null) {
+            outStream.println(indentation + msgSender.get(message) + "->" + lifeline + ": " + message + ";");
+            msgSender.put(message, null);
+        
+        } else {
+            msgReceiver.put(message, lifeline);
+        }        
+    }
+    
+    private void processMessageOut(String lifeline, String message, String receiver, 
+            String msgType, String indentation) {
+        
+        if (receiver.equals("MsgGate")) {                 // message output to ENV
+            outStream.println(indentation + lifeline + "->: " + message + ";");
+        
+        } else if (msgType.equals("IncompleteMsg")) {    // lost of message
+            outStream.println(indentation + lifeline + "->*" + receiver + ": " + message + " [text.ident = left];");
+        
+        } else if (msgReceiver.get(message) != null) {
+            outStream.println(indentation + lifeline + "->" + msgReceiver.get(message) + ": " + message + ";");
+            msgReceiver.put(message, null);
+        
+        } else {
+            msgSender.put(message, lifeline);
+        }        
+    }
+    
     private static String listJoin(Collection<String> collection, String delim) {
         StringBuilder sb = new StringBuilder();
         String loopDelim = "";
@@ -145,6 +198,18 @@ public class MscParser {
         for (String str : collection) {
             sb.append(loopDelim);
             sb.append(str);
+            loopDelim = delim;
+        }
+        return sb.toString();
+    }    
+    
+    private static String treeJoin(Tree tree, String delim) {
+        StringBuilder sb = new StringBuilder();
+        String loopDelim = "";
+        
+        for(int i = 0; i < tree.getChildCount(); i++) {
+            sb.append(loopDelim);
+            sb.append(tree.getChild(i).getText());
             loopDelim = delim;
         }
         return sb.toString();

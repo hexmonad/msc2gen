@@ -1,4 +1,4 @@
-// $ANTLR 3.1.3 Mar 18, 2009 10:09:25 msc_grammar.g 2014-03-12 23:18:31
+// $ANTLR 3.1.3 Mar 18, 2009 10:09:25 msc_grammar.g 2014-03-16 14:12:27
 package org.hexmonad.msc2gen;
 
 import org.antlr.runtime.*;
@@ -8,9 +8,9 @@ import java.util.ArrayList;
 
 public class msc_grammarLexer extends Lexer {
     public static final int Condition=17;
-    public static final int MsgGate=40;
+    public static final int MsgGate=38;
     public static final int Before=29;
-    public static final int LETTER=50;
+    public static final int LETTER=48;
     public static final int ElseCond=20;
     public static final int After=30;
     public static final int Empty=32;
@@ -20,18 +20,19 @@ public class msc_grammarLexer extends Lexer {
     public static final int T__94=94;
     public static final int T__91=91;
     public static final int FullMsg=14;
-    public static final int NAME=46;
     public static final int T__92=92;
+    public static final int NAME=44;
     public static final int T__90=90;
     public static final int MSCHead=5;
-    public static final int BEGIN=44;
-    public static final int FULLSTOP=53;
+    public static final int Bounds=25;
+    public static final int BEGIN=42;
+    public static final int FULLSTOP=51;
     public static final int MSGIn=12;
-    public static final int APOSTROPHE=54;
+    public static final int APOSTROPHE=52;
     public static final int T__99=99;
     public static final int T__98=98;
     public static final int T__97=97;
-    public static final int OTHERWISE=43;
+    public static final int OTHERWISE=41;
     public static final int T__96=96;
     public static final int T__95=95;
     public static final int T__80=80;
@@ -47,17 +48,18 @@ public class msc_grammarLexer extends Lexer {
     public static final int T__86=86;
     public static final int T__89=89;
     public static final int T__88=88;
-    public static final int UNDERLINE=52;
+    public static final int UNDERLINE=50;
     public static final int MSGOut=13;
     public static final int NodeExpr=33;
-    public static final int WS=58;
+    public static final int WS=56;
     public static final int T__71=71;
     public static final int T__72=72;
-    public static final int SPECIAL=57;
+    public static final int SPECIAL=55;
     public static final int T__70=70;
     public static final int Par=23;
-    public static final int END=45;
+    public static final int Timer=37;
     public static final int T__76=76;
+    public static final int END=43;
     public static final int T__75=75;
     public static final int T__74=74;
     public static final int Label=11;
@@ -69,7 +71,6 @@ public class msc_grammarLexer extends Lexer {
     public static final int T__68=68;
     public static final int T__69=69;
     public static final int T__66=66;
-    public static final int Timeout=39;
     public static final int T__67=67;
     public static final int Alt=22;
     public static final int T__64=64;
@@ -77,23 +78,19 @@ public class msc_grammarLexer extends Lexer {
     public static final int Opt=26;
     public static final int T__62=62;
     public static final int T__63=63;
-    public static final int LEFTBINDSYMBOL=48;
-    public static final int StopTimer=38;
+    public static final int LEFTBINDSYMBOL=46;
     public static final int T__61=61;
-    public static final int RIGHTBINDSYMBOL=49;
+    public static final int RIGHTBINDSYMBOL=47;
     public static final int T__60=60;
-    public static final int ALPHANUMERIC=55;
+    public static final int T__57=57;
+    public static final int T__58=58;
+    public static final int ALPHANUMERIC=53;
     public static final int T__59=59;
-    public static final int T__103=103;
-    public static final int T__104=104;
     public static final int MSC=4;
-    public static final int ALL=41;
-    public static final int T__105=105;
+    public static final int ALL=39;
     public static final int InstanceList=8;
-    public static final int LoopBoundary=25;
     public static final int Instance=7;
     public static final int Start=34;
-    public static final int T__102=102;
     public static final int T__101=101;
     public static final int IncompleteMsg=15;
     public static final int T__100=100;
@@ -102,14 +99,13 @@ public class msc_grammarLexer extends Lexer {
     public static final int Ref=31;
     public static final int Seq=21;
     public static final int Terminate=36;
-    public static final int WHEN=42;
+    public static final int WHEN=40;
     public static final int GuardCond=19;
+    public static final int CHARACTERSTRING=45;
     public static final int ParameterList=10;
-    public static final int CHARACTERSTRING=47;
-    public static final int DECIMALDIGIT=51;
-    public static final int StartTimer=37;
+    public static final int DECIMALDIGIT=49;
     public static final int SetCond=18;
-    public static final int OTHERCHARACTER=56;
+    public static final int OTHERCHARACTER=54;
 
     // delegates
     // delegators
@@ -124,16 +120,57 @@ public class msc_grammarLexer extends Lexer {
     }
     public String getGrammarFileName() { return "msc_grammar.g"; }
 
-    // $ANTLR start "T__59"
-    public final void mT__59() throws RecognitionException {
+    // $ANTLR start "T__57"
+    public final void mT__57() throws RecognitionException {
         try {
-            int _type = T__59;
+            int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // msc_grammar.g:3:7: ( 'msc' )
             // msc_grammar.g:3:9: 'msc'
             {
             match("msc"); 
 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__57"
+
+    // $ANTLR start "T__58"
+    public final void mT__58() throws RecognitionException {
+        try {
+            int _type = T__58;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // msc_grammar.g:4:7: ( 'endmsc' )
+            // msc_grammar.g:4:9: 'endmsc'
+            {
+            match("endmsc"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__58"
+
+    // $ANTLR start "T__59"
+    public final void mT__59() throws RecognitionException {
+        try {
+            int _type = T__59;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // msc_grammar.g:5:7: ( ':' )
+            // msc_grammar.g:5:9: ':'
+            {
+            match(':'); 
 
             }
 
@@ -150,11 +187,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:4:7: ( 'endmsc' )
-            // msc_grammar.g:4:9: 'endmsc'
+            // msc_grammar.g:6:7: ( ',' )
+            // msc_grammar.g:6:9: ','
             {
-            match("endmsc"); 
-
+            match(','); 
 
             }
 
@@ -171,10 +207,11 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:5:7: ( ':' )
-            // msc_grammar.g:5:9: ':'
+            // msc_grammar.g:7:7: ( 'label' )
+            // msc_grammar.g:7:9: 'label'
             {
-            match(':'); 
+            match("label"); 
+
 
             }
 
@@ -191,10 +228,11 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:6:7: ( ',' )
-            // msc_grammar.g:6:9: ','
+            // msc_grammar.g:8:7: ( 'out' )
+            // msc_grammar.g:8:9: 'out'
             {
-            match(','); 
+            match("out"); 
+
 
             }
 
@@ -211,10 +249,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:7:7: ( 'label' )
-            // msc_grammar.g:7:9: 'label'
+            // msc_grammar.g:9:7: ( 'to' )
+            // msc_grammar.g:9:9: 'to'
             {
-            match("label"); 
+            match("to"); 
 
 
             }
@@ -232,10 +270,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__64;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:8:7: ( 'out' )
-            // msc_grammar.g:8:9: 'out'
+            // msc_grammar.g:10:7: ( 'in' )
+            // msc_grammar.g:10:9: 'in'
             {
-            match("out"); 
+            match("in"); 
 
 
             }
@@ -253,10 +291,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__65;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:9:7: ( 'to' )
-            // msc_grammar.g:9:9: 'to'
+            // msc_grammar.g:11:7: ( 'from' )
+            // msc_grammar.g:11:9: 'from'
             {
-            match("to"); 
+            match("from"); 
 
 
             }
@@ -274,10 +312,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__66;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:10:7: ( 'in' )
-            // msc_grammar.g:10:9: 'in'
+            // msc_grammar.g:12:7: ( 'lost' )
+            // msc_grammar.g:12:9: 'lost'
             {
-            match("in"); 
+            match("lost"); 
 
 
             }
@@ -295,10 +333,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__67;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:11:7: ( 'from' )
-            // msc_grammar.g:11:9: 'from'
+            // msc_grammar.g:13:7: ( 'found' )
+            // msc_grammar.g:13:9: 'found'
             {
-            match("from"); 
+            match("found"); 
 
 
             }
@@ -316,10 +354,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__68;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:12:7: ( 'lost' )
-            // msc_grammar.g:12:9: 'lost'
+            // msc_grammar.g:14:7: ( 'env' )
+            // msc_grammar.g:14:9: 'env'
             {
-            match("lost"); 
+            match("env"); 
 
 
             }
@@ -337,10 +375,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__69;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:13:7: ( 'found' )
-            // msc_grammar.g:13:9: 'found'
+            // msc_grammar.g:15:7: ( 'via' )
+            // msc_grammar.g:15:9: 'via'
             {
-            match("found"); 
+            match("via"); 
 
 
             }
@@ -358,10 +396,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__70;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:14:7: ( 'env' )
-            // msc_grammar.g:14:9: 'env'
+            // msc_grammar.g:16:7: ( 'action' )
+            // msc_grammar.g:16:9: 'action'
             {
-            match("env"); 
+            match("action"); 
 
 
             }
@@ -379,10 +417,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__71;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:15:7: ( 'via' )
-            // msc_grammar.g:15:9: 'via'
+            // msc_grammar.g:17:7: ( 'instance' )
+            // msc_grammar.g:17:9: 'instance'
             {
-            match("via"); 
+            match("instance"); 
 
 
             }
@@ -400,10 +438,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__72;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:16:7: ( 'action' )
-            // msc_grammar.g:16:9: 'action'
+            // msc_grammar.g:18:7: ( 'endinstance' )
+            // msc_grammar.g:18:9: 'endinstance'
             {
-            match("action"); 
+            match("endinstance"); 
 
 
             }
@@ -421,10 +459,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__73;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:17:7: ( 'instance' )
-            // msc_grammar.g:17:9: 'instance'
+            // msc_grammar.g:19:7: ( 'inst' )
+            // msc_grammar.g:19:9: 'inst'
             {
-            match("instance"); 
+            match("inst"); 
 
 
             }
@@ -442,10 +480,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__74;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:18:7: ( 'endinstance' )
-            // msc_grammar.g:18:9: 'endinstance'
+            // msc_grammar.g:20:7: ( 'system' )
+            // msc_grammar.g:20:9: 'system'
             {
-            match("endinstance"); 
+            match("system"); 
 
 
             }
@@ -463,10 +501,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__75;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:19:7: ( 'inst' )
-            // msc_grammar.g:19:9: 'inst'
+            // msc_grammar.g:21:7: ( 'block' )
+            // msc_grammar.g:21:9: 'block'
             {
-            match("inst"); 
+            match("block"); 
 
 
             }
@@ -484,10 +522,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__76;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:20:7: ( 'system' )
-            // msc_grammar.g:20:9: 'system'
+            // msc_grammar.g:22:7: ( 'process' )
+            // msc_grammar.g:22:9: 'process'
             {
-            match("system"); 
+            match("process"); 
 
 
             }
@@ -505,10 +543,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__77;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:21:7: ( 'block' )
-            // msc_grammar.g:21:9: 'block'
+            // msc_grammar.g:23:7: ( 'service' )
+            // msc_grammar.g:23:9: 'service'
             {
-            match("block"); 
+            match("service"); 
 
 
             }
@@ -526,11 +564,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__78;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:22:7: ( 'process' )
-            // msc_grammar.g:22:9: 'process'
+            // msc_grammar.g:24:7: ( ';' )
+            // msc_grammar.g:24:9: ';'
             {
-            match("process"); 
-
+            match(';'); 
 
             }
 
@@ -547,10 +584,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__79;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:23:7: ( 'service' )
-            // msc_grammar.g:23:9: 'service'
+            // msc_grammar.g:25:7: ( 'condition' )
+            // msc_grammar.g:25:9: 'condition'
             {
-            match("service"); 
+            match("condition"); 
 
 
             }
@@ -568,10 +605,11 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__80;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:24:7: ( ';' )
-            // msc_grammar.g:24:9: ';'
+            // msc_grammar.g:26:7: ( 'loop' )
+            // msc_grammar.g:26:9: 'loop'
             {
-            match(';'); 
+            match("loop"); 
+
 
             }
 
@@ -588,10 +626,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__81;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:25:7: ( 'condition' )
-            // msc_grammar.g:25:9: 'condition'
+            // msc_grammar.g:27:7: ( 'opt' )
+            // msc_grammar.g:27:9: 'opt'
             {
-            match("condition"); 
+            match("opt"); 
 
 
             }
@@ -609,10 +647,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__82;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:26:7: ( 'loop' )
-            // msc_grammar.g:26:9: 'loop'
+            // msc_grammar.g:28:7: ( 'exc' )
+            // msc_grammar.g:28:9: 'exc'
             {
-            match("loop"); 
+            match("exc"); 
 
 
             }
@@ -630,10 +668,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__83;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:27:7: ( 'opt' )
-            // msc_grammar.g:27:9: 'opt'
+            // msc_grammar.g:29:7: ( 'alt' )
+            // msc_grammar.g:29:9: 'alt'
             {
-            match("opt"); 
+            match("alt"); 
 
 
             }
@@ -651,10 +689,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__84;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:28:7: ( 'exc' )
-            // msc_grammar.g:28:9: 'exc'
+            // msc_grammar.g:30:7: ( 'par' )
+            // msc_grammar.g:30:9: 'par'
             {
-            match("exc"); 
+            match("par"); 
 
 
             }
@@ -672,11 +710,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__85;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:29:7: ( 'alt' )
-            // msc_grammar.g:29:9: 'alt'
+            // msc_grammar.g:31:7: ( '<' )
+            // msc_grammar.g:31:9: '<'
             {
-            match("alt"); 
-
+            match('<'); 
 
             }
 
@@ -693,11 +730,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__86;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:30:7: ( 'par' )
-            // msc_grammar.g:30:9: 'par'
+            // msc_grammar.g:32:7: ( '>' )
+            // msc_grammar.g:32:9: '>'
             {
-            match("par"); 
-
+            match('>'); 
 
             }
 
@@ -714,10 +750,11 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__87;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:31:7: ( '<' )
-            // msc_grammar.g:31:9: '<'
+            // msc_grammar.g:33:7: ( 'create' )
+            // msc_grammar.g:33:9: 'create'
             {
-            match('<'); 
+            match("create"); 
+
 
             }
 
@@ -734,10 +771,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__88;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:32:7: ( '>' )
-            // msc_grammar.g:32:9: '>'
+            // msc_grammar.g:34:7: ( '(' )
+            // msc_grammar.g:34:9: '('
             {
-            match('>'); 
+            match('('); 
 
             }
 
@@ -754,11 +791,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__89;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:33:7: ( 'inf' )
-            // msc_grammar.g:33:9: 'inf'
+            // msc_grammar.g:35:7: ( ')' )
+            // msc_grammar.g:35:9: ')'
             {
-            match("inf"); 
-
+            match(')'); 
 
             }
 
@@ -775,10 +811,11 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__90;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:34:7: ( '\"' )
-            // msc_grammar.g:34:9: '\"'
+            // msc_grammar.g:36:7: ( 'stop' )
+            // msc_grammar.g:36:9: 'stop'
             {
-            match('\"'); 
+            match("stop"); 
+
 
             }
 
@@ -795,10 +832,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__91;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:35:7: ( 'create' )
-            // msc_grammar.g:35:9: 'create'
+            // msc_grammar.g:37:7: ( 'starttimer' )
+            // msc_grammar.g:37:9: 'starttimer'
             {
-            match("create"); 
+            match("starttimer"); 
 
 
             }
@@ -816,10 +853,11 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__92;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:36:7: ( '(' )
-            // msc_grammar.g:36:9: '('
+            // msc_grammar.g:38:7: ( 'stoptimer' )
+            // msc_grammar.g:38:9: 'stoptimer'
             {
-            match('('); 
+            match("stoptimer"); 
+
 
             }
 
@@ -836,10 +874,11 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__93;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:37:7: ( ')' )
-            // msc_grammar.g:37:9: ')'
+            // msc_grammar.g:39:7: ( 'timeout' )
+            // msc_grammar.g:39:9: 'timeout'
             {
-            match(')'); 
+            match("timeout"); 
+
 
             }
 
@@ -856,11 +895,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__94;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:38:7: ( 'stop' )
-            // msc_grammar.g:38:9: 'stop'
+            // msc_grammar.g:40:7: ( '[' )
+            // msc_grammar.g:40:9: '['
             {
-            match("stop"); 
-
+            match('['); 
 
             }
 
@@ -877,11 +915,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__95;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:39:7: ( 'starttimer' )
-            // msc_grammar.g:39:9: 'starttimer'
+            // msc_grammar.g:41:7: ( ']' )
+            // msc_grammar.g:41:9: ']'
             {
-            match("starttimer"); 
-
+            match(']'); 
 
             }
 
@@ -898,10 +935,11 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__96;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:40:7: ( '[' )
-            // msc_grammar.g:40:9: '['
+            // msc_grammar.g:42:7: ( 'gate' )
+            // msc_grammar.g:42:9: 'gate'
             {
-            match('['); 
+            match("gate"); 
+
 
             }
 
@@ -918,10 +956,11 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__97;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:41:7: ( ']' )
-            // msc_grammar.g:41:9: ']'
+            // msc_grammar.g:43:7: ( 'before' )
+            // msc_grammar.g:43:9: 'before'
             {
-            match(']'); 
+            match("before"); 
+
 
             }
 
@@ -938,10 +977,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__98;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:42:7: ( 'stoptimer' )
-            // msc_grammar.g:42:9: 'stoptimer'
+            // msc_grammar.g:44:7: ( 'after' )
+            // msc_grammar.g:44:9: 'after'
             {
-            match("stoptimer"); 
+            match("after"); 
 
 
             }
@@ -959,10 +998,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__99;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:43:7: ( 'timeout' )
-            // msc_grammar.g:43:9: 'timeout'
+            // msc_grammar.g:45:7: ( 'concurrent' )
+            // msc_grammar.g:45:9: 'concurrent'
             {
-            match("timeout"); 
+            match("concurrent"); 
 
 
             }
@@ -980,10 +1019,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__100;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:44:8: ( 'gate' )
-            // msc_grammar.g:44:10: 'gate'
+            // msc_grammar.g:46:8: ( 'endconcurrent' )
+            // msc_grammar.g:46:10: 'endconcurrent'
             {
-            match("gate"); 
+            match("endconcurrent"); 
 
 
             }
@@ -1001,92 +1040,8 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = T__101;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:45:8: ( 'before' )
-            // msc_grammar.g:45:10: 'before'
-            {
-            match("before"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__101"
-
-    // $ANTLR start "T__102"
-    public final void mT__102() throws RecognitionException {
-        try {
-            int _type = T__102;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:46:8: ( 'after' )
-            // msc_grammar.g:46:10: 'after'
-            {
-            match("after"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__102"
-
-    // $ANTLR start "T__103"
-    public final void mT__103() throws RecognitionException {
-        try {
-            int _type = T__103;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:47:8: ( 'concurrent' )
-            // msc_grammar.g:47:10: 'concurrent'
-            {
-            match("concurrent"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__103"
-
-    // $ANTLR start "T__104"
-    public final void mT__104() throws RecognitionException {
-        try {
-            int _type = T__104;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:48:8: ( 'endconcurrent' )
-            // msc_grammar.g:48:10: 'endconcurrent'
-            {
-            match("endconcurrent"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__104"
-
-    // $ANTLR start "T__105"
-    public final void mT__105() throws RecognitionException {
-        try {
-            int _type = T__105;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:49:8: ( 'reference' )
-            // msc_grammar.g:49:10: 'reference'
+            // msc_grammar.g:47:8: ( 'reference' )
+            // msc_grammar.g:47:10: 'reference'
             {
             match("reference"); 
 
@@ -1099,14 +1054,14 @@ public class msc_grammarLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__105"
+    // $ANTLR end "T__101"
 
     // $ANTLR start "BEGIN"
     public final void mBEGIN() throws RecognitionException {
         try {
             int _type = BEGIN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:341:7: ( 'begin' | 'BEGIN' )
+            // msc_grammar.g:333:7: ( 'begin' | 'BEGIN' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -1124,7 +1079,7 @@ public class msc_grammarLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // msc_grammar.g:341:9: 'begin'
+                    // msc_grammar.g:333:9: 'begin'
                     {
                     match("begin"); 
 
@@ -1132,7 +1087,7 @@ public class msc_grammarLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:341:19: 'BEGIN'
+                    // msc_grammar.g:333:19: 'BEGIN'
                     {
                     match("BEGIN"); 
 
@@ -1154,7 +1109,7 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = END;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:343:5: ( 'end' | 'END' )
+            // msc_grammar.g:335:5: ( 'end' | 'END' )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -1172,7 +1127,7 @@ public class msc_grammarLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // msc_grammar.g:343:7: 'end'
+                    // msc_grammar.g:335:7: 'end'
                     {
                     match("end"); 
 
@@ -1180,7 +1135,7 @@ public class msc_grammarLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:343:15: 'END'
+                    // msc_grammar.g:335:15: 'END'
                     {
                     match("END"); 
 
@@ -1202,7 +1157,7 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = ALL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:345:5: ( 'all' | 'ALL' )
+            // msc_grammar.g:337:5: ( 'all' | 'ALL' )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -1220,7 +1175,7 @@ public class msc_grammarLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // msc_grammar.g:345:7: 'all'
+                    // msc_grammar.g:337:7: 'all'
                     {
                     match("all"); 
 
@@ -1228,7 +1183,7 @@ public class msc_grammarLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:345:15: 'ALL'
+                    // msc_grammar.g:337:15: 'ALL'
                     {
                     match("ALL"); 
 
@@ -1250,7 +1205,7 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = WHEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:347:7: ( 'when' | 'WHEN' )
+            // msc_grammar.g:339:7: ( 'when' | 'WHEN' )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1268,7 +1223,7 @@ public class msc_grammarLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // msc_grammar.g:347:9: 'when'
+                    // msc_grammar.g:339:9: 'when'
                     {
                     match("when"); 
 
@@ -1276,7 +1231,7 @@ public class msc_grammarLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:347:18: 'WHEN'
+                    // msc_grammar.g:339:18: 'WHEN'
                     {
                     match("WHEN"); 
 
@@ -1298,7 +1253,7 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = OTHERWISE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:350:2: ( 'otherwise' | 'OTHERWISE' )
+            // msc_grammar.g:342:2: ( 'otherwise' | 'OTHERWISE' )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -1316,7 +1271,7 @@ public class msc_grammarLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // msc_grammar.g:350:4: 'otherwise'
+                    // msc_grammar.g:342:4: 'otherwise'
                     {
                     match("otherwise"); 
 
@@ -1324,7 +1279,7 @@ public class msc_grammarLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:350:18: 'OTHERWISE'
+                    // msc_grammar.g:342:18: 'OTHERWISE'
                     {
                     match("OTHERWISE"); 
 
@@ -1346,8 +1301,8 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = LEFTBINDSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:353:2: ( ':=' )
-            // msc_grammar.g:353:4: ':='
+            // msc_grammar.g:345:2: ( ':=' )
+            // msc_grammar.g:345:4: ':='
             {
             match(":="); 
 
@@ -1367,8 +1322,8 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = RIGHTBINDSYMBOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:356:2: ( '=:' )
-            // msc_grammar.g:356:4: '=:'
+            // msc_grammar.g:348:2: ( '=:' )
+            // msc_grammar.g:348:4: '=:'
             {
             match("=:"); 
 
@@ -1386,7 +1341,7 @@ public class msc_grammarLexer extends Lexer {
     // $ANTLR start "LETTER"
     public final void mLETTER() throws RecognitionException {
         try {
-            // msc_grammar.g:360:9: ( 'A' .. 'Z' | 'a' .. 'z' )
+            // msc_grammar.g:352:9: ( 'A' .. 'Z' | 'a' .. 'z' )
             // msc_grammar.g:
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
@@ -1410,8 +1365,8 @@ public class msc_grammarLexer extends Lexer {
     // $ANTLR start "DECIMALDIGIT"
     public final void mDECIMALDIGIT() throws RecognitionException {
         try {
-            // msc_grammar.g:363:2: ( '0' .. '9' )
-            // msc_grammar.g:363:4: '0' .. '9'
+            // msc_grammar.g:355:2: ( '0' .. '9' )
+            // msc_grammar.g:355:4: '0' .. '9'
             {
             matchRange('0','9'); 
 
@@ -1426,8 +1381,8 @@ public class msc_grammarLexer extends Lexer {
     // $ANTLR start "UNDERLINE"
     public final void mUNDERLINE() throws RecognitionException {
         try {
-            // msc_grammar.g:366:2: ( '_' )
-            // msc_grammar.g:366:4: '_'
+            // msc_grammar.g:358:2: ( '_' )
+            // msc_grammar.g:358:4: '_'
             {
             match('_'); 
 
@@ -1442,8 +1397,8 @@ public class msc_grammarLexer extends Lexer {
     // $ANTLR start "FULLSTOP"
     public final void mFULLSTOP() throws RecognitionException {
         try {
-            // msc_grammar.g:369:2: ( '.' )
-            // msc_grammar.g:369:4: '.'
+            // msc_grammar.g:361:2: ( '.' )
+            // msc_grammar.g:361:4: '.'
             {
             match('.'); 
 
@@ -1458,8 +1413,8 @@ public class msc_grammarLexer extends Lexer {
     // $ANTLR start "APOSTROPHE"
     public final void mAPOSTROPHE() throws RecognitionException {
         try {
-            // msc_grammar.g:372:2: ( '\\'' )
-            // msc_grammar.g:372:4: '\\''
+            // msc_grammar.g:364:2: ( '\\'' )
+            // msc_grammar.g:364:4: '\\''
             {
             match('\''); 
 
@@ -1474,7 +1429,7 @@ public class msc_grammarLexer extends Lexer {
     // $ANTLR start "ALPHANUMERIC"
     public final void mALPHANUMERIC() throws RecognitionException {
         try {
-            // msc_grammar.g:375:2: ( LETTER | DECIMALDIGIT )
+            // msc_grammar.g:367:2: ( LETTER | DECIMALDIGIT )
             // msc_grammar.g:
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
@@ -1498,7 +1453,7 @@ public class msc_grammarLexer extends Lexer {
     // $ANTLR start "OTHERCHARACTER"
     public final void mOTHERCHARACTER() throws RecognitionException {
         try {
-            // msc_grammar.g:378:2: ( '?' | '&' | '%' | '+' | '-' | '!' | '/' | '*' | '\"' | '=' )
+            // msc_grammar.g:370:2: ( '?' | '&' | '%' | '+' | '-' | '!' | '/' | '*' | '\"' | '=' )
             // msc_grammar.g:
             {
             if ( (input.LA(1)>='!' && input.LA(1)<='\"')||(input.LA(1)>='%' && input.LA(1)<='&')||(input.LA(1)>='*' && input.LA(1)<='+')||input.LA(1)=='-'||input.LA(1)=='/'||input.LA(1)=='='||input.LA(1)=='?' ) {
@@ -1522,7 +1477,7 @@ public class msc_grammarLexer extends Lexer {
     // $ANTLR start "SPECIAL"
     public final void mSPECIAL() throws RecognitionException {
         try {
-            // msc_grammar.g:380:9: ( '(' | ')' | '<' | '>' | ',' | ';' | ':' )
+            // msc_grammar.g:372:9: ( '(' | ')' | '<' | '>' | ',' | ';' | ':' )
             // msc_grammar.g:
             {
             if ( (input.LA(1)>='(' && input.LA(1)<=')')||input.LA(1)==','||(input.LA(1)>=':' && input.LA(1)<='<')||input.LA(1)=='>' ) {
@@ -1548,10 +1503,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = NAME;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:382:7: ( ( LETTER | DECIMALDIGIT | UNDERLINE | FULLSTOP )+ )
-            // msc_grammar.g:382:9: ( LETTER | DECIMALDIGIT | UNDERLINE | FULLSTOP )+
+            // msc_grammar.g:374:7: ( ( LETTER | DECIMALDIGIT | UNDERLINE | FULLSTOP )+ )
+            // msc_grammar.g:374:9: ( LETTER | DECIMALDIGIT | UNDERLINE | FULLSTOP )+
             {
-            // msc_grammar.g:382:9: ( LETTER | DECIMALDIGIT | UNDERLINE | FULLSTOP )+
+            // msc_grammar.g:374:9: ( LETTER | DECIMALDIGIT | UNDERLINE | FULLSTOP )+
             int cnt6=0;
             loop6:
             do {
@@ -1605,63 +1560,63 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = CHARACTERSTRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:385:2: ( APOSTROPHE ( ALPHANUMERIC | OTHERCHARACTER | SPECIAL | FULLSTOP | UNDERLINE | ' ' | ( APOSTROPHE APOSTROPHE ) )* APOSTROPHE )
-            // msc_grammar.g:385:4: APOSTROPHE ( ALPHANUMERIC | OTHERCHARACTER | SPECIAL | FULLSTOP | UNDERLINE | ' ' | ( APOSTROPHE APOSTROPHE ) )* APOSTROPHE
+            // msc_grammar.g:377:2: ( APOSTROPHE ( ALPHANUMERIC | OTHERCHARACTER | SPECIAL | FULLSTOP | UNDERLINE | ' ' | ( APOSTROPHE APOSTROPHE ) )* APOSTROPHE )
+            // msc_grammar.g:377:4: APOSTROPHE ( ALPHANUMERIC | OTHERCHARACTER | SPECIAL | FULLSTOP | UNDERLINE | ' ' | ( APOSTROPHE APOSTROPHE ) )* APOSTROPHE
             {
             mAPOSTROPHE(); 
-            // msc_grammar.g:385:15: ( ALPHANUMERIC | OTHERCHARACTER | SPECIAL | FULLSTOP | UNDERLINE | ' ' | ( APOSTROPHE APOSTROPHE ) )*
+            // msc_grammar.g:377:15: ( ALPHANUMERIC | OTHERCHARACTER | SPECIAL | FULLSTOP | UNDERLINE | ' ' | ( APOSTROPHE APOSTROPHE ) )*
             loop7:
             do {
                 int alt7=8;
                 alt7 = dfa7.predict(input);
                 switch (alt7) {
             	case 1 :
-            	    // msc_grammar.g:385:17: ALPHANUMERIC
+            	    // msc_grammar.g:377:17: ALPHANUMERIC
             	    {
             	    mALPHANUMERIC(); 
 
             	    }
             	    break;
             	case 2 :
-            	    // msc_grammar.g:385:32: OTHERCHARACTER
+            	    // msc_grammar.g:377:32: OTHERCHARACTER
             	    {
             	    mOTHERCHARACTER(); 
 
             	    }
             	    break;
             	case 3 :
-            	    // msc_grammar.g:385:49: SPECIAL
+            	    // msc_grammar.g:377:49: SPECIAL
             	    {
             	    mSPECIAL(); 
 
             	    }
             	    break;
             	case 4 :
-            	    // msc_grammar.g:385:59: FULLSTOP
+            	    // msc_grammar.g:377:59: FULLSTOP
             	    {
             	    mFULLSTOP(); 
 
             	    }
             	    break;
             	case 5 :
-            	    // msc_grammar.g:385:70: UNDERLINE
+            	    // msc_grammar.g:377:70: UNDERLINE
             	    {
             	    mUNDERLINE(); 
 
             	    }
             	    break;
             	case 6 :
-            	    // msc_grammar.g:385:82: ' '
+            	    // msc_grammar.g:377:82: ' '
             	    {
             	    match(' '); 
 
             	    }
             	    break;
             	case 7 :
-            	    // msc_grammar.g:385:88: ( APOSTROPHE APOSTROPHE )
+            	    // msc_grammar.g:377:88: ( APOSTROPHE APOSTROPHE )
             	    {
-            	    // msc_grammar.g:385:88: ( APOSTROPHE APOSTROPHE )
-            	    // msc_grammar.g:385:89: APOSTROPHE APOSTROPHE
+            	    // msc_grammar.g:377:88: ( APOSTROPHE APOSTROPHE )
+            	    // msc_grammar.g:377:89: APOSTROPHE APOSTROPHE
             	    {
             	    mAPOSTROPHE(); 
             	    mAPOSTROPHE(); 
@@ -1694,10 +1649,10 @@ public class msc_grammarLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // msc_grammar.g:389:4: ( ( ' ' | '\\t' | '\\n' | '\\r' )+ )
-            // msc_grammar.g:389:6: ( ' ' | '\\t' | '\\n' | '\\r' )+
+            // msc_grammar.g:381:4: ( ( ' ' | '\\t' | '\\n' | '\\r' )+ )
+            // msc_grammar.g:381:6: ( ' ' | '\\t' | '\\n' | '\\r' )+
             {
-            // msc_grammar.g:389:6: ( ' ' | '\\t' | '\\n' | '\\r' )+
+            // msc_grammar.g:381:6: ( ' ' | '\\t' | '\\n' | '\\r' )+
             int cnt8=0;
             loop8:
             do {
@@ -1748,404 +1703,390 @@ public class msc_grammarLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // msc_grammar.g:1:8: ( T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | BEGIN | END | ALL | WHEN | OTHERWISE | LEFTBINDSYMBOL | RIGHTBINDSYMBOL | NAME | CHARACTERSTRING | WS )
-        int alt9=57;
+        // msc_grammar.g:1:8: ( T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | BEGIN | END | ALL | WHEN | OTHERWISE | LEFTBINDSYMBOL | RIGHTBINDSYMBOL | NAME | CHARACTERSTRING | WS )
+        int alt9=55;
         alt9 = dfa9.predict(input);
         switch (alt9) {
             case 1 :
-                // msc_grammar.g:1:10: T__59
+                // msc_grammar.g:1:10: T__57
+                {
+                mT__57(); 
+
+                }
+                break;
+            case 2 :
+                // msc_grammar.g:1:16: T__58
+                {
+                mT__58(); 
+
+                }
+                break;
+            case 3 :
+                // msc_grammar.g:1:22: T__59
                 {
                 mT__59(); 
 
                 }
                 break;
-            case 2 :
-                // msc_grammar.g:1:16: T__60
+            case 4 :
+                // msc_grammar.g:1:28: T__60
                 {
                 mT__60(); 
 
                 }
                 break;
-            case 3 :
-                // msc_grammar.g:1:22: T__61
+            case 5 :
+                // msc_grammar.g:1:34: T__61
                 {
                 mT__61(); 
 
                 }
                 break;
-            case 4 :
-                // msc_grammar.g:1:28: T__62
+            case 6 :
+                // msc_grammar.g:1:40: T__62
                 {
                 mT__62(); 
 
                 }
                 break;
-            case 5 :
-                // msc_grammar.g:1:34: T__63
+            case 7 :
+                // msc_grammar.g:1:46: T__63
                 {
                 mT__63(); 
 
                 }
                 break;
-            case 6 :
-                // msc_grammar.g:1:40: T__64
+            case 8 :
+                // msc_grammar.g:1:52: T__64
                 {
                 mT__64(); 
 
                 }
                 break;
-            case 7 :
-                // msc_grammar.g:1:46: T__65
+            case 9 :
+                // msc_grammar.g:1:58: T__65
                 {
                 mT__65(); 
 
                 }
                 break;
-            case 8 :
-                // msc_grammar.g:1:52: T__66
+            case 10 :
+                // msc_grammar.g:1:64: T__66
                 {
                 mT__66(); 
 
                 }
                 break;
-            case 9 :
-                // msc_grammar.g:1:58: T__67
+            case 11 :
+                // msc_grammar.g:1:70: T__67
                 {
                 mT__67(); 
 
                 }
                 break;
-            case 10 :
-                // msc_grammar.g:1:64: T__68
+            case 12 :
+                // msc_grammar.g:1:76: T__68
                 {
                 mT__68(); 
 
                 }
                 break;
-            case 11 :
-                // msc_grammar.g:1:70: T__69
+            case 13 :
+                // msc_grammar.g:1:82: T__69
                 {
                 mT__69(); 
 
                 }
                 break;
-            case 12 :
-                // msc_grammar.g:1:76: T__70
+            case 14 :
+                // msc_grammar.g:1:88: T__70
                 {
                 mT__70(); 
 
                 }
                 break;
-            case 13 :
-                // msc_grammar.g:1:82: T__71
+            case 15 :
+                // msc_grammar.g:1:94: T__71
                 {
                 mT__71(); 
 
                 }
                 break;
-            case 14 :
-                // msc_grammar.g:1:88: T__72
+            case 16 :
+                // msc_grammar.g:1:100: T__72
                 {
                 mT__72(); 
 
                 }
                 break;
-            case 15 :
-                // msc_grammar.g:1:94: T__73
+            case 17 :
+                // msc_grammar.g:1:106: T__73
                 {
                 mT__73(); 
 
                 }
                 break;
-            case 16 :
-                // msc_grammar.g:1:100: T__74
+            case 18 :
+                // msc_grammar.g:1:112: T__74
                 {
                 mT__74(); 
 
                 }
                 break;
-            case 17 :
-                // msc_grammar.g:1:106: T__75
+            case 19 :
+                // msc_grammar.g:1:118: T__75
                 {
                 mT__75(); 
 
                 }
                 break;
-            case 18 :
-                // msc_grammar.g:1:112: T__76
+            case 20 :
+                // msc_grammar.g:1:124: T__76
                 {
                 mT__76(); 
 
                 }
                 break;
-            case 19 :
-                // msc_grammar.g:1:118: T__77
+            case 21 :
+                // msc_grammar.g:1:130: T__77
                 {
                 mT__77(); 
 
                 }
                 break;
-            case 20 :
-                // msc_grammar.g:1:124: T__78
+            case 22 :
+                // msc_grammar.g:1:136: T__78
                 {
                 mT__78(); 
 
                 }
                 break;
-            case 21 :
-                // msc_grammar.g:1:130: T__79
+            case 23 :
+                // msc_grammar.g:1:142: T__79
                 {
                 mT__79(); 
 
                 }
                 break;
-            case 22 :
-                // msc_grammar.g:1:136: T__80
+            case 24 :
+                // msc_grammar.g:1:148: T__80
                 {
                 mT__80(); 
 
                 }
                 break;
-            case 23 :
-                // msc_grammar.g:1:142: T__81
+            case 25 :
+                // msc_grammar.g:1:154: T__81
                 {
                 mT__81(); 
 
                 }
                 break;
-            case 24 :
-                // msc_grammar.g:1:148: T__82
+            case 26 :
+                // msc_grammar.g:1:160: T__82
                 {
                 mT__82(); 
 
                 }
                 break;
-            case 25 :
-                // msc_grammar.g:1:154: T__83
+            case 27 :
+                // msc_grammar.g:1:166: T__83
                 {
                 mT__83(); 
 
                 }
                 break;
-            case 26 :
-                // msc_grammar.g:1:160: T__84
+            case 28 :
+                // msc_grammar.g:1:172: T__84
                 {
                 mT__84(); 
 
                 }
                 break;
-            case 27 :
-                // msc_grammar.g:1:166: T__85
+            case 29 :
+                // msc_grammar.g:1:178: T__85
                 {
                 mT__85(); 
 
                 }
                 break;
-            case 28 :
-                // msc_grammar.g:1:172: T__86
+            case 30 :
+                // msc_grammar.g:1:184: T__86
                 {
                 mT__86(); 
 
                 }
                 break;
-            case 29 :
-                // msc_grammar.g:1:178: T__87
+            case 31 :
+                // msc_grammar.g:1:190: T__87
                 {
                 mT__87(); 
 
                 }
                 break;
-            case 30 :
-                // msc_grammar.g:1:184: T__88
+            case 32 :
+                // msc_grammar.g:1:196: T__88
                 {
                 mT__88(); 
 
                 }
                 break;
-            case 31 :
-                // msc_grammar.g:1:190: T__89
+            case 33 :
+                // msc_grammar.g:1:202: T__89
                 {
                 mT__89(); 
 
                 }
                 break;
-            case 32 :
-                // msc_grammar.g:1:196: T__90
+            case 34 :
+                // msc_grammar.g:1:208: T__90
                 {
                 mT__90(); 
 
                 }
                 break;
-            case 33 :
-                // msc_grammar.g:1:202: T__91
+            case 35 :
+                // msc_grammar.g:1:214: T__91
                 {
                 mT__91(); 
 
                 }
                 break;
-            case 34 :
-                // msc_grammar.g:1:208: T__92
+            case 36 :
+                // msc_grammar.g:1:220: T__92
                 {
                 mT__92(); 
 
                 }
                 break;
-            case 35 :
-                // msc_grammar.g:1:214: T__93
+            case 37 :
+                // msc_grammar.g:1:226: T__93
                 {
                 mT__93(); 
 
                 }
                 break;
-            case 36 :
-                // msc_grammar.g:1:220: T__94
+            case 38 :
+                // msc_grammar.g:1:232: T__94
                 {
                 mT__94(); 
 
                 }
                 break;
-            case 37 :
-                // msc_grammar.g:1:226: T__95
+            case 39 :
+                // msc_grammar.g:1:238: T__95
                 {
                 mT__95(); 
 
                 }
                 break;
-            case 38 :
-                // msc_grammar.g:1:232: T__96
+            case 40 :
+                // msc_grammar.g:1:244: T__96
                 {
                 mT__96(); 
 
                 }
                 break;
-            case 39 :
-                // msc_grammar.g:1:238: T__97
+            case 41 :
+                // msc_grammar.g:1:250: T__97
                 {
                 mT__97(); 
 
                 }
                 break;
-            case 40 :
-                // msc_grammar.g:1:244: T__98
+            case 42 :
+                // msc_grammar.g:1:256: T__98
                 {
                 mT__98(); 
 
                 }
                 break;
-            case 41 :
-                // msc_grammar.g:1:250: T__99
+            case 43 :
+                // msc_grammar.g:1:262: T__99
                 {
                 mT__99(); 
 
                 }
                 break;
-            case 42 :
-                // msc_grammar.g:1:256: T__100
+            case 44 :
+                // msc_grammar.g:1:268: T__100
                 {
                 mT__100(); 
 
                 }
                 break;
-            case 43 :
-                // msc_grammar.g:1:263: T__101
+            case 45 :
+                // msc_grammar.g:1:275: T__101
                 {
                 mT__101(); 
 
                 }
                 break;
-            case 44 :
-                // msc_grammar.g:1:270: T__102
-                {
-                mT__102(); 
-
-                }
-                break;
-            case 45 :
-                // msc_grammar.g:1:277: T__103
-                {
-                mT__103(); 
-
-                }
-                break;
             case 46 :
-                // msc_grammar.g:1:284: T__104
-                {
-                mT__104(); 
-
-                }
-                break;
-            case 47 :
-                // msc_grammar.g:1:291: T__105
-                {
-                mT__105(); 
-
-                }
-                break;
-            case 48 :
-                // msc_grammar.g:1:298: BEGIN
+                // msc_grammar.g:1:282: BEGIN
                 {
                 mBEGIN(); 
 
                 }
                 break;
-            case 49 :
-                // msc_grammar.g:1:304: END
+            case 47 :
+                // msc_grammar.g:1:288: END
                 {
                 mEND(); 
 
                 }
                 break;
-            case 50 :
-                // msc_grammar.g:1:308: ALL
+            case 48 :
+                // msc_grammar.g:1:292: ALL
                 {
                 mALL(); 
 
                 }
                 break;
-            case 51 :
-                // msc_grammar.g:1:312: WHEN
+            case 49 :
+                // msc_grammar.g:1:296: WHEN
                 {
                 mWHEN(); 
 
                 }
                 break;
-            case 52 :
-                // msc_grammar.g:1:317: OTHERWISE
+            case 50 :
+                // msc_grammar.g:1:301: OTHERWISE
                 {
                 mOTHERWISE(); 
 
                 }
                 break;
-            case 53 :
-                // msc_grammar.g:1:327: LEFTBINDSYMBOL
+            case 51 :
+                // msc_grammar.g:1:311: LEFTBINDSYMBOL
                 {
                 mLEFTBINDSYMBOL(); 
 
                 }
                 break;
-            case 54 :
-                // msc_grammar.g:1:342: RIGHTBINDSYMBOL
+            case 52 :
+                // msc_grammar.g:1:326: RIGHTBINDSYMBOL
                 {
                 mRIGHTBINDSYMBOL(); 
 
                 }
                 break;
-            case 55 :
-                // msc_grammar.g:1:358: NAME
+            case 53 :
+                // msc_grammar.g:1:342: NAME
                 {
                 mNAME(); 
 
                 }
                 break;
-            case 56 :
-                // msc_grammar.g:1:363: CHARACTERSTRING
+            case 54 :
+                // msc_grammar.g:1:347: CHARACTERSTRING
                 {
                 mCHARACTERSTRING(); 
 
                 }
                 break;
-            case 57 :
-                // msc_grammar.g:1:379: WS
+            case 55 :
+                // msc_grammar.g:1:363: WS
                 {
                 mWS(); 
 
@@ -2215,117 +2156,114 @@ public class msc_grammarLexer extends Lexer {
             this.transition = DFA7_transition;
         }
         public String getDescription() {
-            return "()* loopback of 385:15: ( ALPHANUMERIC | OTHERCHARACTER | SPECIAL | FULLSTOP | UNDERLINE | ' ' | ( APOSTROPHE APOSTROPHE ) )*";
+            return "()* loopback of 377:15: ( ALPHANUMERIC | OTHERCHARACTER | SPECIAL | FULLSTOP | UNDERLINE | ' ' | ( APOSTROPHE APOSTROPHE ) )*";
         }
     }
     static final String DFA9_eotS =
-        "\1\uffff\2\41\1\50\1\uffff\12\41\1\uffff\1\41\7\uffff\10\41\4\uffff"+
-        "\3\41\2\uffff\5\41\1\122\1\41\1\126\27\41\1\161\1\165\1\166\1\167"+
-        "\3\41\1\173\1\174\1\41\1\uffff\2\41\1\u0080\1\uffff\2\41\1\u0083"+
-        "\1\41\1\u0085\1\u0086\11\41\1\u0090\5\41\1\165\1\u0086\3\41\1\uffff"+
-        "\3\41\3\uffff\1\41\1\u009e\1\u009f\2\uffff\2\41\1\u00a3\1\uffff"+
-        "\1\u00a4\1\41\1\uffff\1\41\2\uffff\3\41\1\u00ab\5\41\1\uffff\3\41"+
-        "\1\u00b4\2\41\2\u00b7\4\41\1\u00bc\2\uffff\3\41\2\uffff\1\u00c0"+
-        "\1\41\1\u00c2\3\41\1\uffff\1\41\1\u00c7\1\41\1\u00c9\4\41\1\uffff"+
-        "\1\41\1\u00c9\1\uffff\1\41\1\u00d0\2\41\1\uffff\3\41\1\uffff\1\u00d6"+
-        "\1\uffff\1\u00d7\3\41\1\uffff\1\u00db\1\uffff\3\41\1\u00df\2\41"+
-        "\1\uffff\3\41\1\u00e5\1\41\2\uffff\1\u00e7\2\41\1\uffff\1\u00ea"+
-        "\2\41\1\uffff\5\41\1\uffff\1\u00f2\1\uffff\2\41\1\uffff\6\41\1\u00fb"+
-        "\1\uffff\1\u00fc\1\41\1\u00fe\1\41\1\u0100\1\u00fb\2\41\2\uffff"+
-        "\1\u0103\1\uffff\1\u0104\1\uffff\1\u0105\1\41\3\uffff\1\41\1\u0108"+
-        "\1\uffff";
+        "\1\uffff\2\40\1\47\1\uffff\12\40\1\uffff\1\40\6\uffff\10\40\4\uffff"+
+        "\3\40\2\uffff\5\40\1\121\1\40\1\124\27\40\1\157\1\163\1\164\1\165"+
+        "\3\40\1\171\1\172\1\40\1\uffff\2\40\1\uffff\2\40\1\u0080\1\40\1"+
+        "\u0082\1\u0083\11\40\1\u008d\5\40\1\163\1\u0083\3\40\1\uffff\3\40"+
+        "\3\uffff\1\40\1\u009b\1\u009c\2\uffff\2\40\1\u00a0\1\u00a1\1\40"+
+        "\1\uffff\1\40\2\uffff\3\40\1\u00a8\5\40\1\uffff\3\40\1\u00b1\2\40"+
+        "\2\u00b4\4\40\1\u00b9\2\uffff\3\40\2\uffff\1\u00bd\1\40\1\u00bf"+
+        "\3\40\1\uffff\1\40\1\u00c4\1\40\1\u00c6\4\40\1\uffff\1\40\1\u00c6"+
+        "\1\uffff\1\40\1\u00cd\2\40\1\uffff\3\40\1\uffff\1\u00d3\1\uffff"+
+        "\1\u00d4\3\40\1\uffff\1\u00d8\1\uffff\3\40\1\u00dc\2\40\1\uffff"+
+        "\3\40\1\u00e2\1\40\2\uffff\1\u00e4\2\40\1\uffff\1\u00e7\2\40\1\uffff"+
+        "\5\40\1\uffff\1\u00ef\1\uffff\2\40\1\uffff\6\40\1\u00f8\1\uffff"+
+        "\1\u00f9\1\40\1\u00fb\1\40\1\u00fd\1\u00f8\2\40\2\uffff\1\u0100"+
+        "\1\uffff\1\u0101\1\uffff\1\u0102\1\40\3\uffff\1\40\1\u0105\1\uffff";
     static final String DFA9_eofS =
-        "\u0109\uffff";
+        "\u0106\uffff";
     static final String DFA9_minS =
         "\1\11\1\163\1\156\1\75\1\uffff\1\141\1\160\1\151\1\156\1\157\1\151"+
-        "\1\143\2\145\1\141\1\uffff\1\157\7\uffff\1\141\1\145\1\105\1\116"+
+        "\1\143\2\145\1\141\1\uffff\1\157\6\uffff\1\141\1\145\1\105\1\116"+
         "\1\114\1\150\1\110\1\124\4\uffff\1\143\1\144\1\143\2\uffff\1\142"+
         "\1\157\2\164\1\150\1\56\1\155\1\56\1\157\1\165\1\141\1\164\1\154"+
         "\1\164\1\163\1\162\1\141\1\157\1\146\1\157\1\162\1\156\1\145\1\164"+
         "\1\146\1\107\1\104\1\114\1\145\1\105\1\110\4\56\1\145\1\164\1\160"+
-        "\2\56\1\145\1\uffff\1\145\1\164\1\56\1\uffff\1\155\1\156\1\56\1"+
-        "\151\2\56\1\145\1\164\1\166\1\160\1\162\1\143\1\157\1\151\1\143"+
-        "\1\56\1\143\1\141\2\145\1\111\2\56\1\156\1\116\1\105\1\uffff\1\163"+
-        "\1\156\1\157\3\uffff\1\154\2\56\2\uffff\1\162\1\157\1\56\1\uffff"+
-        "\1\56\1\144\1\uffff\1\157\2\uffff\1\162\1\145\1\151\1\56\1\164\1"+
-        "\153\1\162\1\156\1\145\1\uffff\1\151\1\165\1\164\1\56\1\162\1\116"+
-        "\2\56\1\122\1\143\1\163\1\156\1\56\2\uffff\1\167\1\165\1\156\2\uffff"+
-        "\1\56\1\156\1\56\1\155\1\143\1\151\1\uffff\1\164\1\56\1\145\1\56"+
-        "\1\163\1\164\1\162\1\145\1\uffff\1\145\1\56\1\uffff\1\127\1\56\1"+
-        "\164\1\143\1\uffff\1\151\1\164\1\143\1\uffff\1\56\1\uffff\1\56\1"+
-        "\145\1\155\1\151\1\uffff\1\56\1\uffff\1\163\1\151\1\162\1\56\1\156"+
-        "\1\111\1\uffff\1\141\1\165\1\163\1\56\1\145\2\uffff\1\56\1\145\1"+
-        "\155\1\uffff\1\56\1\157\1\145\1\uffff\1\143\1\123\1\156\1\162\1"+
-        "\145\1\uffff\1\56\1\uffff\1\162\1\145\1\uffff\2\156\1\145\1\105"+
-        "\1\143\1\162\1\56\1\uffff\1\56\1\162\1\56\1\164\2\56\2\145\2\uffff"+
-        "\1\56\1\uffff\1\56\1\uffff\1\56\1\156\3\uffff\1\164\1\56\1\uffff";
+        "\2\56\1\145\1\uffff\1\145\1\164\1\uffff\1\155\1\156\1\56\1\151\2"+
+        "\56\1\145\1\164\1\166\1\160\1\162\1\143\1\157\1\151\1\143\1\56\1"+
+        "\143\1\141\2\145\1\111\2\56\1\156\1\116\1\105\1\uffff\1\163\1\156"+
+        "\1\157\3\uffff\1\154\2\56\2\uffff\1\162\1\157\2\56\1\144\1\uffff"+
+        "\1\157\2\uffff\1\162\1\145\1\151\1\56\1\164\1\153\1\162\1\156\1"+
+        "\145\1\uffff\1\151\1\165\1\164\1\56\1\162\1\116\2\56\1\122\1\143"+
+        "\1\163\1\156\1\56\2\uffff\1\167\1\165\1\156\2\uffff\1\56\1\156\1"+
+        "\56\1\155\1\143\1\151\1\uffff\1\164\1\56\1\145\1\56\1\163\1\164"+
+        "\1\162\1\145\1\uffff\1\145\1\56\1\uffff\1\127\1\56\1\164\1\143\1"+
+        "\uffff\1\151\1\164\1\143\1\uffff\1\56\1\uffff\1\56\1\145\1\155\1"+
+        "\151\1\uffff\1\56\1\uffff\1\163\1\151\1\162\1\56\1\156\1\111\1\uffff"+
+        "\1\141\1\165\1\163\1\56\1\145\2\uffff\1\56\1\145\1\155\1\uffff\1"+
+        "\56\1\157\1\145\1\uffff\1\143\1\123\1\156\1\162\1\145\1\uffff\1"+
+        "\56\1\uffff\1\162\1\145\1\uffff\2\156\1\145\1\105\1\143\1\162\1"+
+        "\56\1\uffff\1\56\1\162\1\56\1\164\2\56\2\145\2\uffff\1\56\1\uffff"+
+        "\1\56\1\uffff\1\56\1\156\3\uffff\1\164\1\56\1\uffff";
     static final String DFA9_maxS =
         "\1\172\1\163\1\170\1\75\1\uffff\1\157\1\165\1\157\1\156\1\162\1"+
-        "\151\1\154\1\171\1\154\1\162\1\uffff\1\162\7\uffff\1\141\1\145\1"+
+        "\151\1\154\1\171\1\154\1\162\1\uffff\1\162\6\uffff\1\141\1\145\1"+
         "\105\1\116\1\114\1\150\1\110\1\124\4\uffff\1\143\1\166\1\143\2\uffff"+
         "\1\142\1\163\2\164\1\150\1\172\1\155\1\172\1\157\1\165\1\141\3\164"+
         "\1\163\1\162\2\157\1\147\1\157\1\162\1\156\1\145\1\164\1\146\1\107"+
         "\1\104\1\114\1\145\1\105\1\110\4\172\1\145\1\164\1\160\2\172\1\145"+
-        "\1\uffff\1\145\1\164\1\172\1\uffff\1\155\1\156\1\172\1\151\2\172"+
-        "\1\145\1\164\1\166\1\160\1\162\1\143\1\157\1\151\1\143\1\172\1\144"+
-        "\1\141\2\145\1\111\2\172\1\156\1\116\1\105\1\uffff\1\163\1\156\1"+
-        "\157\3\uffff\1\154\2\172\2\uffff\1\162\1\157\1\172\1\uffff\1\172"+
-        "\1\144\1\uffff\1\157\2\uffff\1\162\1\145\1\151\1\172\1\164\1\153"+
-        "\1\162\1\156\1\145\1\uffff\1\151\1\165\1\164\1\172\1\162\1\116\2"+
-        "\172\1\122\1\143\1\163\1\156\1\172\2\uffff\1\167\1\165\1\156\2\uffff"+
-        "\1\172\1\156\1\172\1\155\1\143\1\151\1\uffff\1\164\1\172\1\145\1"+
-        "\172\1\163\1\164\1\162\1\145\1\uffff\1\145\1\172\1\uffff\1\127\1"+
-        "\172\1\164\1\143\1\uffff\1\151\1\164\1\143\1\uffff\1\172\1\uffff"+
-        "\1\172\1\145\1\155\1\151\1\uffff\1\172\1\uffff\1\163\1\151\1\162"+
-        "\1\172\1\156\1\111\1\uffff\1\141\1\165\1\163\1\172\1\145\2\uffff"+
-        "\1\172\1\145\1\155\1\uffff\1\172\1\157\1\145\1\uffff\1\143\1\123"+
-        "\1\156\1\162\1\145\1\uffff\1\172\1\uffff\1\162\1\145\1\uffff\2\156"+
-        "\1\145\1\105\1\143\1\162\1\172\1\uffff\1\172\1\162\1\172\1\164\2"+
-        "\172\2\145\2\uffff\1\172\1\uffff\1\172\1\uffff\1\172\1\156\3\uffff"+
-        "\1\164\1\172\1\uffff";
+        "\1\uffff\1\145\1\164\1\uffff\1\155\1\156\1\172\1\151\2\172\1\145"+
+        "\1\164\1\166\1\160\1\162\1\143\1\157\1\151\1\143\1\172\1\144\1\141"+
+        "\2\145\1\111\2\172\1\156\1\116\1\105\1\uffff\1\163\1\156\1\157\3"+
+        "\uffff\1\154\2\172\2\uffff\1\162\1\157\2\172\1\144\1\uffff\1\157"+
+        "\2\uffff\1\162\1\145\1\151\1\172\1\164\1\153\1\162\1\156\1\145\1"+
+        "\uffff\1\151\1\165\1\164\1\172\1\162\1\116\2\172\1\122\1\143\1\163"+
+        "\1\156\1\172\2\uffff\1\167\1\165\1\156\2\uffff\1\172\1\156\1\172"+
+        "\1\155\1\143\1\151\1\uffff\1\164\1\172\1\145\1\172\1\163\1\164\1"+
+        "\162\1\145\1\uffff\1\145\1\172\1\uffff\1\127\1\172\1\164\1\143\1"+
+        "\uffff\1\151\1\164\1\143\1\uffff\1\172\1\uffff\1\172\1\145\1\155"+
+        "\1\151\1\uffff\1\172\1\uffff\1\163\1\151\1\162\1\172\1\156\1\111"+
+        "\1\uffff\1\141\1\165\1\163\1\172\1\145\2\uffff\1\172\1\145\1\155"+
+        "\1\uffff\1\172\1\157\1\145\1\uffff\1\143\1\123\1\156\1\162\1\145"+
+        "\1\uffff\1\172\1\uffff\1\162\1\145\1\uffff\2\156\1\145\1\105\1\143"+
+        "\1\162\1\172\1\uffff\1\172\1\162\1\172\1\164\2\172\2\145\2\uffff"+
+        "\1\172\1\uffff\1\172\1\uffff\1\172\1\156\3\uffff\1\164\1\172\1\uffff";
     static final String DFA9_acceptS =
-        "\4\uffff\1\4\12\uffff\1\26\1\uffff\1\35\1\36\1\40\1\42\1\43\1\46"+
-        "\1\47\10\uffff\1\66\1\67\1\70\1\71\3\uffff\1\65\1\3\51\uffff\1\7"+
-        "\3\uffff\1\10\32\uffff\1\1\3\uffff\1\61\1\14\1\32\3\uffff\1\6\1"+
-        "\31\3\uffff\1\37\2\uffff\1\15\1\uffff\1\33\1\62\11\uffff\1\34\15"+
-        "\uffff\1\12\1\30\3\uffff\1\21\1\11\6\uffff\1\44\10\uffff\1\52\2"+
-        "\uffff\1\63\4\uffff\1\5\3\uffff\1\13\1\uffff\1\54\4\uffff\1\23\1"+
-        "\uffff\1\60\6\uffff\1\2\5\uffff\1\16\1\22\3\uffff\1\53\3\uffff\1"+
-        "\41\5\uffff\1\51\1\uffff\1\25\2\uffff\1\24\7\uffff\1\17\10\uffff"+
-        "\1\64\1\50\1\uffff\1\27\1\uffff\1\57\2\uffff\1\45\1\55\1\20\2\uffff"+
-        "\1\56";
+        "\4\uffff\1\4\12\uffff\1\26\1\uffff\1\35\1\36\1\40\1\41\1\46\1\47"+
+        "\10\uffff\1\64\1\65\1\66\1\67\3\uffff\1\63\1\3\51\uffff\1\7\2\uffff"+
+        "\1\10\32\uffff\1\1\3\uffff\1\57\1\14\1\32\3\uffff\1\6\1\31\5\uffff"+
+        "\1\15\1\uffff\1\33\1\60\11\uffff\1\34\15\uffff\1\12\1\30\3\uffff"+
+        "\1\21\1\11\6\uffff\1\42\10\uffff\1\50\2\uffff\1\61\4\uffff\1\5\3"+
+        "\uffff\1\13\1\uffff\1\52\4\uffff\1\23\1\uffff\1\56\6\uffff\1\2\5"+
+        "\uffff\1\16\1\22\3\uffff\1\51\3\uffff\1\37\5\uffff\1\45\1\uffff"+
+        "\1\25\2\uffff\1\24\7\uffff\1\17\10\uffff\1\62\1\44\1\uffff\1\27"+
+        "\1\uffff\1\55\2\uffff\1\43\1\53\1\20\2\uffff\1\54";
     static final String DFA9_specialS =
-        "\u0109\uffff}>";
+        "\u0106\uffff}>";
     static final String[] DFA9_transitionS = {
-            "\2\43\2\uffff\1\43\22\uffff\1\43\1\uffff\1\23\4\uffff\1\42\1"+
-            "\24\1\25\2\uffff\1\4\1\uffff\1\41\1\uffff\12\41\1\3\1\17\1\21"+
-            "\1\40\1\22\2\uffff\1\34\1\32\2\41\1\33\11\41\1\37\7\41\1\36"+
-            "\3\41\1\26\1\uffff\1\27\1\uffff\1\41\1\uffff\1\13\1\15\1\20"+
-            "\1\41\1\2\1\11\1\30\1\41\1\10\2\41\1\5\1\1\1\41\1\6\1\16\1\41"+
-            "\1\31\1\14\1\7\1\41\1\12\1\35\3\41",
-            "\1\44",
-            "\1\45\11\uffff\1\46",
-            "\1\47",
+            "\2\42\2\uffff\1\42\22\uffff\1\42\6\uffff\1\41\1\23\1\24\2\uffff"+
+            "\1\4\1\uffff\1\40\1\uffff\12\40\1\3\1\17\1\21\1\37\1\22\2\uffff"+
+            "\1\33\1\31\2\40\1\32\11\40\1\36\7\40\1\35\3\40\1\25\1\uffff"+
+            "\1\26\1\uffff\1\40\1\uffff\1\13\1\15\1\20\1\40\1\2\1\11\1\27"+
+            "\1\40\1\10\2\40\1\5\1\1\1\40\1\6\1\16\1\40\1\30\1\14\1\7\1\40"+
+            "\1\12\1\34\3\40",
+            "\1\43",
+            "\1\44\11\uffff\1\45",
+            "\1\46",
             "",
-            "\1\51\15\uffff\1\52",
-            "\1\54\3\uffff\1\55\1\53",
-            "\1\57\5\uffff\1\56",
-            "\1\60",
-            "\1\62\2\uffff\1\61",
-            "\1\63",
-            "\1\64\2\uffff\1\66\5\uffff\1\65",
-            "\1\70\16\uffff\1\71\4\uffff\1\67",
-            "\1\73\6\uffff\1\72",
-            "\1\75\20\uffff\1\74",
+            "\1\50\15\uffff\1\51",
+            "\1\53\3\uffff\1\54\1\52",
+            "\1\56\5\uffff\1\55",
+            "\1\57",
+            "\1\61\2\uffff\1\60",
+            "\1\62",
+            "\1\63\2\uffff\1\65\5\uffff\1\64",
+            "\1\67\16\uffff\1\70\4\uffff\1\66",
+            "\1\72\6\uffff\1\71",
+            "\1\74\20\uffff\1\73",
             "",
-            "\1\76\2\uffff\1\77",
-            "",
-            "",
+            "\1\75\2\uffff\1\76",
             "",
             "",
             "",
             "",
             "",
+            "",
+            "\1\77",
             "\1\100",
             "\1\101",
             "\1\102",
@@ -2333,36 +2271,37 @@ public class msc_grammarLexer extends Lexer {
             "\1\104",
             "\1\105",
             "\1\106",
+            "",
+            "",
+            "",
+            "",
             "\1\107",
+            "\1\110\21\uffff\1\111",
+            "\1\112",
             "",
             "",
-            "",
-            "",
-            "\1\110",
-            "\1\111\21\uffff\1\112",
             "\1\113",
-            "",
-            "",
-            "\1\114",
-            "\1\116\3\uffff\1\115",
+            "\1\115\3\uffff\1\114",
+            "\1\116",
             "\1\117",
             "\1\120",
-            "\1\121",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\1\123",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\5\41"+
-            "\1\125\14\41\1\124\7\41",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\122",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\22\40"+
+            "\1\123\7\40",
+            "\1\125",
+            "\1\126",
             "\1\127",
             "\1\130",
-            "\1\131",
-            "\1\132",
-            "\1\134\7\uffff\1\133",
+            "\1\132\7\uffff\1\131",
+            "\1\133",
+            "\1\134",
             "\1\135",
-            "\1\136",
-            "\1\137",
-            "\1\141\15\uffff\1\140",
-            "\1\142",
-            "\1\143\1\144",
+            "\1\137\15\uffff\1\136",
+            "\1\140",
+            "\1\141\1\142",
+            "\1\143",
+            "\1\144",
             "\1\145",
             "\1\146",
             "\1\147",
@@ -2373,203 +2312,199 @@ public class msc_grammarLexer extends Lexer {
             "\1\154",
             "\1\155",
             "\1\156",
-            "\1\157",
-            "\1\160",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\2\41"+
-            "\1\164\5\41\1\163\3\41\1\162\15\41",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\2\40"+
+            "\1\162\5\40\1\161\3\40\1\160\15\40",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\166",
+            "\1\167",
             "\1\170",
-            "\1\171",
-            "\1\172",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\173",
+            "",
+            "\1\174",
             "\1\175",
             "",
             "\1\176",
             "\1\177",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u0081",
-            "\1\u0082",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u0084",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u0085",
+            "\1\u0086",
             "\1\u0087",
             "\1\u0088",
             "\1\u0089",
             "\1\u008a",
             "\1\u008b",
             "\1\u008c",
-            "\1\u008d",
-            "\1\u008e",
-            "\1\u008f",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\1\u0092\1\u0091",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u008f\1\u008e",
+            "\1\u0090",
+            "\1\u0091",
+            "\1\u0092",
             "\1\u0093",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u0094",
             "\1\u0095",
             "\1\u0096",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "",
             "\1\u0097",
             "\1\u0098",
             "\1\u0099",
             "",
-            "\1\u009a",
-            "\1\u009b",
-            "\1\u009c",
             "",
+            "",
+            "\1\u009a",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "",
             "",
             "\1\u009d",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u009e",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\1\u009f"+
+            "\31\40",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u00a2",
+            "",
+            "\1\u00a3",
             "",
             "",
-            "\1\u00a0",
-            "\1\u00a1",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\1\u00a2"+
-            "\31\41",
-            "",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u00a4",
             "\1\u00a5",
-            "",
             "\1\u00a6",
-            "",
-            "",
-            "\1\u00a7",
-            "\1\u00a8",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\23\40"+
+            "\1\u00a7\6\40",
             "\1\u00a9",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\23\41"+
-            "\1\u00aa\6\41",
+            "\1\u00aa",
+            "\1\u00ab",
             "\1\u00ac",
             "\1\u00ad",
+            "",
             "\1\u00ae",
             "\1\u00af",
             "\1\u00b0",
-            "",
-            "\1\u00b1",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u00b2",
             "\1\u00b3",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u00b5",
             "\1\u00b6",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u00b7",
             "\1\u00b8",
-            "\1\u00b9",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "",
+            "",
             "\1\u00ba",
             "\1\u00bb",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u00bc",
             "",
             "",
-            "\1\u00bd",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u00be",
-            "\1\u00bf",
-            "",
-            "",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u00c0",
             "\1\u00c1",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u00c2",
+            "",
             "\1\u00c3",
-            "\1\u00c4",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u00c5",
-            "",
-            "\1\u00c6",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u00c7",
             "\1\u00c8",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u00c9",
             "\1\u00ca",
+            "",
             "\1\u00cb",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "",
             "\1\u00cc",
-            "\1\u00cd",
-            "",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u00ce",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "",
             "\1\u00cf",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "",
+            "\1\u00d0",
             "\1\u00d1",
             "\1\u00d2",
             "",
-            "\1\u00d3",
-            "\1\u00d4",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u00d5",
+            "\1\u00d6",
+            "\1\u00d7",
             "",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\1\u00d8",
             "\1\u00d9",
             "\1\u00da",
-            "",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "",
-            "\1\u00dc",
+            "\1\u00db",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u00dd",
             "\1\u00de",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "",
+            "\1\u00df",
             "\1\u00e0",
             "\1\u00e1",
-            "",
-            "\1\u00e2",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u00e3",
-            "\1\u00e4",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "",
+            "",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u00e5",
             "\1\u00e6",
             "",
-            "",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u00e8",
             "\1\u00e9",
             "",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u00ea",
             "\1\u00eb",
             "\1\u00ec",
-            "",
             "\1\u00ed",
             "\1\u00ee",
-            "\1\u00ef",
+            "",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "",
             "\1\u00f0",
             "\1\u00f1",
             "",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "",
+            "\1\u00f2",
             "\1\u00f3",
             "\1\u00f4",
-            "",
             "\1\u00f5",
             "\1\u00f6",
             "\1\u00f7",
-            "\1\u00f8",
-            "\1\u00f9",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u00fa",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\1\u00fd",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u00fc",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u00fe",
             "\1\u00ff",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\1\u0101",
-            "\1\u0102",
             "",
             "",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\1\u0106",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u0103",
             "",
             "",
             "",
-            "\1\u0107",
-            "\1\41\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u0104",
+            "\1\40\1\uffff\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             ""
     };
 
@@ -2603,7 +2538,7 @@ public class msc_grammarLexer extends Lexer {
             this.transition = DFA9_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | BEGIN | END | ALL | WHEN | OTHERWISE | LEFTBINDSYMBOL | RIGHTBINDSYMBOL | NAME | CHARACTERSTRING | WS );";
+            return "1:1: Tokens : ( T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | BEGIN | END | ALL | WHEN | OTHERWISE | LEFTBINDSYMBOL | RIGHTBINDSYMBOL | NAME | CHARACTERSTRING | WS );";
         }
     }
  

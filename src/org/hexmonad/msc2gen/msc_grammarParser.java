@@ -1,4 +1,4 @@
-// $ANTLR 3.1.3 Mar 18, 2009 10:09:25 msc_grammar.g 2014-03-12 23:18:30
+// $ANTLR 3.1.3 Mar 18, 2009 10:09:25 msc_grammar.g 2014-03-16 14:12:26
 package org.hexmonad.msc2gen;
 
 import org.antlr.runtime.*;
@@ -11,11 +11,11 @@ import org.antlr.runtime.tree.*;
 
 public class msc_grammarParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "MSC", "MSCHead", "MSCBody", "Instance", "InstanceList", "INameList", "ParameterList", "Label", "MSGIn", "MSGOut", "FullMsg", "IncompleteMsg", "Action", "Condition", "SetCond", "GuardCond", "ElseCond", "Seq", "Alt", "Par", "Loop", "LoopBoundary", "Opt", "Exc", "Coregion", "Before", "After", "Ref", "Empty", "NodeExpr", "Start", "Create", "Terminate", "StartTimer", "StopTimer", "Timeout", "MsgGate", "ALL", "WHEN", "OTHERWISE", "BEGIN", "END", "NAME", "CHARACTERSTRING", "LEFTBINDSYMBOL", "RIGHTBINDSYMBOL", "LETTER", "DECIMALDIGIT", "UNDERLINE", "FULLSTOP", "APOSTROPHE", "ALPHANUMERIC", "OTHERCHARACTER", "SPECIAL", "WS", "'msc'", "'endmsc'", "':'", "','", "'label'", "'out'", "'to'", "'in'", "'from'", "'lost'", "'found'", "'env'", "'via'", "'action'", "'instance'", "'endinstance'", "'inst'", "'system'", "'block'", "'process'", "'service'", "';'", "'condition'", "'loop'", "'opt'", "'exc'", "'alt'", "'par'", "'<'", "'>'", "'inf'", "'\"'", "'create'", "'('", "')'", "'stop'", "'starttimer'", "'['", "']'", "'stoptimer'", "'timeout'", "'gate'", "'before'", "'after'", "'concurrent'", "'endconcurrent'", "'reference'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "MSC", "MSCHead", "MSCBody", "Instance", "InstanceList", "INameList", "ParameterList", "Label", "MSGIn", "MSGOut", "FullMsg", "IncompleteMsg", "Action", "Condition", "SetCond", "GuardCond", "ElseCond", "Seq", "Alt", "Par", "Loop", "Bounds", "Opt", "Exc", "Coregion", "Before", "After", "Ref", "Empty", "NodeExpr", "Start", "Create", "Terminate", "Timer", "MsgGate", "ALL", "WHEN", "OTHERWISE", "BEGIN", "END", "NAME", "CHARACTERSTRING", "LEFTBINDSYMBOL", "RIGHTBINDSYMBOL", "LETTER", "DECIMALDIGIT", "UNDERLINE", "FULLSTOP", "APOSTROPHE", "ALPHANUMERIC", "OTHERCHARACTER", "SPECIAL", "WS", "'msc'", "'endmsc'", "':'", "','", "'label'", "'out'", "'to'", "'in'", "'from'", "'lost'", "'found'", "'env'", "'via'", "'action'", "'instance'", "'endinstance'", "'inst'", "'system'", "'block'", "'process'", "'service'", "';'", "'condition'", "'loop'", "'opt'", "'exc'", "'alt'", "'par'", "'<'", "'>'", "'create'", "'('", "')'", "'stop'", "'starttimer'", "'stoptimer'", "'timeout'", "'['", "']'", "'gate'", "'before'", "'after'", "'concurrent'", "'endconcurrent'", "'reference'"
     };
     public static final int Condition=17;
-    public static final int MsgGate=40;
-    public static final int LETTER=50;
+    public static final int MsgGate=38;
+    public static final int LETTER=48;
     public static final int Before=29;
     public static final int ElseCond=20;
     public static final int After=30;
@@ -26,19 +26,20 @@ public class msc_grammarParser extends Parser {
     public static final int T__94=94;
     public static final int T__91=91;
     public static final int FullMsg=14;
-    public static final int NAME=46;
     public static final int T__92=92;
+    public static final int NAME=44;
     public static final int T__90=90;
     public static final int MSCHead=5;
-    public static final int BEGIN=44;
-    public static final int FULLSTOP=53;
+    public static final int Bounds=25;
+    public static final int BEGIN=42;
+    public static final int FULLSTOP=51;
     public static final int MSGIn=12;
-    public static final int APOSTROPHE=54;
+    public static final int APOSTROPHE=52;
     public static final int T__99=99;
     public static final int T__98=98;
     public static final int T__97=97;
     public static final int T__96=96;
-    public static final int OTHERWISE=43;
+    public static final int OTHERWISE=41;
     public static final int T__95=95;
     public static final int T__80=80;
     public static final int T__81=81;
@@ -53,17 +54,18 @@ public class msc_grammarParser extends Parser {
     public static final int T__86=86;
     public static final int T__89=89;
     public static final int T__88=88;
-    public static final int UNDERLINE=52;
+    public static final int UNDERLINE=50;
     public static final int MSGOut=13;
     public static final int NodeExpr=33;
-    public static final int WS=58;
+    public static final int WS=56;
     public static final int T__71=71;
     public static final int T__72=72;
-    public static final int SPECIAL=57;
+    public static final int SPECIAL=55;
     public static final int T__70=70;
     public static final int Par=23;
-    public static final int END=45;
+    public static final int Timer=37;
     public static final int T__76=76;
+    public static final int END=43;
     public static final int T__75=75;
     public static final int T__74=74;
     public static final int Label=11;
@@ -75,7 +77,6 @@ public class msc_grammarParser extends Parser {
     public static final int T__68=68;
     public static final int T__69=69;
     public static final int T__66=66;
-    public static final int Timeout=39;
     public static final int T__67=67;
     public static final int Alt=22;
     public static final int T__64=64;
@@ -83,23 +84,19 @@ public class msc_grammarParser extends Parser {
     public static final int Opt=26;
     public static final int T__62=62;
     public static final int T__63=63;
-    public static final int LEFTBINDSYMBOL=48;
-    public static final int StopTimer=38;
+    public static final int LEFTBINDSYMBOL=46;
     public static final int T__61=61;
-    public static final int RIGHTBINDSYMBOL=49;
+    public static final int RIGHTBINDSYMBOL=47;
     public static final int T__60=60;
-    public static final int ALPHANUMERIC=55;
+    public static final int T__57=57;
+    public static final int T__58=58;
+    public static final int ALPHANUMERIC=53;
     public static final int T__59=59;
-    public static final int T__103=103;
-    public static final int T__104=104;
     public static final int MSC=4;
-    public static final int ALL=41;
-    public static final int T__105=105;
+    public static final int ALL=39;
     public static final int InstanceList=8;
-    public static final int LoopBoundary=25;
     public static final int Instance=7;
     public static final int Start=34;
-    public static final int T__102=102;
     public static final int T__101=101;
     public static final int IncompleteMsg=15;
     public static final int T__100=100;
@@ -108,14 +105,13 @@ public class msc_grammarParser extends Parser {
     public static final int Seq=21;
     public static final int Ref=31;
     public static final int Terminate=36;
-    public static final int WHEN=42;
+    public static final int WHEN=40;
     public static final int GuardCond=19;
-    public static final int CHARACTERSTRING=47;
     public static final int ParameterList=10;
-    public static final int DECIMALDIGIT=51;
+    public static final int CHARACTERSTRING=45;
+    public static final int DECIMALDIGIT=49;
     public static final int SetCond=18;
-    public static final int StartTimer=37;
-    public static final int OTHERCHARACTER=56;
+    public static final int OTHERCHARACTER=54;
 
     // delegates
     // delegators
@@ -148,7 +144,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "msc"
-    // msc_grammar.g:48:1: msc : messageSequenceChart ;
+    // msc_grammar.g:46:1: msc : messageSequenceChart ;
     public final msc_grammarParser.msc_return msc() throws RecognitionException {
         msc_grammarParser.msc_return retval = new msc_grammarParser.msc_return();
         retval.start = input.LT(1);
@@ -160,12 +156,12 @@ public class msc_grammarParser extends Parser {
 
 
         try {
-            // msc_grammar.g:48:6: ( messageSequenceChart )
-            // msc_grammar.g:48:8: messageSequenceChart
+            // msc_grammar.g:46:6: ( messageSequenceChart )
+            // msc_grammar.g:46:8: messageSequenceChart
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_messageSequenceChart_in_msc182);
+            pushFollow(FOLLOW_messageSequenceChart_in_msc174);
             messageSequenceChart1=messageSequenceChart();
 
             state._fsp--;
@@ -198,7 +194,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "messageSequenceChart"
-    // msc_grammar.g:51:1: messageSequenceChart : 'msc' mscHead body 'endmsc' end -> ^( MSC mscHead body ) ;
+    // msc_grammar.g:49:1: messageSequenceChart : 'msc' mscHead body 'endmsc' end -> ^( MSC mscHead body ) ;
     public final msc_grammarParser.messageSequenceChart_return messageSequenceChart() throws RecognitionException {
         msc_grammarParser.messageSequenceChart_return retval = new msc_grammarParser.messageSequenceChart_return();
         retval.start = input.LT(1);
@@ -216,34 +212,34 @@ public class msc_grammarParser extends Parser {
 
         CommonTree string_literal2_tree=null;
         CommonTree string_literal5_tree=null;
-        RewriteRuleTokenStream stream_59=new RewriteRuleTokenStream(adaptor,"token 59");
-        RewriteRuleTokenStream stream_60=new RewriteRuleTokenStream(adaptor,"token 60");
+        RewriteRuleTokenStream stream_58=new RewriteRuleTokenStream(adaptor,"token 58");
+        RewriteRuleTokenStream stream_57=new RewriteRuleTokenStream(adaptor,"token 57");
         RewriteRuleSubtreeStream stream_mscHead=new RewriteRuleSubtreeStream(adaptor,"rule mscHead");
         RewriteRuleSubtreeStream stream_body=new RewriteRuleSubtreeStream(adaptor,"rule body");
         RewriteRuleSubtreeStream stream_end=new RewriteRuleSubtreeStream(adaptor,"rule end");
         try {
-            // msc_grammar.g:52:2: ( 'msc' mscHead body 'endmsc' end -> ^( MSC mscHead body ) )
-            // msc_grammar.g:52:4: 'msc' mscHead body 'endmsc' end
+            // msc_grammar.g:50:2: ( 'msc' mscHead body 'endmsc' end -> ^( MSC mscHead body ) )
+            // msc_grammar.g:50:4: 'msc' mscHead body 'endmsc' end
             {
-            string_literal2=(Token)match(input,59,FOLLOW_59_in_messageSequenceChart194);  
-            stream_59.add(string_literal2);
+            string_literal2=(Token)match(input,57,FOLLOW_57_in_messageSequenceChart186);  
+            stream_57.add(string_literal2);
 
-            pushFollow(FOLLOW_mscHead_in_messageSequenceChart196);
+            pushFollow(FOLLOW_mscHead_in_messageSequenceChart188);
             mscHead3=mscHead();
 
             state._fsp--;
 
             stream_mscHead.add(mscHead3.getTree());
-            pushFollow(FOLLOW_body_in_messageSequenceChart198);
+            pushFollow(FOLLOW_body_in_messageSequenceChart190);
             body4=body();
 
             state._fsp--;
 
             stream_body.add(body4.getTree());
-            string_literal5=(Token)match(input,60,FOLLOW_60_in_messageSequenceChart200);  
-            stream_60.add(string_literal5);
+            string_literal5=(Token)match(input,58,FOLLOW_58_in_messageSequenceChart192);  
+            stream_58.add(string_literal5);
 
-            pushFollow(FOLLOW_end_in_messageSequenceChart202);
+            pushFollow(FOLLOW_end_in_messageSequenceChart194);
             end6=end();
 
             state._fsp--;
@@ -262,9 +258,9 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 52:36: -> ^( MSC mscHead body )
+            // 50:36: -> ^( MSC mscHead body )
             {
-                // msc_grammar.g:52:39: ^( MSC mscHead body )
+                // msc_grammar.g:50:39: ^( MSC mscHead body )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(MSC, "MSC"), root_1);
@@ -304,7 +300,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "mscHead"
-    // msc_grammar.g:55:1: mscHead : mscName end ( mscInterface )? -> ^( MSCHead mscName ( mscInterface )? ) ;
+    // msc_grammar.g:53:1: mscHead : mscName end ( mscInterface )? -> ^( MSCHead mscName ( mscInterface )? ) ;
     public final msc_grammarParser.mscHead_return mscHead() throws RecognitionException {
         msc_grammarParser.mscHead_return retval = new msc_grammarParser.mscHead_return();
         retval.start = input.LT(1);
@@ -322,33 +318,33 @@ public class msc_grammarParser extends Parser {
         RewriteRuleSubtreeStream stream_mscName=new RewriteRuleSubtreeStream(adaptor,"rule mscName");
         RewriteRuleSubtreeStream stream_end=new RewriteRuleSubtreeStream(adaptor,"rule end");
         try {
-            // msc_grammar.g:55:9: ( mscName end ( mscInterface )? -> ^( MSCHead mscName ( mscInterface )? ) )
-            // msc_grammar.g:55:11: mscName end ( mscInterface )?
+            // msc_grammar.g:53:9: ( mscName end ( mscInterface )? -> ^( MSCHead mscName ( mscInterface )? ) )
+            // msc_grammar.g:53:11: mscName end ( mscInterface )?
             {
-            pushFollow(FOLLOW_mscName_in_mscHead225);
+            pushFollow(FOLLOW_mscName_in_mscHead217);
             mscName7=mscName();
 
             state._fsp--;
 
             stream_mscName.add(mscName7.getTree());
-            pushFollow(FOLLOW_end_in_mscHead227);
+            pushFollow(FOLLOW_end_in_mscHead219);
             end8=end();
 
             state._fsp--;
 
             stream_end.add(end8.getTree());
-            // msc_grammar.g:55:23: ( mscInterface )?
+            // msc_grammar.g:53:23: ( mscInterface )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0==75||LA1_0==100) ) {
+            if ( (LA1_0==73||LA1_0==96) ) {
                 alt1=1;
             }
             switch (alt1) {
                 case 1 :
-                    // msc_grammar.g:55:25: mscInterface
+                    // msc_grammar.g:53:25: mscInterface
                     {
-                    pushFollow(FOLLOW_mscInterface_in_mscHead231);
+                    pushFollow(FOLLOW_mscInterface_in_mscHead223);
                     mscInterface9=mscInterface();
 
                     state._fsp--;
@@ -373,15 +369,15 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 55:41: -> ^( MSCHead mscName ( mscInterface )? )
+            // 53:41: -> ^( MSCHead mscName ( mscInterface )? )
             {
-                // msc_grammar.g:55:44: ^( MSCHead mscName ( mscInterface )? )
+                // msc_grammar.g:53:44: ^( MSCHead mscName ( mscInterface )? )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(MSCHead, "MSCHead"), root_1);
 
                 adaptor.addChild(root_1, stream_mscName.nextTree());
-                // msc_grammar.g:55:63: ( mscInterface )?
+                // msc_grammar.g:53:63: ( mscInterface )?
                 if ( stream_mscInterface.hasNext() ) {
                     adaptor.addChild(root_1, stream_mscInterface.nextTree());
 
@@ -420,7 +416,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "body"
-    // msc_grammar.g:58:1: body : ( mscBody ) ;
+    // msc_grammar.g:56:1: body : ( mscBody ) ;
     public final msc_grammarParser.body_return body() throws RecognitionException {
         msc_grammarParser.body_return retval = new msc_grammarParser.body_return();
         retval.start = input.LT(1);
@@ -432,15 +428,15 @@ public class msc_grammarParser extends Parser {
 
 
         try {
-            // msc_grammar.g:58:7: ( ( mscBody ) )
-            // msc_grammar.g:58:9: ( mscBody )
+            // msc_grammar.g:56:7: ( ( mscBody ) )
+            // msc_grammar.g:56:9: ( mscBody )
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // msc_grammar.g:58:9: ( mscBody )
-            // msc_grammar.g:58:11: mscBody
+            // msc_grammar.g:56:9: ( mscBody )
+            // msc_grammar.g:56:11: mscBody
             {
-            pushFollow(FOLLOW_mscBody_in_body261);
+            pushFollow(FOLLOW_mscBody_in_body253);
             mscBody10=mscBody();
 
             state._fsp--;
@@ -476,7 +472,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "mscBody"
-    // msc_grammar.g:61:1: mscBody : ( mscStatement )* -> ^( MSCBody ( mscStatement )* ) ;
+    // msc_grammar.g:59:1: mscBody : ( mscStatement )* -> ^( MSCBody ( mscStatement )* ) ;
     public final msc_grammarParser.mscBody_return mscBody() throws RecognitionException {
         msc_grammarParser.mscBody_return retval = new msc_grammarParser.mscBody_return();
         retval.start = input.LT(1);
@@ -488,10 +484,10 @@ public class msc_grammarParser extends Parser {
 
         RewriteRuleSubtreeStream stream_mscStatement=new RewriteRuleSubtreeStream(adaptor,"rule mscStatement");
         try {
-            // msc_grammar.g:61:9: ( ( mscStatement )* -> ^( MSCBody ( mscStatement )* ) )
-            // msc_grammar.g:61:11: ( mscStatement )*
+            // msc_grammar.g:59:9: ( ( mscStatement )* -> ^( MSCBody ( mscStatement )* ) )
+            // msc_grammar.g:59:11: ( mscStatement )*
             {
-            // msc_grammar.g:61:11: ( mscStatement )*
+            // msc_grammar.g:59:11: ( mscStatement )*
             loop2:
             do {
                 int alt2=2;
@@ -504,9 +500,9 @@ public class msc_grammarParser extends Parser {
 
                 switch (alt2) {
             	case 1 :
-            	    // msc_grammar.g:61:11: mscStatement
+            	    // msc_grammar.g:59:11: mscStatement
             	    {
-            	    pushFollow(FOLLOW_mscStatement_in_mscBody274);
+            	    pushFollow(FOLLOW_mscStatement_in_mscBody266);
             	    mscStatement11=mscStatement();
 
             	    state._fsp--;
@@ -534,14 +530,14 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 61:25: -> ^( MSCBody ( mscStatement )* )
+            // 59:25: -> ^( MSCBody ( mscStatement )* )
             {
-                // msc_grammar.g:61:28: ^( MSCBody ( mscStatement )* )
+                // msc_grammar.g:59:28: ^( MSCBody ( mscStatement )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(MSCBody, "MSCBody"), root_1);
 
-                // msc_grammar.g:61:39: ( mscStatement )*
+                // msc_grammar.g:59:39: ( mscStatement )*
                 while ( stream_mscStatement.hasNext() ) {
                     adaptor.addChild(root_1, stream_mscStatement.nextTree());
 
@@ -580,7 +576,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "mscStatement"
-    // msc_grammar.g:64:1: mscStatement : eventDefinition ;
+    // msc_grammar.g:62:1: mscStatement : eventDefinition ;
     public final msc_grammarParser.mscStatement_return mscStatement() throws RecognitionException {
         msc_grammarParser.mscStatement_return retval = new msc_grammarParser.mscStatement_return();
         retval.start = input.LT(1);
@@ -592,12 +588,12 @@ public class msc_grammarParser extends Parser {
 
 
         try {
-            // msc_grammar.g:65:2: ( eventDefinition )
-            // msc_grammar.g:65:4: eventDefinition
+            // msc_grammar.g:63:2: ( eventDefinition )
+            // msc_grammar.g:63:4: eventDefinition
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_eventDefinition_in_mscStatement299);
+            pushFollow(FOLLOW_eventDefinition_in_mscStatement291);
             eventDefinition12=eventDefinition();
 
             state._fsp--;
@@ -630,7 +626,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "eventDefinition"
-    // msc_grammar.g:68:1: eventDefinition : ( instanceName ':' instanceEventList -> ^( Instance instanceName instanceEventList ) | instanceNameList ':' multiInstanceEventList -> ^( InstanceList instanceNameList multiInstanceEventList ) );
+    // msc_grammar.g:66:1: eventDefinition : ( instanceName ':' instanceEventList -> ^( Instance instanceName instanceEventList ) | instanceNameList ':' multiInstanceEventList -> ^( InstanceList instanceNameList multiInstanceEventList ) );
     public final msc_grammarParser.eventDefinition_return eventDefinition() throws RecognitionException {
         msc_grammarParser.eventDefinition_return retval = new msc_grammarParser.eventDefinition_return();
         retval.start = input.LT(1);
@@ -650,29 +646,26 @@ public class msc_grammarParser extends Parser {
 
         CommonTree char_literal14_tree=null;
         CommonTree char_literal17_tree=null;
-        RewriteRuleTokenStream stream_61=new RewriteRuleTokenStream(adaptor,"token 61");
+        RewriteRuleTokenStream stream_59=new RewriteRuleTokenStream(adaptor,"token 59");
         RewriteRuleSubtreeStream stream_instanceName=new RewriteRuleSubtreeStream(adaptor,"rule instanceName");
         RewriteRuleSubtreeStream stream_instanceEventList=new RewriteRuleSubtreeStream(adaptor,"rule instanceEventList");
         RewriteRuleSubtreeStream stream_instanceNameList=new RewriteRuleSubtreeStream(adaptor,"rule instanceNameList");
         RewriteRuleSubtreeStream stream_multiInstanceEventList=new RewriteRuleSubtreeStream(adaptor,"rule multiInstanceEventList");
         try {
-            // msc_grammar.g:69:2: ( instanceName ':' instanceEventList -> ^( Instance instanceName instanceEventList ) | instanceNameList ':' multiInstanceEventList -> ^( InstanceList instanceNameList multiInstanceEventList ) )
+            // msc_grammar.g:67:2: ( instanceName ':' instanceEventList -> ^( Instance instanceName instanceEventList ) | instanceNameList ':' multiInstanceEventList -> ^( InstanceList instanceNameList multiInstanceEventList ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
             if ( (LA3_0==NAME) ) {
                 int LA3_1 = input.LA(2);
 
-                if ( (LA3_1==62) ) {
-                    alt3=2;
-                }
-                else if ( (LA3_1==61) ) {
+                if ( (LA3_1==59) ) {
                     int LA3_3 = input.LA(3);
 
-                    if ( ((LA3_3>=81 && LA3_3<=86)||LA3_3==105) ) {
+                    if ( ((LA3_3>=79 && LA3_3<=84)||LA3_3==101) ) {
                         alt3=2;
                     }
-                    else if ( (LA3_3==NAME||(LA3_3>=63 && LA3_3<=64)||LA3_3==66||(LA3_3>=72 && LA3_3<=74)||LA3_3==91||(LA3_3>=94 && LA3_3<=95)||(LA3_3>=98 && LA3_3<=99)||LA3_3==103) ) {
+                    else if ( (LA3_3==NAME||(LA3_3>=61 && LA3_3<=62)||LA3_3==64||(LA3_3>=70 && LA3_3<=72)||LA3_3==87||(LA3_3>=90 && LA3_3<=93)||LA3_3==99) ) {
                         alt3=1;
                     }
                     else {
@@ -681,6 +674,9 @@ public class msc_grammarParser extends Parser {
 
                         throw nvae;
                     }
+                }
+                else if ( (LA3_1==60) ) {
+                    alt3=2;
                 }
                 else {
                     NoViableAltException nvae =
@@ -700,18 +696,18 @@ public class msc_grammarParser extends Parser {
             }
             switch (alt3) {
                 case 1 :
-                    // msc_grammar.g:69:4: instanceName ':' instanceEventList
+                    // msc_grammar.g:67:4: instanceName ':' instanceEventList
                     {
-                    pushFollow(FOLLOW_instanceName_in_eventDefinition311);
+                    pushFollow(FOLLOW_instanceName_in_eventDefinition303);
                     instanceName13=instanceName();
 
                     state._fsp--;
 
                     stream_instanceName.add(instanceName13.getTree());
-                    char_literal14=(Token)match(input,61,FOLLOW_61_in_eventDefinition313);  
-                    stream_61.add(char_literal14);
+                    char_literal14=(Token)match(input,59,FOLLOW_59_in_eventDefinition305);  
+                    stream_59.add(char_literal14);
 
-                    pushFollow(FOLLOW_instanceEventList_in_eventDefinition315);
+                    pushFollow(FOLLOW_instanceEventList_in_eventDefinition307);
                     instanceEventList15=instanceEventList();
 
                     state._fsp--;
@@ -730,9 +726,9 @@ public class msc_grammarParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 69:39: -> ^( Instance instanceName instanceEventList )
+                    // 67:39: -> ^( Instance instanceName instanceEventList )
                     {
-                        // msc_grammar.g:69:42: ^( Instance instanceName instanceEventList )
+                        // msc_grammar.g:67:42: ^( Instance instanceName instanceEventList )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Instance, "Instance"), root_1);
@@ -749,18 +745,18 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:70:4: instanceNameList ':' multiInstanceEventList
+                    // msc_grammar.g:68:4: instanceNameList ':' multiInstanceEventList
                     {
-                    pushFollow(FOLLOW_instanceNameList_in_eventDefinition333);
+                    pushFollow(FOLLOW_instanceNameList_in_eventDefinition325);
                     instanceNameList16=instanceNameList();
 
                     state._fsp--;
 
                     stream_instanceNameList.add(instanceNameList16.getTree());
-                    char_literal17=(Token)match(input,61,FOLLOW_61_in_eventDefinition335);  
-                    stream_61.add(char_literal17);
+                    char_literal17=(Token)match(input,59,FOLLOW_59_in_eventDefinition327);  
+                    stream_59.add(char_literal17);
 
-                    pushFollow(FOLLOW_multiInstanceEventList_in_eventDefinition337);
+                    pushFollow(FOLLOW_multiInstanceEventList_in_eventDefinition329);
                     multiInstanceEventList18=multiInstanceEventList();
 
                     state._fsp--;
@@ -779,9 +775,9 @@ public class msc_grammarParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 70:48: -> ^( InstanceList instanceNameList multiInstanceEventList )
+                    // 68:48: -> ^( InstanceList instanceNameList multiInstanceEventList )
                     {
-                        // msc_grammar.g:70:51: ^( InstanceList instanceNameList multiInstanceEventList )
+                        // msc_grammar.g:68:51: ^( InstanceList instanceNameList multiInstanceEventList )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(InstanceList, "InstanceList"), root_1);
@@ -823,7 +819,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "instanceEventList"
-    // msc_grammar.g:73:1: instanceEventList : ( instanceEvent end )+ -> ( instanceEvent )+ ;
+    // msc_grammar.g:71:1: instanceEventList : ( instanceEvent end )+ -> ( instanceEvent )+ ;
     public final msc_grammarParser.instanceEventList_return instanceEventList() throws RecognitionException {
         msc_grammarParser.instanceEventList_return retval = new msc_grammarParser.instanceEventList_return();
         retval.start = input.LT(1);
@@ -838,10 +834,10 @@ public class msc_grammarParser extends Parser {
         RewriteRuleSubtreeStream stream_instanceEvent=new RewriteRuleSubtreeStream(adaptor,"rule instanceEvent");
         RewriteRuleSubtreeStream stream_end=new RewriteRuleSubtreeStream(adaptor,"rule end");
         try {
-            // msc_grammar.g:74:2: ( ( instanceEvent end )+ -> ( instanceEvent )+ )
-            // msc_grammar.g:74:4: ( instanceEvent end )+
+            // msc_grammar.g:72:2: ( ( instanceEvent end )+ -> ( instanceEvent )+ )
+            // msc_grammar.g:72:4: ( instanceEvent end )+
             {
-            // msc_grammar.g:74:4: ( instanceEvent end )+
+            // msc_grammar.g:72:4: ( instanceEvent end )+
             int cnt4=0;
             loop4:
             do {
@@ -851,28 +847,28 @@ public class msc_grammarParser extends Parser {
                 if ( (LA4_0==NAME) ) {
                     int LA4_2 = input.LA(2);
 
-                    if ( (LA4_2==64||LA4_2==66||LA4_2==72||LA4_2==91||LA4_2==95||(LA4_2>=98 && LA4_2<=99)) ) {
+                    if ( (LA4_2==62||LA4_2==64||LA4_2==70||LA4_2==87||(LA4_2>=91 && LA4_2<=93)) ) {
                         alt4=1;
                     }
 
 
                 }
-                else if ( ((LA4_0>=63 && LA4_0<=64)||LA4_0==66||(LA4_0>=72 && LA4_0<=74)||LA4_0==91||(LA4_0>=94 && LA4_0<=95)||(LA4_0>=98 && LA4_0<=99)||LA4_0==103) ) {
+                else if ( ((LA4_0>=61 && LA4_0<=62)||LA4_0==64||(LA4_0>=70 && LA4_0<=72)||LA4_0==87||(LA4_0>=90 && LA4_0<=93)||LA4_0==99) ) {
                     alt4=1;
                 }
 
 
                 switch (alt4) {
             	case 1 :
-            	    // msc_grammar.g:74:6: instanceEvent end
+            	    // msc_grammar.g:72:6: instanceEvent end
             	    {
-            	    pushFollow(FOLLOW_instanceEvent_in_instanceEventList364);
+            	    pushFollow(FOLLOW_instanceEvent_in_instanceEventList356);
             	    instanceEvent19=instanceEvent();
 
             	    state._fsp--;
 
             	    stream_instanceEvent.add(instanceEvent19.getTree());
-            	    pushFollow(FOLLOW_end_in_instanceEventList366);
+            	    pushFollow(FOLLOW_end_in_instanceEventList358);
             	    end20=end();
 
             	    state._fsp--;
@@ -904,7 +900,7 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 74:27: -> ( instanceEvent )+
+            // 72:27: -> ( instanceEvent )+
             {
                 if ( !(stream_instanceEvent.hasNext()) ) {
                     throw new RewriteEarlyExitException();
@@ -944,7 +940,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "instanceEvent"
-    // msc_grammar.g:77:1: instanceEvent : ( orderableEvent | nonOrderableEvent );
+    // msc_grammar.g:75:1: instanceEvent : ( orderableEvent | nonOrderableEvent );
     public final msc_grammarParser.instanceEvent_return instanceEvent() throws RecognitionException {
         msc_grammarParser.instanceEvent_return retval = new msc_grammarParser.instanceEvent_return();
         retval.start = input.LT(1);
@@ -958,14 +954,14 @@ public class msc_grammarParser extends Parser {
 
 
         try {
-            // msc_grammar.g:78:2: ( orderableEvent | nonOrderableEvent )
+            // msc_grammar.g:76:2: ( orderableEvent | nonOrderableEvent )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==NAME||(LA5_0>=63 && LA5_0<=64)||LA5_0==66||LA5_0==72||LA5_0==91||LA5_0==95||(LA5_0>=98 && LA5_0<=99)) ) {
+            if ( (LA5_0==NAME||(LA5_0>=61 && LA5_0<=62)||LA5_0==64||LA5_0==70||LA5_0==87||(LA5_0>=91 && LA5_0<=93)) ) {
                 alt5=1;
             }
-            else if ( ((LA5_0>=73 && LA5_0<=74)||LA5_0==94||LA5_0==103) ) {
+            else if ( ((LA5_0>=71 && LA5_0<=72)||LA5_0==90||LA5_0==99) ) {
                 alt5=2;
             }
             else {
@@ -976,11 +972,11 @@ public class msc_grammarParser extends Parser {
             }
             switch (alt5) {
                 case 1 :
-                    // msc_grammar.g:78:4: orderableEvent
+                    // msc_grammar.g:76:4: orderableEvent
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_orderableEvent_in_instanceEvent387);
+                    pushFollow(FOLLOW_orderableEvent_in_instanceEvent379);
                     orderableEvent21=orderableEvent();
 
                     state._fsp--;
@@ -990,11 +986,11 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:78:21: nonOrderableEvent
+                    // msc_grammar.g:76:21: nonOrderableEvent
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_nonOrderableEvent_in_instanceEvent391);
+                    pushFollow(FOLLOW_nonOrderableEvent_in_instanceEvent383);
                     nonOrderableEvent22=nonOrderableEvent();
 
                     state._fsp--;
@@ -1029,7 +1025,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "orderableEvent"
-    // msc_grammar.g:81:1: orderableEvent : ( label )? ( messageEvent | action | create | timerStatement ) ( generalOrdering )? ;
+    // msc_grammar.g:79:1: orderableEvent : ( label )? ( messageEvent | action | create | timerStatement ) ( generalOrdering )? ;
     public final msc_grammarParser.orderableEvent_return orderableEvent() throws RecognitionException {
         msc_grammarParser.orderableEvent_return retval = new msc_grammarParser.orderableEvent_return();
         retval.start = input.LT(1);
@@ -1051,23 +1047,23 @@ public class msc_grammarParser extends Parser {
 
 
         try {
-            // msc_grammar.g:82:2: ( ( label )? ( messageEvent | action | create | timerStatement ) ( generalOrdering )? )
-            // msc_grammar.g:82:4: ( label )? ( messageEvent | action | create | timerStatement ) ( generalOrdering )?
+            // msc_grammar.g:80:2: ( ( label )? ( messageEvent | action | create | timerStatement ) ( generalOrdering )? )
+            // msc_grammar.g:80:4: ( label )? ( messageEvent | action | create | timerStatement ) ( generalOrdering )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // msc_grammar.g:82:4: ( label )?
+            // msc_grammar.g:80:4: ( label )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
-            if ( (LA6_0==NAME||LA6_0==63) ) {
+            if ( (LA6_0==NAME||LA6_0==61) ) {
                 alt6=1;
             }
             switch (alt6) {
                 case 1 :
-                    // msc_grammar.g:82:4: label
+                    // msc_grammar.g:80:4: label
                     {
-                    pushFollow(FOLLOW_label_in_orderableEvent403);
+                    pushFollow(FOLLOW_label_in_orderableEvent395);
                     label23=label();
 
                     state._fsp--;
@@ -1079,28 +1075,28 @@ public class msc_grammarParser extends Parser {
 
             }
 
-            // msc_grammar.g:82:11: ( messageEvent | action | create | timerStatement )
+            // msc_grammar.g:80:11: ( messageEvent | action | create | timerStatement )
             int alt7=4;
             switch ( input.LA(1) ) {
+            case 62:
             case 64:
-            case 66:
                 {
                 alt7=1;
                 }
                 break;
-            case 72:
+            case 70:
                 {
                 alt7=2;
                 }
                 break;
-            case 91:
+            case 87:
                 {
                 alt7=3;
                 }
                 break;
-            case 95:
-            case 98:
-            case 99:
+            case 91:
+            case 92:
+            case 93:
                 {
                 alt7=4;
                 }
@@ -1114,9 +1110,9 @@ public class msc_grammarParser extends Parser {
 
             switch (alt7) {
                 case 1 :
-                    // msc_grammar.g:82:13: messageEvent
+                    // msc_grammar.g:80:13: messageEvent
                     {
-                    pushFollow(FOLLOW_messageEvent_in_orderableEvent408);
+                    pushFollow(FOLLOW_messageEvent_in_orderableEvent400);
                     messageEvent24=messageEvent();
 
                     state._fsp--;
@@ -1126,9 +1122,9 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:82:28: action
+                    // msc_grammar.g:80:28: action
                     {
-                    pushFollow(FOLLOW_action_in_orderableEvent412);
+                    pushFollow(FOLLOW_action_in_orderableEvent404);
                     action25=action();
 
                     state._fsp--;
@@ -1138,9 +1134,9 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // msc_grammar.g:82:37: create
+                    // msc_grammar.g:80:37: create
                     {
-                    pushFollow(FOLLOW_create_in_orderableEvent416);
+                    pushFollow(FOLLOW_create_in_orderableEvent408);
                     create26=create();
 
                     state._fsp--;
@@ -1150,9 +1146,9 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // msc_grammar.g:82:46: timerStatement
+                    // msc_grammar.g:80:46: timerStatement
                     {
-                    pushFollow(FOLLOW_timerStatement_in_orderableEvent420);
+                    pushFollow(FOLLOW_timerStatement_in_orderableEvent412);
                     timerStatement27=timerStatement();
 
                     state._fsp--;
@@ -1164,18 +1160,18 @@ public class msc_grammarParser extends Parser {
 
             }
 
-            // msc_grammar.g:82:63: ( generalOrdering )?
+            // msc_grammar.g:80:63: ( generalOrdering )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( ((LA8_0>=101 && LA8_0<=102)) ) {
+            if ( ((LA8_0>=97 && LA8_0<=98)) ) {
                 alt8=1;
             }
             switch (alt8) {
                 case 1 :
-                    // msc_grammar.g:82:63: generalOrdering
+                    // msc_grammar.g:80:63: generalOrdering
                     {
-                    pushFollow(FOLLOW_generalOrdering_in_orderableEvent424);
+                    pushFollow(FOLLOW_generalOrdering_in_orderableEvent416);
                     generalOrdering28=generalOrdering();
 
                     state._fsp--;
@@ -1214,7 +1210,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "nonOrderableEvent"
-    // msc_grammar.g:85:1: nonOrderableEvent : ( instanceHeadStatement | instanceEndStatement | stop | coregion );
+    // msc_grammar.g:83:1: nonOrderableEvent : ( instanceHeadStatement | instanceEndStatement | stop | coregion );
     public final msc_grammarParser.nonOrderableEvent_return nonOrderableEvent() throws RecognitionException {
         msc_grammarParser.nonOrderableEvent_return retval = new msc_grammarParser.nonOrderableEvent_return();
         retval.start = input.LT(1);
@@ -1232,25 +1228,25 @@ public class msc_grammarParser extends Parser {
 
 
         try {
-            // msc_grammar.g:86:2: ( instanceHeadStatement | instanceEndStatement | stop | coregion )
+            // msc_grammar.g:84:2: ( instanceHeadStatement | instanceEndStatement | stop | coregion )
             int alt9=4;
             switch ( input.LA(1) ) {
-            case 73:
+            case 71:
                 {
                 alt9=1;
                 }
                 break;
-            case 74:
+            case 72:
                 {
                 alt9=2;
                 }
                 break;
-            case 94:
+            case 90:
                 {
                 alt9=3;
                 }
                 break;
-            case 103:
+            case 99:
                 {
                 alt9=4;
                 }
@@ -1264,11 +1260,11 @@ public class msc_grammarParser extends Parser {
 
             switch (alt9) {
                 case 1 :
-                    // msc_grammar.g:86:4: instanceHeadStatement
+                    // msc_grammar.g:84:4: instanceHeadStatement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_instanceHeadStatement_in_nonOrderableEvent437);
+                    pushFollow(FOLLOW_instanceHeadStatement_in_nonOrderableEvent429);
                     instanceHeadStatement29=instanceHeadStatement();
 
                     state._fsp--;
@@ -1278,11 +1274,11 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:86:28: instanceEndStatement
+                    // msc_grammar.g:84:28: instanceEndStatement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_instanceEndStatement_in_nonOrderableEvent441);
+                    pushFollow(FOLLOW_instanceEndStatement_in_nonOrderableEvent433);
                     instanceEndStatement30=instanceEndStatement();
 
                     state._fsp--;
@@ -1292,11 +1288,11 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // msc_grammar.g:86:51: stop
+                    // msc_grammar.g:84:51: stop
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_stop_in_nonOrderableEvent445);
+                    pushFollow(FOLLOW_stop_in_nonOrderableEvent437);
                     stop31=stop();
 
                     state._fsp--;
@@ -1306,11 +1302,11 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // msc_grammar.g:86:58: coregion
+                    // msc_grammar.g:84:58: coregion
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_coregion_in_nonOrderableEvent449);
+                    pushFollow(FOLLOW_coregion_in_nonOrderableEvent441);
                     coregion32=coregion();
 
                     state._fsp--;
@@ -1345,7 +1341,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "instanceNameList"
-    // msc_grammar.g:89:1: instanceNameList : ( instanceName ( ',' instanceName )* -> ^( INameList ( instanceName )+ ) | ALL -> ^( INameList ALL ) );
+    // msc_grammar.g:87:1: instanceNameList : ( instanceName ( ',' instanceName )* -> ^( INameList ( instanceName )+ ) | ALL -> ^( INameList ALL ) );
     public final msc_grammarParser.instanceNameList_return instanceNameList() throws RecognitionException {
         msc_grammarParser.instanceNameList_return retval = new msc_grammarParser.instanceNameList_return();
         retval.start = input.LT(1);
@@ -1361,11 +1357,11 @@ public class msc_grammarParser extends Parser {
 
         CommonTree char_literal34_tree=null;
         CommonTree ALL36_tree=null;
-        RewriteRuleTokenStream stream_62=new RewriteRuleTokenStream(adaptor,"token 62");
+        RewriteRuleTokenStream stream_60=new RewriteRuleTokenStream(adaptor,"token 60");
         RewriteRuleTokenStream stream_ALL=new RewriteRuleTokenStream(adaptor,"token ALL");
         RewriteRuleSubtreeStream stream_instanceName=new RewriteRuleSubtreeStream(adaptor,"rule instanceName");
         try {
-            // msc_grammar.g:90:2: ( instanceName ( ',' instanceName )* -> ^( INameList ( instanceName )+ ) | ALL -> ^( INameList ALL ) )
+            // msc_grammar.g:88:2: ( instanceName ( ',' instanceName )* -> ^( INameList ( instanceName )+ ) | ALL -> ^( INameList ALL ) )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1383,33 +1379,33 @@ public class msc_grammarParser extends Parser {
             }
             switch (alt11) {
                 case 1 :
-                    // msc_grammar.g:90:4: instanceName ( ',' instanceName )*
+                    // msc_grammar.g:88:4: instanceName ( ',' instanceName )*
                     {
-                    pushFollow(FOLLOW_instanceName_in_instanceNameList462);
+                    pushFollow(FOLLOW_instanceName_in_instanceNameList454);
                     instanceName33=instanceName();
 
                     state._fsp--;
 
                     stream_instanceName.add(instanceName33.getTree());
-                    // msc_grammar.g:90:17: ( ',' instanceName )*
+                    // msc_grammar.g:88:17: ( ',' instanceName )*
                     loop10:
                     do {
                         int alt10=2;
                         int LA10_0 = input.LA(1);
 
-                        if ( (LA10_0==62) ) {
+                        if ( (LA10_0==60) ) {
                             alt10=1;
                         }
 
 
                         switch (alt10) {
                     	case 1 :
-                    	    // msc_grammar.g:90:19: ',' instanceName
+                    	    // msc_grammar.g:88:19: ',' instanceName
                     	    {
-                    	    char_literal34=(Token)match(input,62,FOLLOW_62_in_instanceNameList466);  
-                    	    stream_62.add(char_literal34);
+                    	    char_literal34=(Token)match(input,60,FOLLOW_60_in_instanceNameList458);  
+                    	    stream_60.add(char_literal34);
 
-                    	    pushFollow(FOLLOW_instanceName_in_instanceNameList468);
+                    	    pushFollow(FOLLOW_instanceName_in_instanceNameList460);
                     	    instanceName35=instanceName();
 
                     	    state._fsp--;
@@ -1437,9 +1433,9 @@ public class msc_grammarParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 90:39: -> ^( INameList ( instanceName )+ )
+                    // 88:39: -> ^( INameList ( instanceName )+ )
                     {
-                        // msc_grammar.g:90:42: ^( INameList ( instanceName )+ )
+                        // msc_grammar.g:88:42: ^( INameList ( instanceName )+ )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(INameList, "INameList"), root_1);
@@ -1462,9 +1458,9 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:91:5: ALL
+                    // msc_grammar.g:89:5: ALL
                     {
-                    ALL36=(Token)match(input,ALL,FOLLOW_ALL_in_instanceNameList488);  
+                    ALL36=(Token)match(input,ALL,FOLLOW_ALL_in_instanceNameList480);  
                     stream_ALL.add(ALL36);
 
 
@@ -1480,9 +1476,9 @@ public class msc_grammarParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 91:9: -> ^( INameList ALL )
+                    // 89:9: -> ^( INameList ALL )
                     {
-                        // msc_grammar.g:91:12: ^( INameList ALL )
+                        // msc_grammar.g:89:12: ^( INameList ALL )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(INameList, "INameList"), root_1);
@@ -1523,7 +1519,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "multiInstanceEventList"
-    // msc_grammar.g:94:1: multiInstanceEventList : ( multiInstanceEvent end )+ -> ( multiInstanceEvent )+ ;
+    // msc_grammar.g:92:1: multiInstanceEventList : ( multiInstanceEvent end )+ -> ( multiInstanceEvent )+ ;
     public final msc_grammarParser.multiInstanceEventList_return multiInstanceEventList() throws RecognitionException {
         msc_grammarParser.multiInstanceEventList_return retval = new msc_grammarParser.multiInstanceEventList_return();
         retval.start = input.LT(1);
@@ -1538,27 +1534,27 @@ public class msc_grammarParser extends Parser {
         RewriteRuleSubtreeStream stream_multiInstanceEvent=new RewriteRuleSubtreeStream(adaptor,"rule multiInstanceEvent");
         RewriteRuleSubtreeStream stream_end=new RewriteRuleSubtreeStream(adaptor,"rule end");
         try {
-            // msc_grammar.g:95:2: ( ( multiInstanceEvent end )+ -> ( multiInstanceEvent )+ )
-            // msc_grammar.g:95:4: ( multiInstanceEvent end )+
+            // msc_grammar.g:93:2: ( ( multiInstanceEvent end )+ -> ( multiInstanceEvent )+ )
+            // msc_grammar.g:93:4: ( multiInstanceEvent end )+
             {
-            // msc_grammar.g:95:4: ( multiInstanceEvent end )+
+            // msc_grammar.g:93:4: ( multiInstanceEvent end )+
             int cnt12=0;
             loop12:
             do {
                 int alt12=2;
                 switch ( input.LA(1) ) {
-                case 82:
+                case 80:
                     {
                     int LA12_2 = input.LA(2);
 
-                    if ( (LA12_2==BEGIN||LA12_2==87) ) {
+                    if ( (LA12_2==BEGIN||LA12_2==85) ) {
                         alt12=1;
                     }
 
 
                     }
                     break;
-                case 83:
+                case 81:
                     {
                     int LA12_3 = input.LA(2);
 
@@ -1569,7 +1565,7 @@ public class msc_grammarParser extends Parser {
 
                     }
                     break;
-                case 84:
+                case 82:
                     {
                     int LA12_4 = input.LA(2);
 
@@ -1580,7 +1576,7 @@ public class msc_grammarParser extends Parser {
 
                     }
                     break;
-                case 85:
+                case 83:
                     {
                     int LA12_5 = input.LA(2);
 
@@ -1591,7 +1587,7 @@ public class msc_grammarParser extends Parser {
 
                     }
                     break;
-                case 86:
+                case 84:
                     {
                     int LA12_6 = input.LA(2);
 
@@ -1602,8 +1598,8 @@ public class msc_grammarParser extends Parser {
 
                     }
                     break;
-                case 81:
-                case 105:
+                case 79:
+                case 101:
                     {
                     alt12=1;
                     }
@@ -1613,15 +1609,15 @@ public class msc_grammarParser extends Parser {
 
                 switch (alt12) {
             	case 1 :
-            	    // msc_grammar.g:95:6: multiInstanceEvent end
+            	    // msc_grammar.g:93:6: multiInstanceEvent end
             	    {
-            	    pushFollow(FOLLOW_multiInstanceEvent_in_multiInstanceEventList513);
+            	    pushFollow(FOLLOW_multiInstanceEvent_in_multiInstanceEventList505);
             	    multiInstanceEvent37=multiInstanceEvent();
 
             	    state._fsp--;
 
             	    stream_multiInstanceEvent.add(multiInstanceEvent37.getTree());
-            	    pushFollow(FOLLOW_end_in_multiInstanceEventList515);
+            	    pushFollow(FOLLOW_end_in_multiInstanceEventList507);
             	    end38=end();
 
             	    state._fsp--;
@@ -1653,7 +1649,7 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 95:32: -> ( multiInstanceEvent )+
+            // 93:32: -> ( multiInstanceEvent )+
             {
                 if ( !(stream_multiInstanceEvent.hasNext()) ) {
                     throw new RewriteEarlyExitException();
@@ -1693,7 +1689,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "multiInstanceEvent"
-    // msc_grammar.g:98:1: multiInstanceEvent : ( condition | mscReference | inlineExpr );
+    // msc_grammar.g:96:1: multiInstanceEvent : ( condition | mscReference | inlineExpr );
     public final msc_grammarParser.multiInstanceEvent_return multiInstanceEvent() throws RecognitionException {
         msc_grammarParser.multiInstanceEvent_return retval = new msc_grammarParser.multiInstanceEvent_return();
         retval.start = input.LT(1);
@@ -1709,24 +1705,24 @@ public class msc_grammarParser extends Parser {
 
 
         try {
-            // msc_grammar.g:99:2: ( condition | mscReference | inlineExpr )
+            // msc_grammar.g:97:2: ( condition | mscReference | inlineExpr )
             int alt13=3;
             switch ( input.LA(1) ) {
-            case 81:
+            case 79:
                 {
                 alt13=1;
                 }
                 break;
-            case 105:
+            case 101:
                 {
                 alt13=2;
                 }
                 break;
+            case 80:
+            case 81:
             case 82:
             case 83:
             case 84:
-            case 85:
-            case 86:
                 {
                 alt13=3;
                 }
@@ -1740,11 +1736,11 @@ public class msc_grammarParser extends Parser {
 
             switch (alt13) {
                 case 1 :
-                    // msc_grammar.g:99:4: condition
+                    // msc_grammar.g:97:4: condition
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_condition_in_multiInstanceEvent536);
+                    pushFollow(FOLLOW_condition_in_multiInstanceEvent528);
                     condition39=condition();
 
                     state._fsp--;
@@ -1754,11 +1750,11 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:99:16: mscReference
+                    // msc_grammar.g:97:16: mscReference
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_mscReference_in_multiInstanceEvent540);
+                    pushFollow(FOLLOW_mscReference_in_multiInstanceEvent532);
                     mscReference40=mscReference();
 
                     state._fsp--;
@@ -1768,11 +1764,11 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // msc_grammar.g:99:31: inlineExpr
+                    // msc_grammar.g:97:31: inlineExpr
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_inlineExpr_in_multiInstanceEvent544);
+                    pushFollow(FOLLOW_inlineExpr_in_multiInstanceEvent536);
                     inlineExpr41=inlineExpr();
 
                     state._fsp--;
@@ -1807,7 +1803,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "label"
-    // msc_grammar.g:103:1: label : ( eventName | 'label' eventName end ) -> ^( Label eventName ) ;
+    // msc_grammar.g:101:1: label : ( eventName | 'label' eventName end ) -> ^( Label eventName ) ;
     public final msc_grammarParser.label_return label() throws RecognitionException {
         msc_grammarParser.label_return retval = new msc_grammarParser.label_return();
         retval.start = input.LT(1);
@@ -1823,21 +1819,21 @@ public class msc_grammarParser extends Parser {
 
 
         CommonTree string_literal43_tree=null;
-        RewriteRuleTokenStream stream_63=new RewriteRuleTokenStream(adaptor,"token 63");
+        RewriteRuleTokenStream stream_61=new RewriteRuleTokenStream(adaptor,"token 61");
         RewriteRuleSubtreeStream stream_eventName=new RewriteRuleSubtreeStream(adaptor,"rule eventName");
         RewriteRuleSubtreeStream stream_end=new RewriteRuleSubtreeStream(adaptor,"rule end");
         try {
-            // msc_grammar.g:103:8: ( ( eventName | 'label' eventName end ) -> ^( Label eventName ) )
-            // msc_grammar.g:103:10: ( eventName | 'label' eventName end )
+            // msc_grammar.g:101:8: ( ( eventName | 'label' eventName end ) -> ^( Label eventName ) )
+            // msc_grammar.g:101:10: ( eventName | 'label' eventName end )
             {
-            // msc_grammar.g:103:10: ( eventName | 'label' eventName end )
+            // msc_grammar.g:101:10: ( eventName | 'label' eventName end )
             int alt14=2;
             int LA14_0 = input.LA(1);
 
             if ( (LA14_0==NAME) ) {
                 alt14=1;
             }
-            else if ( (LA14_0==63) ) {
+            else if ( (LA14_0==61) ) {
                 alt14=2;
             }
             else {
@@ -1848,9 +1844,9 @@ public class msc_grammarParser extends Parser {
             }
             switch (alt14) {
                 case 1 :
-                    // msc_grammar.g:103:12: eventName
+                    // msc_grammar.g:101:12: eventName
                     {
-                    pushFollow(FOLLOW_eventName_in_label558);
+                    pushFollow(FOLLOW_eventName_in_label550);
                     eventName42=eventName();
 
                     state._fsp--;
@@ -1860,18 +1856,18 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:103:24: 'label' eventName end
+                    // msc_grammar.g:101:24: 'label' eventName end
                     {
-                    string_literal43=(Token)match(input,63,FOLLOW_63_in_label562);  
-                    stream_63.add(string_literal43);
+                    string_literal43=(Token)match(input,61,FOLLOW_61_in_label554);  
+                    stream_61.add(string_literal43);
 
-                    pushFollow(FOLLOW_eventName_in_label564);
+                    pushFollow(FOLLOW_eventName_in_label556);
                     eventName44=eventName();
 
                     state._fsp--;
 
                     stream_eventName.add(eventName44.getTree());
-                    pushFollow(FOLLOW_end_in_label566);
+                    pushFollow(FOLLOW_end_in_label558);
                     end45=end();
 
                     state._fsp--;
@@ -1896,9 +1892,9 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 103:48: -> ^( Label eventName )
+            // 101:48: -> ^( Label eventName )
             {
-                // msc_grammar.g:103:51: ^( Label eventName )
+                // msc_grammar.g:101:51: ^( Label eventName )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Label, "Label"), root_1);
@@ -1937,7 +1933,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "messageEvent"
-    // msc_grammar.g:107:1: messageEvent : ( 'out' msgIdentification 'to' messageReceiver -> ^( MSGOut msgIdentification messageReceiver ) | 'in' msgIdentification 'from' messageSender -> ^( MSGIn msgIdentification messageSender ) );
+    // msc_grammar.g:105:1: messageEvent : ( 'out' msgIdentification 'to' messageReceiver -> ^( MSGOut msgIdentification messageReceiver ) | 'in' msgIdentification 'from' messageSender -> ^( MSGIn msgIdentification messageSender ) );
     public final msc_grammarParser.messageEvent_return messageEvent() throws RecognitionException {
         msc_grammarParser.messageEvent_return retval = new msc_grammarParser.messageEvent_return();
         retval.start = input.LT(1);
@@ -1961,22 +1957,22 @@ public class msc_grammarParser extends Parser {
         CommonTree string_literal48_tree=null;
         CommonTree string_literal50_tree=null;
         CommonTree string_literal52_tree=null;
-        RewriteRuleTokenStream stream_67=new RewriteRuleTokenStream(adaptor,"token 67");
-        RewriteRuleTokenStream stream_66=new RewriteRuleTokenStream(adaptor,"token 66");
         RewriteRuleTokenStream stream_64=new RewriteRuleTokenStream(adaptor,"token 64");
         RewriteRuleTokenStream stream_65=new RewriteRuleTokenStream(adaptor,"token 65");
+        RewriteRuleTokenStream stream_62=new RewriteRuleTokenStream(adaptor,"token 62");
+        RewriteRuleTokenStream stream_63=new RewriteRuleTokenStream(adaptor,"token 63");
         RewriteRuleSubtreeStream stream_messageReceiver=new RewriteRuleSubtreeStream(adaptor,"rule messageReceiver");
         RewriteRuleSubtreeStream stream_msgIdentification=new RewriteRuleSubtreeStream(adaptor,"rule msgIdentification");
         RewriteRuleSubtreeStream stream_messageSender=new RewriteRuleSubtreeStream(adaptor,"rule messageSender");
         try {
-            // msc_grammar.g:108:2: ( 'out' msgIdentification 'to' messageReceiver -> ^( MSGOut msgIdentification messageReceiver ) | 'in' msgIdentification 'from' messageSender -> ^( MSGIn msgIdentification messageSender ) )
+            // msc_grammar.g:106:2: ( 'out' msgIdentification 'to' messageReceiver -> ^( MSGOut msgIdentification messageReceiver ) | 'in' msgIdentification 'from' messageSender -> ^( MSGIn msgIdentification messageSender ) )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
-            if ( (LA15_0==64) ) {
+            if ( (LA15_0==62) ) {
                 alt15=1;
             }
-            else if ( (LA15_0==66) ) {
+            else if ( (LA15_0==64) ) {
                 alt15=2;
             }
             else {
@@ -1987,21 +1983,21 @@ public class msc_grammarParser extends Parser {
             }
             switch (alt15) {
                 case 1 :
-                    // msc_grammar.g:108:4: 'out' msgIdentification 'to' messageReceiver
+                    // msc_grammar.g:106:4: 'out' msgIdentification 'to' messageReceiver
                     {
-                    string_literal46=(Token)match(input,64,FOLLOW_64_in_messageEvent591);  
-                    stream_64.add(string_literal46);
+                    string_literal46=(Token)match(input,62,FOLLOW_62_in_messageEvent583);  
+                    stream_62.add(string_literal46);
 
-                    pushFollow(FOLLOW_msgIdentification_in_messageEvent593);
+                    pushFollow(FOLLOW_msgIdentification_in_messageEvent585);
                     msgIdentification47=msgIdentification();
 
                     state._fsp--;
 
                     stream_msgIdentification.add(msgIdentification47.getTree());
-                    string_literal48=(Token)match(input,65,FOLLOW_65_in_messageEvent595);  
-                    stream_65.add(string_literal48);
+                    string_literal48=(Token)match(input,63,FOLLOW_63_in_messageEvent587);  
+                    stream_63.add(string_literal48);
 
-                    pushFollow(FOLLOW_messageReceiver_in_messageEvent597);
+                    pushFollow(FOLLOW_messageReceiver_in_messageEvent589);
                     messageReceiver49=messageReceiver();
 
                     state._fsp--;
@@ -2020,9 +2016,9 @@ public class msc_grammarParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 108:49: -> ^( MSGOut msgIdentification messageReceiver )
+                    // 106:49: -> ^( MSGOut msgIdentification messageReceiver )
                     {
-                        // msc_grammar.g:108:52: ^( MSGOut msgIdentification messageReceiver )
+                        // msc_grammar.g:106:52: ^( MSGOut msgIdentification messageReceiver )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(MSGOut, "MSGOut"), root_1);
@@ -2039,21 +2035,21 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:109:4: 'in' msgIdentification 'from' messageSender
+                    // msc_grammar.g:107:4: 'in' msgIdentification 'from' messageSender
                     {
-                    string_literal50=(Token)match(input,66,FOLLOW_66_in_messageEvent614);  
-                    stream_66.add(string_literal50);
+                    string_literal50=(Token)match(input,64,FOLLOW_64_in_messageEvent606);  
+                    stream_64.add(string_literal50);
 
-                    pushFollow(FOLLOW_msgIdentification_in_messageEvent616);
+                    pushFollow(FOLLOW_msgIdentification_in_messageEvent608);
                     msgIdentification51=msgIdentification();
 
                     state._fsp--;
 
                     stream_msgIdentification.add(msgIdentification51.getTree());
-                    string_literal52=(Token)match(input,67,FOLLOW_67_in_messageEvent618);  
-                    stream_67.add(string_literal52);
+                    string_literal52=(Token)match(input,65,FOLLOW_65_in_messageEvent610);  
+                    stream_65.add(string_literal52);
 
-                    pushFollow(FOLLOW_messageSender_in_messageEvent620);
+                    pushFollow(FOLLOW_messageSender_in_messageEvent612);
                     messageSender53=messageSender();
 
                     state._fsp--;
@@ -2072,9 +2068,9 @@ public class msc_grammarParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 109:49: -> ^( MSGIn msgIdentification messageSender )
+                    // 107:49: -> ^( MSGIn msgIdentification messageSender )
                     {
-                        // msc_grammar.g:109:52: ^( MSGIn msgIdentification messageSender )
+                        // msc_grammar.g:107:52: ^( MSGIn msgIdentification messageSender )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(MSGIn, "MSGIn"), root_1);
@@ -2116,7 +2112,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "messageReceiver"
-    // msc_grammar.g:112:1: messageReceiver : ( inputAddress -> inputAddress FullMsg | 'lost' ( inputAddress )? -> ( inputAddress )? IncompleteMsg );
+    // msc_grammar.g:110:1: messageReceiver : ( inputAddress -> inputAddress FullMsg | 'lost' ( inputAddress )? -> ( inputAddress )? IncompleteMsg );
     public final msc_grammarParser.messageReceiver_return messageReceiver() throws RecognitionException {
         msc_grammarParser.messageReceiver_return retval = new msc_grammarParser.messageReceiver_return();
         retval.start = input.LT(1);
@@ -2130,17 +2126,17 @@ public class msc_grammarParser extends Parser {
 
 
         CommonTree string_literal55_tree=null;
-        RewriteRuleTokenStream stream_68=new RewriteRuleTokenStream(adaptor,"token 68");
+        RewriteRuleTokenStream stream_66=new RewriteRuleTokenStream(adaptor,"token 66");
         RewriteRuleSubtreeStream stream_inputAddress=new RewriteRuleSubtreeStream(adaptor,"rule inputAddress");
         try {
-            // msc_grammar.g:113:2: ( inputAddress -> inputAddress FullMsg | 'lost' ( inputAddress )? -> ( inputAddress )? IncompleteMsg )
+            // msc_grammar.g:111:2: ( inputAddress -> inputAddress FullMsg | 'lost' ( inputAddress )? -> ( inputAddress )? IncompleteMsg )
             int alt17=2;
             int LA17_0 = input.LA(1);
 
-            if ( (LA17_0==NAME||LA17_0==70) ) {
+            if ( (LA17_0==NAME||LA17_0==68) ) {
                 alt17=1;
             }
-            else if ( (LA17_0==68) ) {
+            else if ( (LA17_0==66) ) {
                 alt17=2;
             }
             else {
@@ -2151,9 +2147,9 @@ public class msc_grammarParser extends Parser {
             }
             switch (alt17) {
                 case 1 :
-                    // msc_grammar.g:113:4: inputAddress
+                    // msc_grammar.g:111:4: inputAddress
                     {
-                    pushFollow(FOLLOW_inputAddress_in_messageReceiver646);
+                    pushFollow(FOLLOW_inputAddress_in_messageReceiver638);
                     inputAddress54=inputAddress();
 
                     state._fsp--;
@@ -2172,7 +2168,7 @@ public class msc_grammarParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 113:17: -> inputAddress FullMsg
+                    // 111:17: -> inputAddress FullMsg
                     {
                         adaptor.addChild(root_0, stream_inputAddress.nextTree());
                         adaptor.addChild(root_0, (CommonTree)adaptor.create(FullMsg, "FullMsg"));
@@ -2183,23 +2179,23 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:114:4: 'lost' ( inputAddress )?
+                    // msc_grammar.g:112:4: 'lost' ( inputAddress )?
                     {
-                    string_literal55=(Token)match(input,68,FOLLOW_68_in_messageReceiver657);  
-                    stream_68.add(string_literal55);
+                    string_literal55=(Token)match(input,66,FOLLOW_66_in_messageReceiver649);  
+                    stream_66.add(string_literal55);
 
-                    // msc_grammar.g:114:11: ( inputAddress )?
+                    // msc_grammar.g:112:11: ( inputAddress )?
                     int alt16=2;
                     int LA16_0 = input.LA(1);
 
-                    if ( (LA16_0==NAME||LA16_0==70) ) {
+                    if ( (LA16_0==NAME||LA16_0==68) ) {
                         alt16=1;
                     }
                     switch (alt16) {
                         case 1 :
-                            // msc_grammar.g:114:13: inputAddress
+                            // msc_grammar.g:112:13: inputAddress
                             {
-                            pushFollow(FOLLOW_inputAddress_in_messageReceiver661);
+                            pushFollow(FOLLOW_inputAddress_in_messageReceiver653);
                             inputAddress56=inputAddress();
 
                             state._fsp--;
@@ -2224,9 +2220,9 @@ public class msc_grammarParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 114:29: -> ( inputAddress )? IncompleteMsg
+                    // 112:29: -> ( inputAddress )? IncompleteMsg
                     {
-                        // msc_grammar.g:114:32: ( inputAddress )?
+                        // msc_grammar.g:112:32: ( inputAddress )?
                         if ( stream_inputAddress.hasNext() ) {
                             adaptor.addChild(root_0, stream_inputAddress.nextTree());
 
@@ -2265,7 +2261,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "messageSender"
-    // msc_grammar.g:117:1: messageSender : ( outputAddress -> outputAddress FullMsg | 'found' ( outputAddress )? -> ( outputAddress )? IncompleteMsg );
+    // msc_grammar.g:115:1: messageSender : ( outputAddress -> outputAddress FullMsg | 'found' ( outputAddress )? -> ( outputAddress )? IncompleteMsg );
     public final msc_grammarParser.messageSender_return messageSender() throws RecognitionException {
         msc_grammarParser.messageSender_return retval = new msc_grammarParser.messageSender_return();
         retval.start = input.LT(1);
@@ -2279,17 +2275,17 @@ public class msc_grammarParser extends Parser {
 
 
         CommonTree string_literal58_tree=null;
-        RewriteRuleTokenStream stream_69=new RewriteRuleTokenStream(adaptor,"token 69");
+        RewriteRuleTokenStream stream_67=new RewriteRuleTokenStream(adaptor,"token 67");
         RewriteRuleSubtreeStream stream_outputAddress=new RewriteRuleSubtreeStream(adaptor,"rule outputAddress");
         try {
-            // msc_grammar.g:118:2: ( outputAddress -> outputAddress FullMsg | 'found' ( outputAddress )? -> ( outputAddress )? IncompleteMsg )
+            // msc_grammar.g:116:2: ( outputAddress -> outputAddress FullMsg | 'found' ( outputAddress )? -> ( outputAddress )? IncompleteMsg )
             int alt19=2;
             int LA19_0 = input.LA(1);
 
-            if ( (LA19_0==NAME||LA19_0==70) ) {
+            if ( (LA19_0==NAME||LA19_0==68) ) {
                 alt19=1;
             }
-            else if ( (LA19_0==69) ) {
+            else if ( (LA19_0==67) ) {
                 alt19=2;
             }
             else {
@@ -2300,9 +2296,9 @@ public class msc_grammarParser extends Parser {
             }
             switch (alt19) {
                 case 1 :
-                    // msc_grammar.g:118:4: outputAddress
+                    // msc_grammar.g:116:4: outputAddress
                     {
-                    pushFollow(FOLLOW_outputAddress_in_messageSender683);
+                    pushFollow(FOLLOW_outputAddress_in_messageSender675);
                     outputAddress57=outputAddress();
 
                     state._fsp--;
@@ -2321,7 +2317,7 @@ public class msc_grammarParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 118:18: -> outputAddress FullMsg
+                    // 116:18: -> outputAddress FullMsg
                     {
                         adaptor.addChild(root_0, stream_outputAddress.nextTree());
                         adaptor.addChild(root_0, (CommonTree)adaptor.create(FullMsg, "FullMsg"));
@@ -2332,23 +2328,23 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:119:4: 'found' ( outputAddress )?
+                    // msc_grammar.g:117:4: 'found' ( outputAddress )?
                     {
-                    string_literal58=(Token)match(input,69,FOLLOW_69_in_messageSender694);  
-                    stream_69.add(string_literal58);
+                    string_literal58=(Token)match(input,67,FOLLOW_67_in_messageSender686);  
+                    stream_67.add(string_literal58);
 
-                    // msc_grammar.g:119:12: ( outputAddress )?
+                    // msc_grammar.g:117:12: ( outputAddress )?
                     int alt18=2;
                     int LA18_0 = input.LA(1);
 
-                    if ( (LA18_0==NAME||LA18_0==70) ) {
+                    if ( (LA18_0==NAME||LA18_0==68) ) {
                         alt18=1;
                     }
                     switch (alt18) {
                         case 1 :
-                            // msc_grammar.g:119:14: outputAddress
+                            // msc_grammar.g:117:14: outputAddress
                             {
-                            pushFollow(FOLLOW_outputAddress_in_messageSender698);
+                            pushFollow(FOLLOW_outputAddress_in_messageSender690);
                             outputAddress59=outputAddress();
 
                             state._fsp--;
@@ -2373,9 +2369,9 @@ public class msc_grammarParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 119:31: -> ( outputAddress )? IncompleteMsg
+                    // 117:31: -> ( outputAddress )? IncompleteMsg
                     {
-                        // msc_grammar.g:119:34: ( outputAddress )?
+                        // msc_grammar.g:117:34: ( outputAddress )?
                         if ( stream_outputAddress.hasNext() ) {
                             adaptor.addChild(root_0, stream_outputAddress.nextTree());
 
@@ -2414,7 +2410,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "msgIdentification"
-    // msc_grammar.g:122:1: msgIdentification : ( messageName | characterString );
+    // msc_grammar.g:120:1: msgIdentification : ( messageName | characterString );
     public final msc_grammarParser.msgIdentification_return msgIdentification() throws RecognitionException {
         msc_grammarParser.msgIdentification_return retval = new msc_grammarParser.msgIdentification_return();
         retval.start = input.LT(1);
@@ -2428,7 +2424,7 @@ public class msc_grammarParser extends Parser {
 
 
         try {
-            // msc_grammar.g:123:2: ( messageName | characterString )
+            // msc_grammar.g:121:2: ( messageName | characterString )
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -2446,11 +2442,11 @@ public class msc_grammarParser extends Parser {
             }
             switch (alt20) {
                 case 1 :
-                    // msc_grammar.g:123:4: messageName
+                    // msc_grammar.g:121:4: messageName
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_messageName_in_msgIdentification721);
+                    pushFollow(FOLLOW_messageName_in_msgIdentification713);
                     messageName60=messageName();
 
                     state._fsp--;
@@ -2460,11 +2456,11 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:123:18: characterString
+                    // msc_grammar.g:121:18: characterString
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_characterString_in_msgIdentification725);
+                    pushFollow(FOLLOW_characterString_in_msgIdentification717);
                     characterString61=characterString();
 
                     state._fsp--;
@@ -2499,7 +2495,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "outputAddress"
-    // msc_grammar.g:126:1: outputAddress : ( instanceName | 'env' ( 'via' gateName )? -> ^( MsgGate ( gateName )? ) );
+    // msc_grammar.g:124:1: outputAddress : ( instanceName | 'env' ( 'via' gateName )? -> ^( MsgGate ( gateName )? ) );
     public final msc_grammarParser.outputAddress_return outputAddress() throws RecognitionException {
         msc_grammarParser.outputAddress_return retval = new msc_grammarParser.outputAddress_return();
         retval.start = input.LT(1);
@@ -2515,18 +2511,18 @@ public class msc_grammarParser extends Parser {
 
         CommonTree string_literal63_tree=null;
         CommonTree string_literal64_tree=null;
-        RewriteRuleTokenStream stream_70=new RewriteRuleTokenStream(adaptor,"token 70");
-        RewriteRuleTokenStream stream_71=new RewriteRuleTokenStream(adaptor,"token 71");
+        RewriteRuleTokenStream stream_69=new RewriteRuleTokenStream(adaptor,"token 69");
+        RewriteRuleTokenStream stream_68=new RewriteRuleTokenStream(adaptor,"token 68");
         RewriteRuleSubtreeStream stream_gateName=new RewriteRuleSubtreeStream(adaptor,"rule gateName");
         try {
-            // msc_grammar.g:127:2: ( instanceName | 'env' ( 'via' gateName )? -> ^( MsgGate ( gateName )? ) )
+            // msc_grammar.g:125:2: ( instanceName | 'env' ( 'via' gateName )? -> ^( MsgGate ( gateName )? ) )
             int alt22=2;
             int LA22_0 = input.LA(1);
 
             if ( (LA22_0==NAME) ) {
                 alt22=1;
             }
-            else if ( (LA22_0==70) ) {
+            else if ( (LA22_0==68) ) {
                 alt22=2;
             }
             else {
@@ -2537,11 +2533,11 @@ public class msc_grammarParser extends Parser {
             }
             switch (alt22) {
                 case 1 :
-                    // msc_grammar.g:127:4: instanceName
+                    // msc_grammar.g:125:4: instanceName
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_instanceName_in_outputAddress737);
+                    pushFollow(FOLLOW_instanceName_in_outputAddress729);
                     instanceName62=instanceName();
 
                     state._fsp--;
@@ -2551,26 +2547,26 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:128:4: 'env' ( 'via' gateName )?
+                    // msc_grammar.g:126:4: 'env' ( 'via' gateName )?
                     {
-                    string_literal63=(Token)match(input,70,FOLLOW_70_in_outputAddress742);  
-                    stream_70.add(string_literal63);
+                    string_literal63=(Token)match(input,68,FOLLOW_68_in_outputAddress734);  
+                    stream_68.add(string_literal63);
 
-                    // msc_grammar.g:128:10: ( 'via' gateName )?
+                    // msc_grammar.g:126:10: ( 'via' gateName )?
                     int alt21=2;
                     int LA21_0 = input.LA(1);
 
-                    if ( (LA21_0==71) ) {
+                    if ( (LA21_0==69) ) {
                         alt21=1;
                     }
                     switch (alt21) {
                         case 1 :
-                            // msc_grammar.g:128:12: 'via' gateName
+                            // msc_grammar.g:126:12: 'via' gateName
                             {
-                            string_literal64=(Token)match(input,71,FOLLOW_71_in_outputAddress746);  
-                            stream_71.add(string_literal64);
+                            string_literal64=(Token)match(input,69,FOLLOW_69_in_outputAddress738);  
+                            stream_69.add(string_literal64);
 
-                            pushFollow(FOLLOW_gateName_in_outputAddress748);
+                            pushFollow(FOLLOW_gateName_in_outputAddress740);
                             gateName65=gateName();
 
                             state._fsp--;
@@ -2595,14 +2591,14 @@ public class msc_grammarParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 128:30: -> ^( MsgGate ( gateName )? )
+                    // 126:30: -> ^( MsgGate ( gateName )? )
                     {
-                        // msc_grammar.g:128:33: ^( MsgGate ( gateName )? )
+                        // msc_grammar.g:126:33: ^( MsgGate ( gateName )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(MsgGate, "MsgGate"), root_1);
 
-                        // msc_grammar.g:128:44: ( gateName )?
+                        // msc_grammar.g:126:44: ( gateName )?
                         if ( stream_gateName.hasNext() ) {
                             adaptor.addChild(root_1, stream_gateName.nextTree());
 
@@ -2643,7 +2639,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "inputAddress"
-    // msc_grammar.g:131:1: inputAddress : ( instanceName | 'env' ( 'via' gateName )? -> ^( MsgGate ( gateName )? ) );
+    // msc_grammar.g:129:1: inputAddress : ( instanceName | 'env' ( 'via' gateName )? -> ^( MsgGate ( gateName )? ) );
     public final msc_grammarParser.inputAddress_return inputAddress() throws RecognitionException {
         msc_grammarParser.inputAddress_return retval = new msc_grammarParser.inputAddress_return();
         retval.start = input.LT(1);
@@ -2659,18 +2655,18 @@ public class msc_grammarParser extends Parser {
 
         CommonTree string_literal67_tree=null;
         CommonTree string_literal68_tree=null;
-        RewriteRuleTokenStream stream_70=new RewriteRuleTokenStream(adaptor,"token 70");
-        RewriteRuleTokenStream stream_71=new RewriteRuleTokenStream(adaptor,"token 71");
+        RewriteRuleTokenStream stream_69=new RewriteRuleTokenStream(adaptor,"token 69");
+        RewriteRuleTokenStream stream_68=new RewriteRuleTokenStream(adaptor,"token 68");
         RewriteRuleSubtreeStream stream_gateName=new RewriteRuleSubtreeStream(adaptor,"rule gateName");
         try {
-            // msc_grammar.g:132:2: ( instanceName | 'env' ( 'via' gateName )? -> ^( MsgGate ( gateName )? ) )
+            // msc_grammar.g:130:2: ( instanceName | 'env' ( 'via' gateName )? -> ^( MsgGate ( gateName )? ) )
             int alt24=2;
             int LA24_0 = input.LA(1);
 
             if ( (LA24_0==NAME) ) {
                 alt24=1;
             }
-            else if ( (LA24_0==70) ) {
+            else if ( (LA24_0==68) ) {
                 alt24=2;
             }
             else {
@@ -2681,11 +2677,11 @@ public class msc_grammarParser extends Parser {
             }
             switch (alt24) {
                 case 1 :
-                    // msc_grammar.g:132:4: instanceName
+                    // msc_grammar.g:130:4: instanceName
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_instanceName_in_inputAddress775);
+                    pushFollow(FOLLOW_instanceName_in_inputAddress767);
                     instanceName66=instanceName();
 
                     state._fsp--;
@@ -2695,26 +2691,26 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:133:4: 'env' ( 'via' gateName )?
+                    // msc_grammar.g:131:4: 'env' ( 'via' gateName )?
                     {
-                    string_literal67=(Token)match(input,70,FOLLOW_70_in_inputAddress780);  
-                    stream_70.add(string_literal67);
+                    string_literal67=(Token)match(input,68,FOLLOW_68_in_inputAddress772);  
+                    stream_68.add(string_literal67);
 
-                    // msc_grammar.g:133:10: ( 'via' gateName )?
+                    // msc_grammar.g:131:10: ( 'via' gateName )?
                     int alt23=2;
                     int LA23_0 = input.LA(1);
 
-                    if ( (LA23_0==71) ) {
+                    if ( (LA23_0==69) ) {
                         alt23=1;
                     }
                     switch (alt23) {
                         case 1 :
-                            // msc_grammar.g:133:12: 'via' gateName
+                            // msc_grammar.g:131:12: 'via' gateName
                             {
-                            string_literal68=(Token)match(input,71,FOLLOW_71_in_inputAddress784);  
-                            stream_71.add(string_literal68);
+                            string_literal68=(Token)match(input,69,FOLLOW_69_in_inputAddress776);  
+                            stream_69.add(string_literal68);
 
-                            pushFollow(FOLLOW_gateName_in_inputAddress786);
+                            pushFollow(FOLLOW_gateName_in_inputAddress778);
                             gateName69=gateName();
 
                             state._fsp--;
@@ -2739,14 +2735,14 @@ public class msc_grammarParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 133:30: -> ^( MsgGate ( gateName )? )
+                    // 131:30: -> ^( MsgGate ( gateName )? )
                     {
-                        // msc_grammar.g:133:33: ^( MsgGate ( gateName )? )
+                        // msc_grammar.g:131:33: ^( MsgGate ( gateName )? )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(MsgGate, "MsgGate"), root_1);
 
-                        // msc_grammar.g:133:44: ( gateName )?
+                        // msc_grammar.g:131:44: ( gateName )?
                         if ( stream_gateName.hasNext() ) {
                             adaptor.addChild(root_1, stream_gateName.nextTree());
 
@@ -2787,7 +2783,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "action"
-    // msc_grammar.g:136:1: action : 'action' actionStatement -> actionStatement ;
+    // msc_grammar.g:134:1: action : 'action' actionStatement -> actionStatement ;
     public final msc_grammarParser.action_return action() throws RecognitionException {
         msc_grammarParser.action_return retval = new msc_grammarParser.action_return();
         retval.start = input.LT(1);
@@ -2799,16 +2795,16 @@ public class msc_grammarParser extends Parser {
 
 
         CommonTree string_literal70_tree=null;
-        RewriteRuleTokenStream stream_72=new RewriteRuleTokenStream(adaptor,"token 72");
+        RewriteRuleTokenStream stream_70=new RewriteRuleTokenStream(adaptor,"token 70");
         RewriteRuleSubtreeStream stream_actionStatement=new RewriteRuleSubtreeStream(adaptor,"rule actionStatement");
         try {
-            // msc_grammar.g:136:9: ( 'action' actionStatement -> actionStatement )
-            // msc_grammar.g:136:11: 'action' actionStatement
+            // msc_grammar.g:134:9: ( 'action' actionStatement -> actionStatement )
+            // msc_grammar.g:134:11: 'action' actionStatement
             {
-            string_literal70=(Token)match(input,72,FOLLOW_72_in_action812);  
-            stream_72.add(string_literal70);
+            string_literal70=(Token)match(input,70,FOLLOW_70_in_action804);  
+            stream_70.add(string_literal70);
 
-            pushFollow(FOLLOW_actionStatement_in_action814);
+            pushFollow(FOLLOW_actionStatement_in_action806);
             actionStatement71=actionStatement();
 
             state._fsp--;
@@ -2827,7 +2823,7 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 136:36: -> actionStatement
+            // 134:36: -> actionStatement
             {
                 adaptor.addChild(root_0, stream_actionStatement.nextTree());
 
@@ -2860,7 +2856,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "actionStatement"
-    // msc_grammar.g:138:1: actionStatement : informalAction -> ^( Action informalAction ) ;
+    // msc_grammar.g:136:1: actionStatement : informalAction -> ^( Action informalAction ) ;
     public final msc_grammarParser.actionStatement_return actionStatement() throws RecognitionException {
         msc_grammarParser.actionStatement_return retval = new msc_grammarParser.actionStatement_return();
         retval.start = input.LT(1);
@@ -2872,10 +2868,10 @@ public class msc_grammarParser extends Parser {
 
         RewriteRuleSubtreeStream stream_informalAction=new RewriteRuleSubtreeStream(adaptor,"rule informalAction");
         try {
-            // msc_grammar.g:139:2: ( informalAction -> ^( Action informalAction ) )
-            // msc_grammar.g:139:4: informalAction
+            // msc_grammar.g:137:2: ( informalAction -> ^( Action informalAction ) )
+            // msc_grammar.g:137:4: informalAction
             {
-            pushFollow(FOLLOW_informalAction_in_actionStatement829);
+            pushFollow(FOLLOW_informalAction_in_actionStatement821);
             informalAction72=informalAction();
 
             state._fsp--;
@@ -2894,9 +2890,9 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 139:19: -> ^( Action informalAction )
+            // 137:19: -> ^( Action informalAction )
             {
-                // msc_grammar.g:139:22: ^( Action informalAction )
+                // msc_grammar.g:137:22: ^( Action informalAction )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Action, "Action"), root_1);
@@ -2935,7 +2931,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "informalAction"
-    // msc_grammar.g:141:1: informalAction : ( name | characterString );
+    // msc_grammar.g:139:1: informalAction : ( name | characterString );
     public final msc_grammarParser.informalAction_return informalAction() throws RecognitionException {
         msc_grammarParser.informalAction_return retval = new msc_grammarParser.informalAction_return();
         retval.start = input.LT(1);
@@ -2949,7 +2945,7 @@ public class msc_grammarParser extends Parser {
 
 
         try {
-            // msc_grammar.g:142:2: ( name | characterString )
+            // msc_grammar.g:140:2: ( name | characterString )
             int alt25=2;
             int LA25_0 = input.LA(1);
 
@@ -2967,11 +2963,11 @@ public class msc_grammarParser extends Parser {
             }
             switch (alt25) {
                 case 1 :
-                    // msc_grammar.g:142:4: name
+                    // msc_grammar.g:140:4: name
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_name_in_informalAction850);
+                    pushFollow(FOLLOW_name_in_informalAction842);
                     name73=name();
 
                     state._fsp--;
@@ -2981,11 +2977,11 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:142:11: characterString
+                    // msc_grammar.g:140:11: characterString
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_characterString_in_informalAction854);
+                    pushFollow(FOLLOW_characterString_in_informalAction846);
                     characterString74=characterString();
 
                     state._fsp--;
@@ -3020,7 +3016,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "instanceHeadStatement"
-    // msc_grammar.g:145:1: instanceHeadStatement : 'instance' ( instanceKind )? ;
+    // msc_grammar.g:143:1: instanceHeadStatement : 'instance' ( instanceKind )? ;
     public final msc_grammarParser.instanceHeadStatement_return instanceHeadStatement() throws RecognitionException {
         msc_grammarParser.instanceHeadStatement_return retval = new msc_grammarParser.instanceHeadStatement_return();
         retval.start = input.LT(1);
@@ -3034,27 +3030,27 @@ public class msc_grammarParser extends Parser {
         CommonTree string_literal75_tree=null;
 
         try {
-            // msc_grammar.g:146:2: ( 'instance' ( instanceKind )? )
-            // msc_grammar.g:146:4: 'instance' ( instanceKind )?
+            // msc_grammar.g:144:2: ( 'instance' ( instanceKind )? )
+            // msc_grammar.g:144:4: 'instance' ( instanceKind )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            string_literal75=(Token)match(input,73,FOLLOW_73_in_instanceHeadStatement867); 
+            string_literal75=(Token)match(input,71,FOLLOW_71_in_instanceHeadStatement859); 
             string_literal75_tree = (CommonTree)adaptor.create(string_literal75);
             adaptor.addChild(root_0, string_literal75_tree);
 
-            // msc_grammar.g:146:15: ( instanceKind )?
+            // msc_grammar.g:144:15: ( instanceKind )?
             int alt26=2;
             int LA26_0 = input.LA(1);
 
-            if ( (LA26_0==NAME||(LA26_0>=76 && LA26_0<=79)) ) {
+            if ( (LA26_0==NAME||(LA26_0>=74 && LA26_0<=77)) ) {
                 alt26=1;
             }
             switch (alt26) {
                 case 1 :
-                    // msc_grammar.g:146:17: instanceKind
+                    // msc_grammar.g:144:17: instanceKind
                     {
-                    pushFollow(FOLLOW_instanceKind_in_instanceHeadStatement871);
+                    pushFollow(FOLLOW_instanceKind_in_instanceHeadStatement863);
                     instanceKind76=instanceKind();
 
                     state._fsp--;
@@ -3093,7 +3089,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "instanceEndStatement"
-    // msc_grammar.g:149:1: instanceEndStatement : 'endinstance' ;
+    // msc_grammar.g:147:1: instanceEndStatement : 'endinstance' ;
     public final msc_grammarParser.instanceEndStatement_return instanceEndStatement() throws RecognitionException {
         msc_grammarParser.instanceEndStatement_return retval = new msc_grammarParser.instanceEndStatement_return();
         retval.start = input.LT(1);
@@ -3105,12 +3101,12 @@ public class msc_grammarParser extends Parser {
         CommonTree string_literal77_tree=null;
 
         try {
-            // msc_grammar.g:150:2: ( 'endinstance' )
-            // msc_grammar.g:150:4: 'endinstance'
+            // msc_grammar.g:148:2: ( 'endinstance' )
+            // msc_grammar.g:148:4: 'endinstance'
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            string_literal77=(Token)match(input,74,FOLLOW_74_in_instanceEndStatement887); 
+            string_literal77=(Token)match(input,72,FOLLOW_72_in_instanceEndStatement879); 
             string_literal77_tree = (CommonTree)adaptor.create(string_literal77);
             adaptor.addChild(root_0, string_literal77_tree);
 
@@ -3141,7 +3137,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "mscInterface"
-    // msc_grammar.g:153:1: mscInterface : ( mscInstInterface ( mscGateInterface )? | mscGateInterface );
+    // msc_grammar.g:151:1: mscInterface : ( mscInstInterface ( mscGateInterface )? | mscGateInterface );
     public final msc_grammarParser.mscInterface_return mscInterface() throws RecognitionException {
         msc_grammarParser.mscInterface_return retval = new msc_grammarParser.mscInterface_return();
         retval.start = input.LT(1);
@@ -3157,14 +3153,14 @@ public class msc_grammarParser extends Parser {
 
 
         try {
-            // msc_grammar.g:154:2: ( mscInstInterface ( mscGateInterface )? | mscGateInterface )
+            // msc_grammar.g:152:2: ( mscInstInterface ( mscGateInterface )? | mscGateInterface )
             int alt28=2;
             int LA28_0 = input.LA(1);
 
-            if ( (LA28_0==75) ) {
+            if ( (LA28_0==73) ) {
                 alt28=1;
             }
-            else if ( (LA28_0==100) ) {
+            else if ( (LA28_0==96) ) {
                 alt28=2;
             }
             else {
@@ -3175,28 +3171,28 @@ public class msc_grammarParser extends Parser {
             }
             switch (alt28) {
                 case 1 :
-                    // msc_grammar.g:154:4: mscInstInterface ( mscGateInterface )?
+                    // msc_grammar.g:152:4: mscInstInterface ( mscGateInterface )?
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_mscInstInterface_in_mscInterface899);
+                    pushFollow(FOLLOW_mscInstInterface_in_mscInterface891);
                     mscInstInterface78=mscInstInterface();
 
                     state._fsp--;
 
                     adaptor.addChild(root_0, mscInstInterface78.getTree());
-                    // msc_grammar.g:154:21: ( mscGateInterface )?
+                    // msc_grammar.g:152:21: ( mscGateInterface )?
                     int alt27=2;
                     int LA27_0 = input.LA(1);
 
-                    if ( (LA27_0==100) ) {
+                    if ( (LA27_0==96) ) {
                         alt27=1;
                     }
                     switch (alt27) {
                         case 1 :
-                            // msc_grammar.g:154:23: mscGateInterface
+                            // msc_grammar.g:152:23: mscGateInterface
                             {
-                            pushFollow(FOLLOW_mscGateInterface_in_mscInterface903);
+                            pushFollow(FOLLOW_mscGateInterface_in_mscInterface895);
                             mscGateInterface79=mscGateInterface();
 
                             state._fsp--;
@@ -3212,11 +3208,11 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:154:45: mscGateInterface
+                    // msc_grammar.g:152:45: mscGateInterface
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_mscGateInterface_in_mscInterface910);
+                    pushFollow(FOLLOW_mscGateInterface_in_mscInterface902);
                     mscGateInterface80=mscGateInterface();
 
                     state._fsp--;
@@ -3251,7 +3247,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "mscInstInterface"
-    // msc_grammar.g:157:1: mscInstInterface : 'inst' instanceList end ;
+    // msc_grammar.g:155:1: mscInstInterface : 'inst' instanceList end ;
     public final msc_grammarParser.mscInstInterface_return mscInstInterface() throws RecognitionException {
         msc_grammarParser.mscInstInterface_return retval = new msc_grammarParser.mscInstInterface_return();
         retval.start = input.LT(1);
@@ -3267,22 +3263,22 @@ public class msc_grammarParser extends Parser {
         CommonTree string_literal81_tree=null;
 
         try {
-            // msc_grammar.g:158:2: ( 'inst' instanceList end )
-            // msc_grammar.g:158:4: 'inst' instanceList end
+            // msc_grammar.g:156:2: ( 'inst' instanceList end )
+            // msc_grammar.g:156:4: 'inst' instanceList end
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            string_literal81=(Token)match(input,75,FOLLOW_75_in_mscInstInterface923); 
+            string_literal81=(Token)match(input,73,FOLLOW_73_in_mscInstInterface915); 
             string_literal81_tree = (CommonTree)adaptor.create(string_literal81);
             adaptor.addChild(root_0, string_literal81_tree);
 
-            pushFollow(FOLLOW_instanceList_in_mscInstInterface925);
+            pushFollow(FOLLOW_instanceList_in_mscInstInterface917);
             instanceList82=instanceList();
 
             state._fsp--;
 
             adaptor.addChild(root_0, instanceList82.getTree());
-            pushFollow(FOLLOW_end_in_mscInstInterface927);
+            pushFollow(FOLLOW_end_in_mscInstInterface919);
             end83=end();
 
             state._fsp--;
@@ -3315,7 +3311,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "instanceList"
-    // msc_grammar.g:161:1: instanceList : instanceName ( ':' instanceKind )? ( ',' instanceList )? ;
+    // msc_grammar.g:159:1: instanceList : instanceName ( ':' instanceKind )? ( ',' instanceList )? ;
     public final msc_grammarParser.instanceList_return instanceList() throws RecognitionException {
         msc_grammarParser.instanceList_return retval = new msc_grammarParser.instanceList_return();
         retval.start = input.LT(1);
@@ -3335,33 +3331,33 @@ public class msc_grammarParser extends Parser {
         CommonTree char_literal87_tree=null;
 
         try {
-            // msc_grammar.g:162:2: ( instanceName ( ':' instanceKind )? ( ',' instanceList )? )
-            // msc_grammar.g:162:4: instanceName ( ':' instanceKind )? ( ',' instanceList )?
+            // msc_grammar.g:160:2: ( instanceName ( ':' instanceKind )? ( ',' instanceList )? )
+            // msc_grammar.g:160:4: instanceName ( ':' instanceKind )? ( ',' instanceList )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_instanceName_in_instanceList940);
+            pushFollow(FOLLOW_instanceName_in_instanceList932);
             instanceName84=instanceName();
 
             state._fsp--;
 
             adaptor.addChild(root_0, instanceName84.getTree());
-            // msc_grammar.g:162:17: ( ':' instanceKind )?
+            // msc_grammar.g:160:17: ( ':' instanceKind )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
-            if ( (LA29_0==61) ) {
+            if ( (LA29_0==59) ) {
                 alt29=1;
             }
             switch (alt29) {
                 case 1 :
-                    // msc_grammar.g:162:19: ':' instanceKind
+                    // msc_grammar.g:160:19: ':' instanceKind
                     {
-                    char_literal85=(Token)match(input,61,FOLLOW_61_in_instanceList944); 
+                    char_literal85=(Token)match(input,59,FOLLOW_59_in_instanceList936); 
                     char_literal85_tree = (CommonTree)adaptor.create(char_literal85);
                     adaptor.addChild(root_0, char_literal85_tree);
 
-                    pushFollow(FOLLOW_instanceKind_in_instanceList946);
+                    pushFollow(FOLLOW_instanceKind_in_instanceList938);
                     instanceKind86=instanceKind();
 
                     state._fsp--;
@@ -3373,22 +3369,22 @@ public class msc_grammarParser extends Parser {
 
             }
 
-            // msc_grammar.g:162:39: ( ',' instanceList )?
+            // msc_grammar.g:160:39: ( ',' instanceList )?
             int alt30=2;
             int LA30_0 = input.LA(1);
 
-            if ( (LA30_0==62) ) {
+            if ( (LA30_0==60) ) {
                 alt30=1;
             }
             switch (alt30) {
                 case 1 :
-                    // msc_grammar.g:162:41: ',' instanceList
+                    // msc_grammar.g:160:41: ',' instanceList
                     {
-                    char_literal87=(Token)match(input,62,FOLLOW_62_in_instanceList953); 
+                    char_literal87=(Token)match(input,60,FOLLOW_60_in_instanceList945); 
                     char_literal87_tree = (CommonTree)adaptor.create(char_literal87);
                     adaptor.addChild(root_0, char_literal87_tree);
 
-                    pushFollow(FOLLOW_instanceList_in_instanceList955);
+                    pushFollow(FOLLOW_instanceList_in_instanceList947);
                     instanceList88=instanceList();
 
                     state._fsp--;
@@ -3427,7 +3423,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "instanceKind"
-    // msc_grammar.g:165:1: instanceKind : ( kindDenominator )? identifier ;
+    // msc_grammar.g:163:1: instanceKind : ( kindDenominator )? identifier ;
     public final msc_grammarParser.instanceKind_return instanceKind() throws RecognitionException {
         msc_grammarParser.instanceKind_return retval = new msc_grammarParser.instanceKind_return();
         retval.start = input.LT(1);
@@ -3441,16 +3437,16 @@ public class msc_grammarParser extends Parser {
 
 
         try {
-            // msc_grammar.g:166:2: ( ( kindDenominator )? identifier )
-            // msc_grammar.g:166:4: ( kindDenominator )? identifier
+            // msc_grammar.g:164:2: ( ( kindDenominator )? identifier )
+            // msc_grammar.g:164:4: ( kindDenominator )? identifier
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // msc_grammar.g:166:4: ( kindDenominator )?
+            // msc_grammar.g:164:4: ( kindDenominator )?
             int alt31=2;
             int LA31_0 = input.LA(1);
 
-            if ( ((LA31_0>=76 && LA31_0<=79)) ) {
+            if ( ((LA31_0>=74 && LA31_0<=77)) ) {
                 alt31=1;
             }
             else if ( (LA31_0==NAME) ) {
@@ -3462,9 +3458,9 @@ public class msc_grammarParser extends Parser {
             }
             switch (alt31) {
                 case 1 :
-                    // msc_grammar.g:166:6: kindDenominator
+                    // msc_grammar.g:164:6: kindDenominator
                     {
-                    pushFollow(FOLLOW_kindDenominator_in_instanceKind973);
+                    pushFollow(FOLLOW_kindDenominator_in_instanceKind965);
                     kindDenominator89=kindDenominator();
 
                     state._fsp--;
@@ -3476,7 +3472,7 @@ public class msc_grammarParser extends Parser {
 
             }
 
-            pushFollow(FOLLOW_identifier_in_instanceKind978);
+            pushFollow(FOLLOW_identifier_in_instanceKind970);
             identifier90=identifier();
 
             state._fsp--;
@@ -3509,7 +3505,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "kindDenominator"
-    // msc_grammar.g:169:1: kindDenominator : ( 'system' | 'block' | 'process' | 'service' | name );
+    // msc_grammar.g:167:1: kindDenominator : ( 'system' | 'block' | 'process' | 'service' | name );
     public final msc_grammarParser.kindDenominator_return kindDenominator() throws RecognitionException {
         msc_grammarParser.kindDenominator_return retval = new msc_grammarParser.kindDenominator_return();
         retval.start = input.LT(1);
@@ -3529,25 +3525,25 @@ public class msc_grammarParser extends Parser {
         CommonTree string_literal94_tree=null;
 
         try {
-            // msc_grammar.g:170:2: ( 'system' | 'block' | 'process' | 'service' | name )
+            // msc_grammar.g:168:2: ( 'system' | 'block' | 'process' | 'service' | name )
             int alt32=5;
             switch ( input.LA(1) ) {
-            case 76:
+            case 74:
                 {
                 alt32=1;
                 }
                 break;
-            case 77:
+            case 75:
                 {
                 alt32=2;
                 }
                 break;
-            case 78:
+            case 76:
                 {
                 alt32=3;
                 }
                 break;
-            case 79:
+            case 77:
                 {
                 alt32=4;
                 }
@@ -3566,11 +3562,11 @@ public class msc_grammarParser extends Parser {
 
             switch (alt32) {
                 case 1 :
-                    // msc_grammar.g:170:4: 'system'
+                    // msc_grammar.g:168:4: 'system'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    string_literal91=(Token)match(input,76,FOLLOW_76_in_kindDenominator991); 
+                    string_literal91=(Token)match(input,74,FOLLOW_74_in_kindDenominator983); 
                     string_literal91_tree = (CommonTree)adaptor.create(string_literal91);
                     adaptor.addChild(root_0, string_literal91_tree);
 
@@ -3578,11 +3574,11 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:170:15: 'block'
+                    // msc_grammar.g:168:15: 'block'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    string_literal92=(Token)match(input,77,FOLLOW_77_in_kindDenominator995); 
+                    string_literal92=(Token)match(input,75,FOLLOW_75_in_kindDenominator987); 
                     string_literal92_tree = (CommonTree)adaptor.create(string_literal92);
                     adaptor.addChild(root_0, string_literal92_tree);
 
@@ -3590,11 +3586,11 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // msc_grammar.g:170:25: 'process'
+                    // msc_grammar.g:168:25: 'process'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    string_literal93=(Token)match(input,78,FOLLOW_78_in_kindDenominator999); 
+                    string_literal93=(Token)match(input,76,FOLLOW_76_in_kindDenominator991); 
                     string_literal93_tree = (CommonTree)adaptor.create(string_literal93);
                     adaptor.addChild(root_0, string_literal93_tree);
 
@@ -3602,11 +3598,11 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // msc_grammar.g:170:37: 'service'
+                    // msc_grammar.g:168:37: 'service'
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    string_literal94=(Token)match(input,79,FOLLOW_79_in_kindDenominator1003); 
+                    string_literal94=(Token)match(input,77,FOLLOW_77_in_kindDenominator995); 
                     string_literal94_tree = (CommonTree)adaptor.create(string_literal94);
                     adaptor.addChild(root_0, string_literal94_tree);
 
@@ -3614,11 +3610,11 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // msc_grammar.g:170:49: name
+                    // msc_grammar.g:168:49: name
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_name_in_kindDenominator1007);
+                    pushFollow(FOLLOW_name_in_kindDenominator999);
                     name95=name();
 
                     state._fsp--;
@@ -3653,7 +3649,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "end"
-    // msc_grammar.g:173:1: end : ';' ;
+    // msc_grammar.g:171:1: end : ';' ;
     public final msc_grammarParser.end_return end() throws RecognitionException {
         msc_grammarParser.end_return retval = new msc_grammarParser.end_return();
         retval.start = input.LT(1);
@@ -3665,12 +3661,12 @@ public class msc_grammarParser extends Parser {
         CommonTree char_literal96_tree=null;
 
         try {
-            // msc_grammar.g:173:6: ( ';' )
-            // msc_grammar.g:173:8: ';'
+            // msc_grammar.g:171:6: ( ';' )
+            // msc_grammar.g:171:8: ';'
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            char_literal96=(Token)match(input,80,FOLLOW_80_in_end1018); 
+            char_literal96=(Token)match(input,78,FOLLOW_78_in_end1010); 
             char_literal96_tree = (CommonTree)adaptor.create(char_literal96);
             adaptor.addChild(root_0, char_literal96_tree);
 
@@ -3701,7 +3697,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "condition"
-    // msc_grammar.g:177:1: condition : conditionIdentification ;
+    // msc_grammar.g:175:1: condition : conditionIdentification ;
     public final msc_grammarParser.condition_return condition() throws RecognitionException {
         msc_grammarParser.condition_return retval = new msc_grammarParser.condition_return();
         retval.start = input.LT(1);
@@ -3713,12 +3709,12 @@ public class msc_grammarParser extends Parser {
 
 
         try {
-            // msc_grammar.g:178:2: ( conditionIdentification )
-            // msc_grammar.g:178:4: conditionIdentification
+            // msc_grammar.g:176:2: ( conditionIdentification )
+            // msc_grammar.g:176:4: conditionIdentification
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_conditionIdentification_in_condition1031);
+            pushFollow(FOLLOW_conditionIdentification_in_condition1023);
             conditionIdentification97=conditionIdentification();
 
             state._fsp--;
@@ -3751,7 +3747,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "conditionIdentification"
-    // msc_grammar.g:180:1: conditionIdentification : 'condition' conditionText -> ^( Condition conditionText ) ;
+    // msc_grammar.g:178:1: conditionIdentification : 'condition' conditionText -> ^( Condition conditionText ) ;
     public final msc_grammarParser.conditionIdentification_return conditionIdentification() throws RecognitionException {
         msc_grammarParser.conditionIdentification_return retval = new msc_grammarParser.conditionIdentification_return();
         retval.start = input.LT(1);
@@ -3763,16 +3759,16 @@ public class msc_grammarParser extends Parser {
 
 
         CommonTree string_literal98_tree=null;
-        RewriteRuleTokenStream stream_81=new RewriteRuleTokenStream(adaptor,"token 81");
+        RewriteRuleTokenStream stream_79=new RewriteRuleTokenStream(adaptor,"token 79");
         RewriteRuleSubtreeStream stream_conditionText=new RewriteRuleSubtreeStream(adaptor,"rule conditionText");
         try {
-            // msc_grammar.g:181:2: ( 'condition' conditionText -> ^( Condition conditionText ) )
-            // msc_grammar.g:181:4: 'condition' conditionText
+            // msc_grammar.g:179:2: ( 'condition' conditionText -> ^( Condition conditionText ) )
+            // msc_grammar.g:179:4: 'condition' conditionText
             {
-            string_literal98=(Token)match(input,81,FOLLOW_81_in_conditionIdentification1042);  
-            stream_81.add(string_literal98);
+            string_literal98=(Token)match(input,79,FOLLOW_79_in_conditionIdentification1034);  
+            stream_79.add(string_literal98);
 
-            pushFollow(FOLLOW_conditionText_in_conditionIdentification1044);
+            pushFollow(FOLLOW_conditionText_in_conditionIdentification1036);
             conditionText99=conditionText();
 
             state._fsp--;
@@ -3791,9 +3787,9 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 181:30: -> ^( Condition conditionText )
+            // 179:30: -> ^( Condition conditionText )
             {
-                // msc_grammar.g:181:33: ^( Condition conditionText )
+                // msc_grammar.g:179:33: ^( Condition conditionText )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Condition, "Condition"), root_1);
@@ -3832,7 +3828,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "conditionText"
-    // msc_grammar.g:183:1: conditionText : ( conditionNameList -> SetCond conditionNameList | WHEN conditionNameList -> GuardCond conditionNameList | OTHERWISE -> ElseCond );
+    // msc_grammar.g:181:1: conditionText : ( conditionNameList -> SetCond conditionNameList | WHEN conditionNameList -> GuardCond conditionNameList | OTHERWISE -> ElseCond );
     public final msc_grammarParser.conditionText_return conditionText() throws RecognitionException {
         msc_grammarParser.conditionText_return retval = new msc_grammarParser.conditionText_return();
         retval.start = input.LT(1);
@@ -3852,7 +3848,7 @@ public class msc_grammarParser extends Parser {
         RewriteRuleTokenStream stream_OTHERWISE=new RewriteRuleTokenStream(adaptor,"token OTHERWISE");
         RewriteRuleSubtreeStream stream_conditionNameList=new RewriteRuleSubtreeStream(adaptor,"rule conditionNameList");
         try {
-            // msc_grammar.g:184:2: ( conditionNameList -> SetCond conditionNameList | WHEN conditionNameList -> GuardCond conditionNameList | OTHERWISE -> ElseCond )
+            // msc_grammar.g:182:2: ( conditionNameList -> SetCond conditionNameList | WHEN conditionNameList -> GuardCond conditionNameList | OTHERWISE -> ElseCond )
             int alt33=3;
             switch ( input.LA(1) ) {
             case NAME:
@@ -3880,9 +3876,9 @@ public class msc_grammarParser extends Parser {
 
             switch (alt33) {
                 case 1 :
-                    // msc_grammar.g:184:4: conditionNameList
+                    // msc_grammar.g:182:4: conditionNameList
                     {
-                    pushFollow(FOLLOW_conditionNameList_in_conditionText1065);
+                    pushFollow(FOLLOW_conditionNameList_in_conditionText1057);
                     conditionNameList100=conditionNameList();
 
                     state._fsp--;
@@ -3901,7 +3897,7 @@ public class msc_grammarParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 184:23: -> SetCond conditionNameList
+                    // 182:23: -> SetCond conditionNameList
                     {
                         adaptor.addChild(root_0, (CommonTree)adaptor.create(SetCond, "SetCond"));
                         adaptor.addChild(root_0, stream_conditionNameList.nextTree());
@@ -3912,12 +3908,12 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:185:4: WHEN conditionNameList
+                    // msc_grammar.g:183:4: WHEN conditionNameList
                     {
-                    WHEN101=(Token)match(input,WHEN,FOLLOW_WHEN_in_conditionText1077);  
+                    WHEN101=(Token)match(input,WHEN,FOLLOW_WHEN_in_conditionText1069);  
                     stream_WHEN.add(WHEN101);
 
-                    pushFollow(FOLLOW_conditionNameList_in_conditionText1079);
+                    pushFollow(FOLLOW_conditionNameList_in_conditionText1071);
                     conditionNameList102=conditionNameList();
 
                     state._fsp--;
@@ -3936,7 +3932,7 @@ public class msc_grammarParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 185:27: -> GuardCond conditionNameList
+                    // 183:27: -> GuardCond conditionNameList
                     {
                         adaptor.addChild(root_0, (CommonTree)adaptor.create(GuardCond, "GuardCond"));
                         adaptor.addChild(root_0, stream_conditionNameList.nextTree());
@@ -3947,9 +3943,9 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // msc_grammar.g:186:5: OTHERWISE
+                    // msc_grammar.g:184:5: OTHERWISE
                     {
-                    OTHERWISE103=(Token)match(input,OTHERWISE,FOLLOW_OTHERWISE_in_conditionText1091);  
+                    OTHERWISE103=(Token)match(input,OTHERWISE,FOLLOW_OTHERWISE_in_conditionText1083);  
                     stream_OTHERWISE.add(OTHERWISE103);
 
 
@@ -3965,7 +3961,7 @@ public class msc_grammarParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 186:17: -> ElseCond
+                    // 184:17: -> ElseCond
                     {
                         adaptor.addChild(root_0, (CommonTree)adaptor.create(ElseCond, "ElseCond"));
 
@@ -4000,7 +3996,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "conditionNameList"
-    // msc_grammar.g:188:1: conditionNameList : ( name | characterString );
+    // msc_grammar.g:186:1: conditionNameList : ( name | characterString );
     public final msc_grammarParser.conditionNameList_return conditionNameList() throws RecognitionException {
         msc_grammarParser.conditionNameList_return retval = new msc_grammarParser.conditionNameList_return();
         retval.start = input.LT(1);
@@ -4014,7 +4010,7 @@ public class msc_grammarParser extends Parser {
 
 
         try {
-            // msc_grammar.g:189:2: ( name | characterString )
+            // msc_grammar.g:187:2: ( name | characterString )
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -4032,11 +4028,11 @@ public class msc_grammarParser extends Parser {
             }
             switch (alt34) {
                 case 1 :
-                    // msc_grammar.g:189:4: name
+                    // msc_grammar.g:187:4: name
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_name_in_conditionNameList1108);
+                    pushFollow(FOLLOW_name_in_conditionNameList1100);
                     name104=name();
 
                     state._fsp--;
@@ -4046,11 +4042,11 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:189:11: characterString
+                    // msc_grammar.g:187:11: characterString
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_characterString_in_conditionNameList1112);
+                    pushFollow(FOLLOW_characterString_in_conditionNameList1104);
                     characterString105=characterString();
 
                     state._fsp--;
@@ -4085,7 +4081,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "inlineExpr"
-    // msc_grammar.g:193:1: inlineExpr : ( loopExpr | optExpr | altExpr | parExpr | excExpr );
+    // msc_grammar.g:191:1: inlineExpr : ( loopExpr | optExpr | altExpr | parExpr | excExpr );
     public final msc_grammarParser.inlineExpr_return inlineExpr() throws RecognitionException {
         msc_grammarParser.inlineExpr_return retval = new msc_grammarParser.inlineExpr_return();
         retval.start = input.LT(1);
@@ -4105,30 +4101,30 @@ public class msc_grammarParser extends Parser {
 
 
         try {
-            // msc_grammar.g:194:2: ( loopExpr | optExpr | altExpr | parExpr | excExpr )
+            // msc_grammar.g:192:2: ( loopExpr | optExpr | altExpr | parExpr | excExpr )
             int alt35=5;
             switch ( input.LA(1) ) {
-            case 82:
+            case 80:
                 {
                 alt35=1;
                 }
                 break;
-            case 83:
+            case 81:
                 {
                 alt35=2;
                 }
                 break;
-            case 85:
+            case 83:
                 {
                 alt35=3;
                 }
                 break;
-            case 86:
+            case 84:
                 {
                 alt35=4;
                 }
                 break;
-            case 84:
+            case 82:
                 {
                 alt35=5;
                 }
@@ -4142,11 +4138,11 @@ public class msc_grammarParser extends Parser {
 
             switch (alt35) {
                 case 1 :
-                    // msc_grammar.g:194:4: loopExpr
+                    // msc_grammar.g:192:4: loopExpr
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_loopExpr_in_inlineExpr1125);
+                    pushFollow(FOLLOW_loopExpr_in_inlineExpr1117);
                     loopExpr106=loopExpr();
 
                     state._fsp--;
@@ -4156,11 +4152,11 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:194:15: optExpr
+                    // msc_grammar.g:192:15: optExpr
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_optExpr_in_inlineExpr1129);
+                    pushFollow(FOLLOW_optExpr_in_inlineExpr1121);
                     optExpr107=optExpr();
 
                     state._fsp--;
@@ -4170,11 +4166,11 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // msc_grammar.g:194:25: altExpr
+                    // msc_grammar.g:192:25: altExpr
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_altExpr_in_inlineExpr1133);
+                    pushFollow(FOLLOW_altExpr_in_inlineExpr1125);
                     altExpr108=altExpr();
 
                     state._fsp--;
@@ -4184,11 +4180,11 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // msc_grammar.g:194:35: parExpr
+                    // msc_grammar.g:192:35: parExpr
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_parExpr_in_inlineExpr1137);
+                    pushFollow(FOLLOW_parExpr_in_inlineExpr1129);
                     parExpr109=parExpr();
 
                     state._fsp--;
@@ -4198,11 +4194,11 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // msc_grammar.g:194:45: excExpr
+                    // msc_grammar.g:192:45: excExpr
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_excExpr_in_inlineExpr1141);
+                    pushFollow(FOLLOW_excExpr_in_inlineExpr1133);
                     excExpr110=excExpr();
 
                     state._fsp--;
@@ -4237,7 +4233,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "loopExpr"
-    // msc_grammar.g:196:1: loopExpr : 'loop' ( loopBoundary )? BEGIN end mscBody 'loop' END -> ^( Loop mscBody ( loopBoundary )? ) ;
+    // msc_grammar.g:194:1: loopExpr : 'loop' ( loopBoundary )? BEGIN end mscBody 'loop' END -> ^( Loop mscBody ( loopBoundary )? ) ;
     public final msc_grammarParser.loopExpr_return loopExpr() throws RecognitionException {
         msc_grammarParser.loopExpr_return retval = new msc_grammarParser.loopExpr_return();
         retval.start = input.LT(1);
@@ -4259,31 +4255,31 @@ public class msc_grammarParser extends Parser {
         CommonTree BEGIN113_tree=null;
         CommonTree string_literal116_tree=null;
         CommonTree END117_tree=null;
-        RewriteRuleTokenStream stream_82=new RewriteRuleTokenStream(adaptor,"token 82");
         RewriteRuleTokenStream stream_END=new RewriteRuleTokenStream(adaptor,"token END");
+        RewriteRuleTokenStream stream_80=new RewriteRuleTokenStream(adaptor,"token 80");
         RewriteRuleTokenStream stream_BEGIN=new RewriteRuleTokenStream(adaptor,"token BEGIN");
         RewriteRuleSubtreeStream stream_loopBoundary=new RewriteRuleSubtreeStream(adaptor,"rule loopBoundary");
         RewriteRuleSubtreeStream stream_mscBody=new RewriteRuleSubtreeStream(adaptor,"rule mscBody");
         RewriteRuleSubtreeStream stream_end=new RewriteRuleSubtreeStream(adaptor,"rule end");
         try {
-            // msc_grammar.g:197:2: ( 'loop' ( loopBoundary )? BEGIN end mscBody 'loop' END -> ^( Loop mscBody ( loopBoundary )? ) )
-            // msc_grammar.g:197:4: 'loop' ( loopBoundary )? BEGIN end mscBody 'loop' END
+            // msc_grammar.g:195:2: ( 'loop' ( loopBoundary )? BEGIN end mscBody 'loop' END -> ^( Loop mscBody ( loopBoundary )? ) )
+            // msc_grammar.g:195:4: 'loop' ( loopBoundary )? BEGIN end mscBody 'loop' END
             {
-            string_literal111=(Token)match(input,82,FOLLOW_82_in_loopExpr1152);  
-            stream_82.add(string_literal111);
+            string_literal111=(Token)match(input,80,FOLLOW_80_in_loopExpr1144);  
+            stream_80.add(string_literal111);
 
-            // msc_grammar.g:197:11: ( loopBoundary )?
+            // msc_grammar.g:195:11: ( loopBoundary )?
             int alt36=2;
             int LA36_0 = input.LA(1);
 
-            if ( (LA36_0==87) ) {
+            if ( (LA36_0==85) ) {
                 alt36=1;
             }
             switch (alt36) {
                 case 1 :
-                    // msc_grammar.g:197:13: loopBoundary
+                    // msc_grammar.g:195:13: loopBoundary
                     {
-                    pushFollow(FOLLOW_loopBoundary_in_loopExpr1156);
+                    pushFollow(FOLLOW_loopBoundary_in_loopExpr1148);
                     loopBoundary112=loopBoundary();
 
                     state._fsp--;
@@ -4295,25 +4291,25 @@ public class msc_grammarParser extends Parser {
 
             }
 
-            BEGIN113=(Token)match(input,BEGIN,FOLLOW_BEGIN_in_loopExpr1161);  
+            BEGIN113=(Token)match(input,BEGIN,FOLLOW_BEGIN_in_loopExpr1153);  
             stream_BEGIN.add(BEGIN113);
 
-            pushFollow(FOLLOW_end_in_loopExpr1163);
+            pushFollow(FOLLOW_end_in_loopExpr1155);
             end114=end();
 
             state._fsp--;
 
             stream_end.add(end114.getTree());
-            pushFollow(FOLLOW_mscBody_in_loopExpr1165);
+            pushFollow(FOLLOW_mscBody_in_loopExpr1157);
             mscBody115=mscBody();
 
             state._fsp--;
 
             stream_mscBody.add(mscBody115.getTree());
-            string_literal116=(Token)match(input,82,FOLLOW_82_in_loopExpr1167);  
-            stream_82.add(string_literal116);
+            string_literal116=(Token)match(input,80,FOLLOW_80_in_loopExpr1159);  
+            stream_80.add(string_literal116);
 
-            END117=(Token)match(input,END,FOLLOW_END_in_loopExpr1169);  
+            END117=(Token)match(input,END,FOLLOW_END_in_loopExpr1161);  
             stream_END.add(END117);
 
 
@@ -4329,15 +4325,15 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 197:58: -> ^( Loop mscBody ( loopBoundary )? )
+            // 195:58: -> ^( Loop mscBody ( loopBoundary )? )
             {
-                // msc_grammar.g:197:61: ^( Loop mscBody ( loopBoundary )? )
+                // msc_grammar.g:195:61: ^( Loop mscBody ( loopBoundary )? )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Loop, "Loop"), root_1);
 
                 adaptor.addChild(root_1, stream_mscBody.nextTree());
-                // msc_grammar.g:197:77: ( loopBoundary )?
+                // msc_grammar.g:195:77: ( loopBoundary )?
                 if ( stream_loopBoundary.hasNext() ) {
                     adaptor.addChild(root_1, stream_loopBoundary.nextTree());
 
@@ -4376,7 +4372,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "optExpr"
-    // msc_grammar.g:199:1: optExpr : 'opt' BEGIN end mscBody 'opt' END -> ^( Opt mscBody ) ;
+    // msc_grammar.g:197:1: optExpr : 'opt' BEGIN end mscBody 'opt' END -> ^( Opt mscBody ) ;
     public final msc_grammarParser.optExpr_return optExpr() throws RecognitionException {
         msc_grammarParser.optExpr_return retval = new msc_grammarParser.optExpr_return();
         retval.start = input.LT(1);
@@ -4397,36 +4393,36 @@ public class msc_grammarParser extends Parser {
         CommonTree string_literal122_tree=null;
         CommonTree END123_tree=null;
         RewriteRuleTokenStream stream_END=new RewriteRuleTokenStream(adaptor,"token END");
-        RewriteRuleTokenStream stream_83=new RewriteRuleTokenStream(adaptor,"token 83");
+        RewriteRuleTokenStream stream_81=new RewriteRuleTokenStream(adaptor,"token 81");
         RewriteRuleTokenStream stream_BEGIN=new RewriteRuleTokenStream(adaptor,"token BEGIN");
         RewriteRuleSubtreeStream stream_mscBody=new RewriteRuleSubtreeStream(adaptor,"rule mscBody");
         RewriteRuleSubtreeStream stream_end=new RewriteRuleSubtreeStream(adaptor,"rule end");
         try {
-            // msc_grammar.g:199:9: ( 'opt' BEGIN end mscBody 'opt' END -> ^( Opt mscBody ) )
-            // msc_grammar.g:199:11: 'opt' BEGIN end mscBody 'opt' END
+            // msc_grammar.g:197:9: ( 'opt' BEGIN end mscBody 'opt' END -> ^( Opt mscBody ) )
+            // msc_grammar.g:197:11: 'opt' BEGIN end mscBody 'opt' END
             {
-            string_literal118=(Token)match(input,83,FOLLOW_83_in_optExpr1191);  
-            stream_83.add(string_literal118);
+            string_literal118=(Token)match(input,81,FOLLOW_81_in_optExpr1183);  
+            stream_81.add(string_literal118);
 
-            BEGIN119=(Token)match(input,BEGIN,FOLLOW_BEGIN_in_optExpr1193);  
+            BEGIN119=(Token)match(input,BEGIN,FOLLOW_BEGIN_in_optExpr1185);  
             stream_BEGIN.add(BEGIN119);
 
-            pushFollow(FOLLOW_end_in_optExpr1195);
+            pushFollow(FOLLOW_end_in_optExpr1187);
             end120=end();
 
             state._fsp--;
 
             stream_end.add(end120.getTree());
-            pushFollow(FOLLOW_mscBody_in_optExpr1197);
+            pushFollow(FOLLOW_mscBody_in_optExpr1189);
             mscBody121=mscBody();
 
             state._fsp--;
 
             stream_mscBody.add(mscBody121.getTree());
-            string_literal122=(Token)match(input,83,FOLLOW_83_in_optExpr1199);  
-            stream_83.add(string_literal122);
+            string_literal122=(Token)match(input,81,FOLLOW_81_in_optExpr1191);  
+            stream_81.add(string_literal122);
 
-            END123=(Token)match(input,END,FOLLOW_END_in_optExpr1201);  
+            END123=(Token)match(input,END,FOLLOW_END_in_optExpr1193);  
             stream_END.add(END123);
 
 
@@ -4442,9 +4438,9 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 199:45: -> ^( Opt mscBody )
+            // 197:45: -> ^( Opt mscBody )
             {
-                // msc_grammar.g:199:48: ^( Opt mscBody )
+                // msc_grammar.g:197:48: ^( Opt mscBody )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Opt, "Opt"), root_1);
@@ -4483,7 +4479,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "excExpr"
-    // msc_grammar.g:201:1: excExpr : 'exc' BEGIN end mscBody 'exc' END -> ^( Exc mscBody ) ;
+    // msc_grammar.g:199:1: excExpr : 'exc' BEGIN end mscBody 'exc' END -> ^( Exc mscBody ) ;
     public final msc_grammarParser.excExpr_return excExpr() throws RecognitionException {
         msc_grammarParser.excExpr_return retval = new msc_grammarParser.excExpr_return();
         retval.start = input.LT(1);
@@ -4504,36 +4500,36 @@ public class msc_grammarParser extends Parser {
         CommonTree string_literal128_tree=null;
         CommonTree END129_tree=null;
         RewriteRuleTokenStream stream_END=new RewriteRuleTokenStream(adaptor,"token END");
+        RewriteRuleTokenStream stream_82=new RewriteRuleTokenStream(adaptor,"token 82");
         RewriteRuleTokenStream stream_BEGIN=new RewriteRuleTokenStream(adaptor,"token BEGIN");
-        RewriteRuleTokenStream stream_84=new RewriteRuleTokenStream(adaptor,"token 84");
         RewriteRuleSubtreeStream stream_mscBody=new RewriteRuleSubtreeStream(adaptor,"rule mscBody");
         RewriteRuleSubtreeStream stream_end=new RewriteRuleSubtreeStream(adaptor,"rule end");
         try {
-            // msc_grammar.g:201:9: ( 'exc' BEGIN end mscBody 'exc' END -> ^( Exc mscBody ) )
-            // msc_grammar.g:201:11: 'exc' BEGIN end mscBody 'exc' END
+            // msc_grammar.g:199:9: ( 'exc' BEGIN end mscBody 'exc' END -> ^( Exc mscBody ) )
+            // msc_grammar.g:199:11: 'exc' BEGIN end mscBody 'exc' END
             {
-            string_literal124=(Token)match(input,84,FOLLOW_84_in_excExpr1220);  
-            stream_84.add(string_literal124);
+            string_literal124=(Token)match(input,82,FOLLOW_82_in_excExpr1212);  
+            stream_82.add(string_literal124);
 
-            BEGIN125=(Token)match(input,BEGIN,FOLLOW_BEGIN_in_excExpr1222);  
+            BEGIN125=(Token)match(input,BEGIN,FOLLOW_BEGIN_in_excExpr1214);  
             stream_BEGIN.add(BEGIN125);
 
-            pushFollow(FOLLOW_end_in_excExpr1224);
+            pushFollow(FOLLOW_end_in_excExpr1216);
             end126=end();
 
             state._fsp--;
 
             stream_end.add(end126.getTree());
-            pushFollow(FOLLOW_mscBody_in_excExpr1226);
+            pushFollow(FOLLOW_mscBody_in_excExpr1218);
             mscBody127=mscBody();
 
             state._fsp--;
 
             stream_mscBody.add(mscBody127.getTree());
-            string_literal128=(Token)match(input,84,FOLLOW_84_in_excExpr1228);  
-            stream_84.add(string_literal128);
+            string_literal128=(Token)match(input,82,FOLLOW_82_in_excExpr1220);  
+            stream_82.add(string_literal128);
 
-            END129=(Token)match(input,END,FOLLOW_END_in_excExpr1230);  
+            END129=(Token)match(input,END,FOLLOW_END_in_excExpr1222);  
             stream_END.add(END129);
 
 
@@ -4549,9 +4545,9 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 201:45: -> ^( Exc mscBody )
+            // 199:45: -> ^( Exc mscBody )
             {
-                // msc_grammar.g:201:48: ^( Exc mscBody )
+                // msc_grammar.g:199:48: ^( Exc mscBody )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Exc, "Exc"), root_1);
@@ -4590,7 +4586,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "altExpr"
-    // msc_grammar.g:203:1: altExpr : 'alt' BEGIN end mscBody ( 'alt' end mscBody )* 'alt' END -> ^( Alt ( mscBody )+ ) ;
+    // msc_grammar.g:201:1: altExpr : 'alt' BEGIN end mscBody ( 'alt' end mscBody )* 'alt' END -> ^( Alt ( mscBody )+ ) ;
     public final msc_grammarParser.altExpr_return altExpr() throws RecognitionException {
         msc_grammarParser.altExpr_return retval = new msc_grammarParser.altExpr_return();
         retval.start = input.LT(1);
@@ -4617,42 +4613,42 @@ public class msc_grammarParser extends Parser {
         CommonTree string_literal137_tree=null;
         CommonTree END138_tree=null;
         RewriteRuleTokenStream stream_END=new RewriteRuleTokenStream(adaptor,"token END");
+        RewriteRuleTokenStream stream_83=new RewriteRuleTokenStream(adaptor,"token 83");
         RewriteRuleTokenStream stream_BEGIN=new RewriteRuleTokenStream(adaptor,"token BEGIN");
-        RewriteRuleTokenStream stream_85=new RewriteRuleTokenStream(adaptor,"token 85");
         RewriteRuleSubtreeStream stream_mscBody=new RewriteRuleSubtreeStream(adaptor,"rule mscBody");
         RewriteRuleSubtreeStream stream_end=new RewriteRuleSubtreeStream(adaptor,"rule end");
         try {
-            // msc_grammar.g:203:9: ( 'alt' BEGIN end mscBody ( 'alt' end mscBody )* 'alt' END -> ^( Alt ( mscBody )+ ) )
-            // msc_grammar.g:203:11: 'alt' BEGIN end mscBody ( 'alt' end mscBody )* 'alt' END
+            // msc_grammar.g:201:9: ( 'alt' BEGIN end mscBody ( 'alt' end mscBody )* 'alt' END -> ^( Alt ( mscBody )+ ) )
+            // msc_grammar.g:201:11: 'alt' BEGIN end mscBody ( 'alt' end mscBody )* 'alt' END
             {
-            string_literal130=(Token)match(input,85,FOLLOW_85_in_altExpr1249);  
-            stream_85.add(string_literal130);
+            string_literal130=(Token)match(input,83,FOLLOW_83_in_altExpr1241);  
+            stream_83.add(string_literal130);
 
-            BEGIN131=(Token)match(input,BEGIN,FOLLOW_BEGIN_in_altExpr1251);  
+            BEGIN131=(Token)match(input,BEGIN,FOLLOW_BEGIN_in_altExpr1243);  
             stream_BEGIN.add(BEGIN131);
 
-            pushFollow(FOLLOW_end_in_altExpr1253);
+            pushFollow(FOLLOW_end_in_altExpr1245);
             end132=end();
 
             state._fsp--;
 
             stream_end.add(end132.getTree());
-            pushFollow(FOLLOW_mscBody_in_altExpr1255);
+            pushFollow(FOLLOW_mscBody_in_altExpr1247);
             mscBody133=mscBody();
 
             state._fsp--;
 
             stream_mscBody.add(mscBody133.getTree());
-            // msc_grammar.g:203:35: ( 'alt' end mscBody )*
+            // msc_grammar.g:201:35: ( 'alt' end mscBody )*
             loop37:
             do {
                 int alt37=2;
                 int LA37_0 = input.LA(1);
 
-                if ( (LA37_0==85) ) {
+                if ( (LA37_0==83) ) {
                     int LA37_1 = input.LA(2);
 
-                    if ( (LA37_1==80) ) {
+                    if ( (LA37_1==78) ) {
                         alt37=1;
                     }
 
@@ -4662,18 +4658,18 @@ public class msc_grammarParser extends Parser {
 
                 switch (alt37) {
             	case 1 :
-            	    // msc_grammar.g:203:37: 'alt' end mscBody
+            	    // msc_grammar.g:201:37: 'alt' end mscBody
             	    {
-            	    string_literal134=(Token)match(input,85,FOLLOW_85_in_altExpr1259);  
-            	    stream_85.add(string_literal134);
+            	    string_literal134=(Token)match(input,83,FOLLOW_83_in_altExpr1251);  
+            	    stream_83.add(string_literal134);
 
-            	    pushFollow(FOLLOW_end_in_altExpr1261);
+            	    pushFollow(FOLLOW_end_in_altExpr1253);
             	    end135=end();
 
             	    state._fsp--;
 
             	    stream_end.add(end135.getTree());
-            	    pushFollow(FOLLOW_mscBody_in_altExpr1263);
+            	    pushFollow(FOLLOW_mscBody_in_altExpr1255);
             	    mscBody136=mscBody();
 
             	    state._fsp--;
@@ -4688,10 +4684,10 @@ public class msc_grammarParser extends Parser {
                 }
             } while (true);
 
-            string_literal137=(Token)match(input,85,FOLLOW_85_in_altExpr1268);  
-            stream_85.add(string_literal137);
+            string_literal137=(Token)match(input,83,FOLLOW_83_in_altExpr1260);  
+            stream_83.add(string_literal137);
 
-            END138=(Token)match(input,END,FOLLOW_END_in_altExpr1270);  
+            END138=(Token)match(input,END,FOLLOW_END_in_altExpr1262);  
             stream_END.add(END138);
 
 
@@ -4707,9 +4703,9 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 203:68: -> ^( Alt ( mscBody )+ )
+            // 201:68: -> ^( Alt ( mscBody )+ )
             {
-                // msc_grammar.g:203:71: ^( Alt ( mscBody )+ )
+                // msc_grammar.g:201:71: ^( Alt ( mscBody )+ )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Alt, "Alt"), root_1);
@@ -4755,7 +4751,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "parExpr"
-    // msc_grammar.g:205:1: parExpr : 'par' BEGIN end mscBody ( 'par' end mscBody )* 'par' END -> ^( Par ( mscBody )+ ) ;
+    // msc_grammar.g:203:1: parExpr : 'par' BEGIN end mscBody ( 'par' end mscBody )* 'par' END -> ^( Par ( mscBody )+ ) ;
     public final msc_grammarParser.parExpr_return parExpr() throws RecognitionException {
         msc_grammarParser.parExpr_return retval = new msc_grammarParser.parExpr_return();
         retval.start = input.LT(1);
@@ -4782,42 +4778,42 @@ public class msc_grammarParser extends Parser {
         CommonTree string_literal146_tree=null;
         CommonTree END147_tree=null;
         RewriteRuleTokenStream stream_END=new RewriteRuleTokenStream(adaptor,"token END");
-        RewriteRuleTokenStream stream_86=new RewriteRuleTokenStream(adaptor,"token 86");
         RewriteRuleTokenStream stream_BEGIN=new RewriteRuleTokenStream(adaptor,"token BEGIN");
+        RewriteRuleTokenStream stream_84=new RewriteRuleTokenStream(adaptor,"token 84");
         RewriteRuleSubtreeStream stream_mscBody=new RewriteRuleSubtreeStream(adaptor,"rule mscBody");
         RewriteRuleSubtreeStream stream_end=new RewriteRuleSubtreeStream(adaptor,"rule end");
         try {
-            // msc_grammar.g:205:9: ( 'par' BEGIN end mscBody ( 'par' end mscBody )* 'par' END -> ^( Par ( mscBody )+ ) )
-            // msc_grammar.g:205:11: 'par' BEGIN end mscBody ( 'par' end mscBody )* 'par' END
+            // msc_grammar.g:203:9: ( 'par' BEGIN end mscBody ( 'par' end mscBody )* 'par' END -> ^( Par ( mscBody )+ ) )
+            // msc_grammar.g:203:11: 'par' BEGIN end mscBody ( 'par' end mscBody )* 'par' END
             {
-            string_literal139=(Token)match(input,86,FOLLOW_86_in_parExpr1290);  
-            stream_86.add(string_literal139);
+            string_literal139=(Token)match(input,84,FOLLOW_84_in_parExpr1282);  
+            stream_84.add(string_literal139);
 
-            BEGIN140=(Token)match(input,BEGIN,FOLLOW_BEGIN_in_parExpr1292);  
+            BEGIN140=(Token)match(input,BEGIN,FOLLOW_BEGIN_in_parExpr1284);  
             stream_BEGIN.add(BEGIN140);
 
-            pushFollow(FOLLOW_end_in_parExpr1294);
+            pushFollow(FOLLOW_end_in_parExpr1286);
             end141=end();
 
             state._fsp--;
 
             stream_end.add(end141.getTree());
-            pushFollow(FOLLOW_mscBody_in_parExpr1296);
+            pushFollow(FOLLOW_mscBody_in_parExpr1288);
             mscBody142=mscBody();
 
             state._fsp--;
 
             stream_mscBody.add(mscBody142.getTree());
-            // msc_grammar.g:205:35: ( 'par' end mscBody )*
+            // msc_grammar.g:203:35: ( 'par' end mscBody )*
             loop38:
             do {
                 int alt38=2;
                 int LA38_0 = input.LA(1);
 
-                if ( (LA38_0==86) ) {
+                if ( (LA38_0==84) ) {
                     int LA38_1 = input.LA(2);
 
-                    if ( (LA38_1==80) ) {
+                    if ( (LA38_1==78) ) {
                         alt38=1;
                     }
 
@@ -4827,18 +4823,18 @@ public class msc_grammarParser extends Parser {
 
                 switch (alt38) {
             	case 1 :
-            	    // msc_grammar.g:205:37: 'par' end mscBody
+            	    // msc_grammar.g:203:37: 'par' end mscBody
             	    {
-            	    string_literal143=(Token)match(input,86,FOLLOW_86_in_parExpr1300);  
-            	    stream_86.add(string_literal143);
+            	    string_literal143=(Token)match(input,84,FOLLOW_84_in_parExpr1292);  
+            	    stream_84.add(string_literal143);
 
-            	    pushFollow(FOLLOW_end_in_parExpr1302);
+            	    pushFollow(FOLLOW_end_in_parExpr1294);
             	    end144=end();
 
             	    state._fsp--;
 
             	    stream_end.add(end144.getTree());
-            	    pushFollow(FOLLOW_mscBody_in_parExpr1304);
+            	    pushFollow(FOLLOW_mscBody_in_parExpr1296);
             	    mscBody145=mscBody();
 
             	    state._fsp--;
@@ -4853,10 +4849,10 @@ public class msc_grammarParser extends Parser {
                 }
             } while (true);
 
-            string_literal146=(Token)match(input,86,FOLLOW_86_in_parExpr1309);  
-            stream_86.add(string_literal146);
+            string_literal146=(Token)match(input,84,FOLLOW_84_in_parExpr1301);  
+            stream_84.add(string_literal146);
 
-            END147=(Token)match(input,END,FOLLOW_END_in_parExpr1311);  
+            END147=(Token)match(input,END,FOLLOW_END_in_parExpr1303);  
             stream_END.add(END147);
 
 
@@ -4872,9 +4868,9 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 205:68: -> ^( Par ( mscBody )+ )
+            // 203:68: -> ^( Par ( mscBody )+ )
             {
-                // msc_grammar.g:205:71: ^( Par ( mscBody )+ )
+                // msc_grammar.g:203:71: ^( Par ( mscBody )+ )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Par, "Par"), root_1);
@@ -4920,7 +4916,7 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "loopBoundary"
-    // msc_grammar.g:207:1: loopBoundary : '<' infNatural ( ',' infNatural )? '>' -> ^( LoopBoundary ( infNatural )+ ) ;
+    // msc_grammar.g:205:1: loopBoundary : '<' infNatural ( ',' infNatural )? '>' -> ^( Bounds ( infNatural )+ ) ;
     public final msc_grammarParser.loopBoundary_return loopBoundary() throws RecognitionException {
         msc_grammarParser.loopBoundary_return retval = new msc_grammarParser.loopBoundary_return();
         retval.start = input.LT(1);
@@ -4938,38 +4934,38 @@ public class msc_grammarParser extends Parser {
         CommonTree char_literal148_tree=null;
         CommonTree char_literal150_tree=null;
         CommonTree char_literal152_tree=null;
-        RewriteRuleTokenStream stream_62=new RewriteRuleTokenStream(adaptor,"token 62");
-        RewriteRuleTokenStream stream_87=new RewriteRuleTokenStream(adaptor,"token 87");
-        RewriteRuleTokenStream stream_88=new RewriteRuleTokenStream(adaptor,"token 88");
+        RewriteRuleTokenStream stream_86=new RewriteRuleTokenStream(adaptor,"token 86");
+        RewriteRuleTokenStream stream_60=new RewriteRuleTokenStream(adaptor,"token 60");
+        RewriteRuleTokenStream stream_85=new RewriteRuleTokenStream(adaptor,"token 85");
         RewriteRuleSubtreeStream stream_infNatural=new RewriteRuleSubtreeStream(adaptor,"rule infNatural");
         try {
-            // msc_grammar.g:208:2: ( '<' infNatural ( ',' infNatural )? '>' -> ^( LoopBoundary ( infNatural )+ ) )
-            // msc_grammar.g:208:4: '<' infNatural ( ',' infNatural )? '>'
+            // msc_grammar.g:206:2: ( '<' infNatural ( ',' infNatural )? '>' -> ^( Bounds ( infNatural )+ ) )
+            // msc_grammar.g:206:4: '<' infNatural ( ',' infNatural )? '>'
             {
-            char_literal148=(Token)match(input,87,FOLLOW_87_in_loopBoundary1332);  
-            stream_87.add(char_literal148);
+            char_literal148=(Token)match(input,85,FOLLOW_85_in_loopBoundary1324);  
+            stream_85.add(char_literal148);
 
-            pushFollow(FOLLOW_infNatural_in_loopBoundary1334);
+            pushFollow(FOLLOW_infNatural_in_loopBoundary1326);
             infNatural149=infNatural();
 
             state._fsp--;
 
             stream_infNatural.add(infNatural149.getTree());
-            // msc_grammar.g:208:19: ( ',' infNatural )?
+            // msc_grammar.g:206:19: ( ',' infNatural )?
             int alt39=2;
             int LA39_0 = input.LA(1);
 
-            if ( (LA39_0==62) ) {
+            if ( (LA39_0==60) ) {
                 alt39=1;
             }
             switch (alt39) {
                 case 1 :
-                    // msc_grammar.g:208:21: ',' infNatural
+                    // msc_grammar.g:206:21: ',' infNatural
                     {
-                    char_literal150=(Token)match(input,62,FOLLOW_62_in_loopBoundary1338);  
-                    stream_62.add(char_literal150);
+                    char_literal150=(Token)match(input,60,FOLLOW_60_in_loopBoundary1330);  
+                    stream_60.add(char_literal150);
 
-                    pushFollow(FOLLOW_infNatural_in_loopBoundary1340);
+                    pushFollow(FOLLOW_infNatural_in_loopBoundary1332);
                     infNatural151=infNatural();
 
                     state._fsp--;
@@ -4981,8 +4977,8 @@ public class msc_grammarParser extends Parser {
 
             }
 
-            char_literal152=(Token)match(input,88,FOLLOW_88_in_loopBoundary1345);  
-            stream_88.add(char_literal152);
+            char_literal152=(Token)match(input,86,FOLLOW_86_in_loopBoundary1337);  
+            stream_86.add(char_literal152);
 
 
 
@@ -4997,12 +4993,12 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 208:43: -> ^( LoopBoundary ( infNatural )+ )
+            // 206:43: -> ^( Bounds ( infNatural )+ )
             {
-                // msc_grammar.g:208:46: ^( LoopBoundary ( infNatural )+ )
+                // msc_grammar.g:206:46: ^( Bounds ( infNatural )+ )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
-                root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(LoopBoundary, "LoopBoundary"), root_1);
+                root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Bounds, "Bounds"), root_1);
 
                 if ( !(stream_infNatural.hasNext()) ) {
                     throw new RewriteEarlyExitException();
@@ -5045,32 +5041,28 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "infNatural"
-    // msc_grammar.g:210:1: infNatural : ( 'inf' | '\"' expressionString '\"' );
+    // msc_grammar.g:208:1: infNatural : ( name | characterString );
     public final msc_grammarParser.infNatural_return infNatural() throws RecognitionException {
         msc_grammarParser.infNatural_return retval = new msc_grammarParser.infNatural_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token string_literal153=null;
-        Token char_literal154=null;
-        Token char_literal156=null;
-        msc_grammarParser.expressionString_return expressionString155 = null;
+        msc_grammarParser.name_return name153 = null;
+
+        msc_grammarParser.characterString_return characterString154 = null;
 
 
-        CommonTree string_literal153_tree=null;
-        CommonTree char_literal154_tree=null;
-        CommonTree char_literal156_tree=null;
 
         try {
-            // msc_grammar.g:211:2: ( 'inf' | '\"' expressionString '\"' )
+            // msc_grammar.g:209:2: ( name | characterString )
             int alt40=2;
             int LA40_0 = input.LA(1);
 
-            if ( (LA40_0==89) ) {
+            if ( (LA40_0==NAME) ) {
                 alt40=1;
             }
-            else if ( (LA40_0==90) ) {
+            else if ( (LA40_0==CHARACTERSTRING) ) {
                 alt40=2;
             }
             else {
@@ -5081,36 +5073,30 @@ public class msc_grammarParser extends Parser {
             }
             switch (alt40) {
                 case 1 :
-                    // msc_grammar.g:211:4: 'inf'
+                    // msc_grammar.g:209:4: name
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    string_literal153=(Token)match(input,89,FOLLOW_89_in_infNatural1367); 
-                    string_literal153_tree = (CommonTree)adaptor.create(string_literal153);
-                    adaptor.addChild(root_0, string_literal153_tree);
+                    pushFollow(FOLLOW_name_in_infNatural1359);
+                    name153=name();
 
+                    state._fsp--;
+
+                    adaptor.addChild(root_0, name153.getTree());
 
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:211:12: '\"' expressionString '\"'
+                    // msc_grammar.g:209:11: characterString
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    char_literal154=(Token)match(input,90,FOLLOW_90_in_infNatural1371); 
-                    char_literal154_tree = (CommonTree)adaptor.create(char_literal154);
-                    adaptor.addChild(root_0, char_literal154_tree);
-
-                    pushFollow(FOLLOW_expressionString_in_infNatural1373);
-                    expressionString155=expressionString();
+                    pushFollow(FOLLOW_characterString_in_infNatural1363);
+                    characterString154=characterString();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, expressionString155.getTree());
-                    char_literal156=(Token)match(input,90,FOLLOW_90_in_infNatural1375); 
-                    char_literal156_tree = (CommonTree)adaptor.create(char_literal156);
-                    adaptor.addChild(root_0, char_literal156_tree);
-
+                    adaptor.addChild(root_0, characterString154.getTree());
 
                     }
                     break;
@@ -5140,64 +5126,64 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "create"
-    // msc_grammar.g:215:1: create : 'create' instanceName ( '(' msgIdentification ')' )? -> ^( Create instanceName ^( ParameterList ( msgIdentification )? ) ) ;
+    // msc_grammar.g:213:1: create : 'create' instanceName ( '(' msgIdentification ')' )? -> ^( Create instanceName ^( ParameterList ( msgIdentification )? ) ) ;
     public final msc_grammarParser.create_return create() throws RecognitionException {
         msc_grammarParser.create_return retval = new msc_grammarParser.create_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token string_literal157=null;
+        Token string_literal155=null;
+        Token char_literal157=null;
         Token char_literal159=null;
-        Token char_literal161=null;
-        msc_grammarParser.instanceName_return instanceName158 = null;
+        msc_grammarParser.instanceName_return instanceName156 = null;
 
-        msc_grammarParser.msgIdentification_return msgIdentification160 = null;
+        msc_grammarParser.msgIdentification_return msgIdentification158 = null;
 
 
-        CommonTree string_literal157_tree=null;
+        CommonTree string_literal155_tree=null;
+        CommonTree char_literal157_tree=null;
         CommonTree char_literal159_tree=null;
-        CommonTree char_literal161_tree=null;
-        RewriteRuleTokenStream stream_93=new RewriteRuleTokenStream(adaptor,"token 93");
-        RewriteRuleTokenStream stream_92=new RewriteRuleTokenStream(adaptor,"token 92");
-        RewriteRuleTokenStream stream_91=new RewriteRuleTokenStream(adaptor,"token 91");
+        RewriteRuleTokenStream stream_87=new RewriteRuleTokenStream(adaptor,"token 87");
+        RewriteRuleTokenStream stream_88=new RewriteRuleTokenStream(adaptor,"token 88");
+        RewriteRuleTokenStream stream_89=new RewriteRuleTokenStream(adaptor,"token 89");
         RewriteRuleSubtreeStream stream_instanceName=new RewriteRuleSubtreeStream(adaptor,"rule instanceName");
         RewriteRuleSubtreeStream stream_msgIdentification=new RewriteRuleSubtreeStream(adaptor,"rule msgIdentification");
         try {
-            // msc_grammar.g:215:9: ( 'create' instanceName ( '(' msgIdentification ')' )? -> ^( Create instanceName ^( ParameterList ( msgIdentification )? ) ) )
-            // msc_grammar.g:215:11: 'create' instanceName ( '(' msgIdentification ')' )?
+            // msc_grammar.g:213:9: ( 'create' instanceName ( '(' msgIdentification ')' )? -> ^( Create instanceName ^( ParameterList ( msgIdentification )? ) ) )
+            // msc_grammar.g:213:11: 'create' instanceName ( '(' msgIdentification ')' )?
             {
-            string_literal157=(Token)match(input,91,FOLLOW_91_in_create1388);  
-            stream_91.add(string_literal157);
+            string_literal155=(Token)match(input,87,FOLLOW_87_in_create1376);  
+            stream_87.add(string_literal155);
 
-            pushFollow(FOLLOW_instanceName_in_create1390);
-            instanceName158=instanceName();
+            pushFollow(FOLLOW_instanceName_in_create1378);
+            instanceName156=instanceName();
 
             state._fsp--;
 
-            stream_instanceName.add(instanceName158.getTree());
-            // msc_grammar.g:215:33: ( '(' msgIdentification ')' )?
+            stream_instanceName.add(instanceName156.getTree());
+            // msc_grammar.g:213:33: ( '(' msgIdentification ')' )?
             int alt41=2;
             int LA41_0 = input.LA(1);
 
-            if ( (LA41_0==92) ) {
+            if ( (LA41_0==88) ) {
                 alt41=1;
             }
             switch (alt41) {
                 case 1 :
-                    // msc_grammar.g:215:35: '(' msgIdentification ')'
+                    // msc_grammar.g:213:35: '(' msgIdentification ')'
                     {
-                    char_literal159=(Token)match(input,92,FOLLOW_92_in_create1394);  
-                    stream_92.add(char_literal159);
+                    char_literal157=(Token)match(input,88,FOLLOW_88_in_create1382);  
+                    stream_88.add(char_literal157);
 
-                    pushFollow(FOLLOW_msgIdentification_in_create1395);
-                    msgIdentification160=msgIdentification();
+                    pushFollow(FOLLOW_msgIdentification_in_create1383);
+                    msgIdentification158=msgIdentification();
 
                     state._fsp--;
 
-                    stream_msgIdentification.add(msgIdentification160.getTree());
-                    char_literal161=(Token)match(input,93,FOLLOW_93_in_create1397);  
-                    stream_93.add(char_literal161);
+                    stream_msgIdentification.add(msgIdentification158.getTree());
+                    char_literal159=(Token)match(input,89,FOLLOW_89_in_create1385);  
+                    stream_89.add(char_literal159);
 
 
                     }
@@ -5208,7 +5194,7 @@ public class msc_grammarParser extends Parser {
 
 
             // AST REWRITE
-            // elements: msgIdentification, instanceName
+            // elements: instanceName, msgIdentification
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -5218,20 +5204,20 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 215:63: -> ^( Create instanceName ^( ParameterList ( msgIdentification )? ) )
+            // 213:63: -> ^( Create instanceName ^( ParameterList ( msgIdentification )? ) )
             {
-                // msc_grammar.g:215:66: ^( Create instanceName ^( ParameterList ( msgIdentification )? ) )
+                // msc_grammar.g:213:66: ^( Create instanceName ^( ParameterList ( msgIdentification )? ) )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Create, "Create"), root_1);
 
                 adaptor.addChild(root_1, stream_instanceName.nextTree());
-                // msc_grammar.g:215:89: ^( ParameterList ( msgIdentification )? )
+                // msc_grammar.g:213:89: ^( ParameterList ( msgIdentification )? )
                 {
                 CommonTree root_2 = (CommonTree)adaptor.nil();
                 root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ParameterList, "ParameterList"), root_2);
 
-                // msc_grammar.g:215:105: ( msgIdentification )?
+                // msc_grammar.g:213:105: ( msgIdentification )?
                 if ( stream_msgIdentification.hasNext() ) {
                     adaptor.addChild(root_2, stream_msgIdentification.nextTree());
 
@@ -5273,24 +5259,24 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "stop"
-    // msc_grammar.g:217:1: stop : 'stop' -> Terminate ;
+    // msc_grammar.g:215:1: stop : 'stop' -> Terminate ;
     public final msc_grammarParser.stop_return stop() throws RecognitionException {
         msc_grammarParser.stop_return retval = new msc_grammarParser.stop_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token string_literal162=null;
+        Token string_literal160=null;
 
-        CommonTree string_literal162_tree=null;
-        RewriteRuleTokenStream stream_94=new RewriteRuleTokenStream(adaptor,"token 94");
+        CommonTree string_literal160_tree=null;
+        RewriteRuleTokenStream stream_90=new RewriteRuleTokenStream(adaptor,"token 90");
 
         try {
-            // msc_grammar.g:217:7: ( 'stop' -> Terminate )
-            // msc_grammar.g:217:9: 'stop'
+            // msc_grammar.g:215:7: ( 'stop' -> Terminate )
+            // msc_grammar.g:215:9: 'stop'
             {
-            string_literal162=(Token)match(input,94,FOLLOW_94_in_stop1427);  
-            stream_94.add(string_literal162);
+            string_literal160=(Token)match(input,90,FOLLOW_90_in_stop1415);  
+            stream_90.add(string_literal160);
 
 
 
@@ -5305,7 +5291,7 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 217:16: -> Terminate
+            // 215:16: -> Terminate
             {
                 adaptor.addChild(root_0, (CommonTree)adaptor.create(Terminate, "Terminate"));
 
@@ -5338,194 +5324,66 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "timerStatement"
-    // msc_grammar.g:220:1: timerStatement : ( setTimer | resetTimer | timeout );
+    // msc_grammar.g:218:1: timerStatement : timerType name ( duration )? -> ^( Timer timerType name ( duration )? ) ;
     public final msc_grammarParser.timerStatement_return timerStatement() throws RecognitionException {
         msc_grammarParser.timerStatement_return retval = new msc_grammarParser.timerStatement_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        msc_grammarParser.setTimer_return setTimer163 = null;
+        msc_grammarParser.timerType_return timerType161 = null;
 
-        msc_grammarParser.resetTimer_return resetTimer164 = null;
+        msc_grammarParser.name_return name162 = null;
 
-        msc_grammarParser.timeout_return timeout165 = null;
+        msc_grammarParser.duration_return duration163 = null;
 
 
-
+        RewriteRuleSubtreeStream stream_duration=new RewriteRuleSubtreeStream(adaptor,"rule duration");
+        RewriteRuleSubtreeStream stream_name=new RewriteRuleSubtreeStream(adaptor,"rule name");
+        RewriteRuleSubtreeStream stream_timerType=new RewriteRuleSubtreeStream(adaptor,"rule timerType");
         try {
-            // msc_grammar.g:221:2: ( setTimer | resetTimer | timeout )
-            int alt42=3;
-            switch ( input.LA(1) ) {
-            case 95:
-                {
+            // msc_grammar.g:219:2: ( timerType name ( duration )? -> ^( Timer timerType name ( duration )? ) )
+            // msc_grammar.g:219:4: timerType name ( duration )?
+            {
+            pushFollow(FOLLOW_timerType_in_timerStatement1431);
+            timerType161=timerType();
+
+            state._fsp--;
+
+            stream_timerType.add(timerType161.getTree());
+            pushFollow(FOLLOW_name_in_timerStatement1433);
+            name162=name();
+
+            state._fsp--;
+
+            stream_name.add(name162.getTree());
+            // msc_grammar.g:219:19: ( duration )?
+            int alt42=2;
+            int LA42_0 = input.LA(1);
+
+            if ( (LA42_0==94) ) {
                 alt42=1;
-                }
-                break;
-            case 98:
-                {
-                alt42=2;
-                }
-                break;
-            case 99:
-                {
-                alt42=3;
-                }
-                break;
-            default:
-                NoViableAltException nvae =
-                    new NoViableAltException("", 42, 0, input);
-
-                throw nvae;
             }
-
             switch (alt42) {
                 case 1 :
-                    // msc_grammar.g:221:4: setTimer
+                    // msc_grammar.g:219:21: duration
                     {
-                    root_0 = (CommonTree)adaptor.nil();
-
-                    pushFollow(FOLLOW_setTimer_in_timerStatement1443);
-                    setTimer163=setTimer();
+                    pushFollow(FOLLOW_duration_in_timerStatement1437);
+                    duration163=duration();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, setTimer163.getTree());
+                    stream_duration.add(duration163.getTree());
 
                     }
                     break;
-                case 2 :
-                    // msc_grammar.g:221:15: resetTimer
-                    {
-                    root_0 = (CommonTree)adaptor.nil();
-
-                    pushFollow(FOLLOW_resetTimer_in_timerStatement1447);
-                    resetTimer164=resetTimer();
-
-                    state._fsp--;
-
-                    adaptor.addChild(root_0, resetTimer164.getTree());
-
-                    }
-                    break;
-                case 3 :
-                    // msc_grammar.g:221:28: timeout
-                    {
-                    root_0 = (CommonTree)adaptor.nil();
-
-                    pushFollow(FOLLOW_timeout_in_timerStatement1451);
-                    timeout165=timeout();
-
-                    state._fsp--;
-
-                    adaptor.addChild(root_0, timeout165.getTree());
-
-                    }
-                    break;
-
-            }
-            retval.stop = input.LT(-1);
-
-            retval.tree = (CommonTree)adaptor.rulePostProcessing(root_0);
-            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-    	retval.tree = (CommonTree)adaptor.errorNode(input, retval.start, input.LT(-1), re);
-
-        }
-        finally {
-        }
-        return retval;
-    }
-    // $ANTLR end "timerStatement"
-
-    public static class setTimer_return extends ParserRuleReturnScope {
-        CommonTree tree;
-        public Object getTree() { return tree; }
-    };
-
-    // $ANTLR start "setTimer"
-    // msc_grammar.g:223:1: setTimer : 'starttimer' name ( ',' instanceName )? ( duration ) -> ^( StartTimer name ( instanceName )? ( duration )? ) ;
-    public final msc_grammarParser.setTimer_return setTimer() throws RecognitionException {
-        msc_grammarParser.setTimer_return retval = new msc_grammarParser.setTimer_return();
-        retval.start = input.LT(1);
-
-        CommonTree root_0 = null;
-
-        Token string_literal166=null;
-        Token char_literal168=null;
-        msc_grammarParser.name_return name167 = null;
-
-        msc_grammarParser.instanceName_return instanceName169 = null;
-
-        msc_grammarParser.duration_return duration170 = null;
-
-
-        CommonTree string_literal166_tree=null;
-        CommonTree char_literal168_tree=null;
-        RewriteRuleTokenStream stream_95=new RewriteRuleTokenStream(adaptor,"token 95");
-        RewriteRuleTokenStream stream_62=new RewriteRuleTokenStream(adaptor,"token 62");
-        RewriteRuleSubtreeStream stream_duration=new RewriteRuleSubtreeStream(adaptor,"rule duration");
-        RewriteRuleSubtreeStream stream_instanceName=new RewriteRuleSubtreeStream(adaptor,"rule instanceName");
-        RewriteRuleSubtreeStream stream_name=new RewriteRuleSubtreeStream(adaptor,"rule name");
-        try {
-            // msc_grammar.g:224:2: ( 'starttimer' name ( ',' instanceName )? ( duration ) -> ^( StartTimer name ( instanceName )? ( duration )? ) )
-            // msc_grammar.g:224:4: 'starttimer' name ( ',' instanceName )? ( duration )
-            {
-            string_literal166=(Token)match(input,95,FOLLOW_95_in_setTimer1462);  
-            stream_95.add(string_literal166);
-
-            pushFollow(FOLLOW_name_in_setTimer1464);
-            name167=name();
-
-            state._fsp--;
-
-            stream_name.add(name167.getTree());
-            // msc_grammar.g:224:22: ( ',' instanceName )?
-            int alt43=2;
-            int LA43_0 = input.LA(1);
-
-            if ( (LA43_0==62) ) {
-                alt43=1;
-            }
-            switch (alt43) {
-                case 1 :
-                    // msc_grammar.g:224:24: ',' instanceName
-                    {
-                    char_literal168=(Token)match(input,62,FOLLOW_62_in_setTimer1468);  
-                    stream_62.add(char_literal168);
-
-                    pushFollow(FOLLOW_instanceName_in_setTimer1470);
-                    instanceName169=instanceName();
-
-                    state._fsp--;
-
-                    stream_instanceName.add(instanceName169.getTree());
-
-                    }
-                    break;
-
-            }
-
-            // msc_grammar.g:224:44: ( duration )
-            // msc_grammar.g:224:46: duration
-            {
-            pushFollow(FOLLOW_duration_in_setTimer1477);
-            duration170=duration();
-
-            state._fsp--;
-
-            stream_duration.add(duration170.getTree());
 
             }
 
 
 
             // AST REWRITE
-            // elements: duration, instanceName, name
+            // elements: timerType, duration, name
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -5535,21 +5393,16 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 225:4: -> ^( StartTimer name ( instanceName )? ( duration )? )
+            // 219:33: -> ^( Timer timerType name ( duration )? )
             {
-                // msc_grammar.g:225:7: ^( StartTimer name ( instanceName )? ( duration )? )
+                // msc_grammar.g:219:36: ^( Timer timerType name ( duration )? )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
-                root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(StartTimer, "StartTimer"), root_1);
+                root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Timer, "Timer"), root_1);
 
+                adaptor.addChild(root_1, stream_timerType.nextTree());
                 adaptor.addChild(root_1, stream_name.nextTree());
-                // msc_grammar.g:225:26: ( instanceName )?
-                if ( stream_instanceName.hasNext() ) {
-                    adaptor.addChild(root_1, stream_instanceName.nextTree());
-
-                }
-                stream_instanceName.reset();
-                // msc_grammar.g:225:40: ( duration )?
+                // msc_grammar.g:219:60: ( duration )?
                 if ( stream_duration.hasNext() ) {
                     adaptor.addChild(root_1, stream_duration.nextTree());
 
@@ -5580,7 +5433,62 @@ public class msc_grammarParser extends Parser {
         }
         return retval;
     }
-    // $ANTLR end "setTimer"
+    // $ANTLR end "timerStatement"
+
+    public static class timerType_return extends ParserRuleReturnScope {
+        CommonTree tree;
+        public Object getTree() { return tree; }
+    };
+
+    // $ANTLR start "timerType"
+    // msc_grammar.g:221:1: timerType : ( 'starttimer' | 'stoptimer' | 'timeout' );
+    public final msc_grammarParser.timerType_return timerType() throws RecognitionException {
+        msc_grammarParser.timerType_return retval = new msc_grammarParser.timerType_return();
+        retval.start = input.LT(1);
+
+        CommonTree root_0 = null;
+
+        Token set164=null;
+
+        CommonTree set164_tree=null;
+
+        try {
+            // msc_grammar.g:222:2: ( 'starttimer' | 'stoptimer' | 'timeout' )
+            // msc_grammar.g:
+            {
+            root_0 = (CommonTree)adaptor.nil();
+
+            set164=(Token)input.LT(1);
+            if ( (input.LA(1)>=91 && input.LA(1)<=93) ) {
+                input.consume();
+                adaptor.addChild(root_0, (CommonTree)adaptor.create(set164));
+                state.errorRecovery=false;
+            }
+            else {
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                throw mse;
+            }
+
+
+            }
+
+            retval.stop = input.LT(-1);
+
+            retval.tree = (CommonTree)adaptor.rulePostProcessing(root_0);
+            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+    	retval.tree = (CommonTree)adaptor.errorNode(input, retval.start, input.LT(-1), re);
+
+        }
+        finally {
+        }
+        return retval;
+    }
+    // $ANTLR end "timerType"
 
     public static class duration_return extends ParserRuleReturnScope {
         CommonTree tree;
@@ -5588,90 +5496,122 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "duration"
-    // msc_grammar.g:227:1: duration : '[' ( infNatural )? ( ',' infNatural )? ']' ;
+    // msc_grammar.g:224:1: duration : '[' ( infNatural )? ( ',' infNatural )? ']' -> ^( Bounds ( infNatural )+ ) ;
     public final msc_grammarParser.duration_return duration() throws RecognitionException {
         msc_grammarParser.duration_return retval = new msc_grammarParser.duration_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token char_literal171=null;
-        Token char_literal173=null;
-        Token char_literal175=null;
-        msc_grammarParser.infNatural_return infNatural172 = null;
+        Token char_literal165=null;
+        Token char_literal167=null;
+        Token char_literal169=null;
+        msc_grammarParser.infNatural_return infNatural166 = null;
 
-        msc_grammarParser.infNatural_return infNatural174 = null;
+        msc_grammarParser.infNatural_return infNatural168 = null;
 
 
-        CommonTree char_literal171_tree=null;
-        CommonTree char_literal173_tree=null;
-        CommonTree char_literal175_tree=null;
-
+        CommonTree char_literal165_tree=null;
+        CommonTree char_literal167_tree=null;
+        CommonTree char_literal169_tree=null;
+        RewriteRuleTokenStream stream_95=new RewriteRuleTokenStream(adaptor,"token 95");
+        RewriteRuleTokenStream stream_94=new RewriteRuleTokenStream(adaptor,"token 94");
+        RewriteRuleTokenStream stream_60=new RewriteRuleTokenStream(adaptor,"token 60");
+        RewriteRuleSubtreeStream stream_infNatural=new RewriteRuleSubtreeStream(adaptor,"rule infNatural");
         try {
-            // msc_grammar.g:228:2: ( '[' ( infNatural )? ( ',' infNatural )? ']' )
-            // msc_grammar.g:228:4: '[' ( infNatural )? ( ',' infNatural )? ']'
+            // msc_grammar.g:225:2: ( '[' ( infNatural )? ( ',' infNatural )? ']' -> ^( Bounds ( infNatural )+ ) )
+            // msc_grammar.g:225:4: '[' ( infNatural )? ( ',' infNatural )? ']'
             {
-            root_0 = (CommonTree)adaptor.nil();
+            char_literal165=(Token)match(input,94,FOLLOW_94_in_duration1485);  
+            stream_94.add(char_literal165);
 
-            char_literal171=(Token)match(input,96,FOLLOW_96_in_duration1510); 
-            char_literal171_tree = (CommonTree)adaptor.create(char_literal171);
-            adaptor.addChild(root_0, char_literal171_tree);
+            // msc_grammar.g:225:8: ( infNatural )?
+            int alt43=2;
+            int LA43_0 = input.LA(1);
 
-            // msc_grammar.g:228:8: ( infNatural )?
+            if ( ((LA43_0>=NAME && LA43_0<=CHARACTERSTRING)) ) {
+                alt43=1;
+            }
+            switch (alt43) {
+                case 1 :
+                    // msc_grammar.g:225:10: infNatural
+                    {
+                    pushFollow(FOLLOW_infNatural_in_duration1489);
+                    infNatural166=infNatural();
+
+                    state._fsp--;
+
+                    stream_infNatural.add(infNatural166.getTree());
+
+                    }
+                    break;
+
+            }
+
+            // msc_grammar.g:225:24: ( ',' infNatural )?
             int alt44=2;
             int LA44_0 = input.LA(1);
 
-            if ( ((LA44_0>=89 && LA44_0<=90)) ) {
+            if ( (LA44_0==60) ) {
                 alt44=1;
             }
             switch (alt44) {
                 case 1 :
-                    // msc_grammar.g:228:10: infNatural
+                    // msc_grammar.g:225:26: ',' infNatural
                     {
-                    pushFollow(FOLLOW_infNatural_in_duration1514);
-                    infNatural172=infNatural();
+                    char_literal167=(Token)match(input,60,FOLLOW_60_in_duration1496);  
+                    stream_60.add(char_literal167);
+
+                    pushFollow(FOLLOW_infNatural_in_duration1498);
+                    infNatural168=infNatural();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, infNatural172.getTree());
+                    stream_infNatural.add(infNatural168.getTree());
 
                     }
                     break;
 
             }
 
-            // msc_grammar.g:228:24: ( ',' infNatural )?
-            int alt45=2;
-            int LA45_0 = input.LA(1);
+            char_literal169=(Token)match(input,95,FOLLOW_95_in_duration1503);  
+            stream_95.add(char_literal169);
 
-            if ( (LA45_0==62) ) {
-                alt45=1;
+
+
+            // AST REWRITE
+            // elements: infNatural
+            // token labels: 
+            // rule labels: retval
+            // token list labels: 
+            // rule list labels: 
+            // wildcard labels: 
+            retval.tree = root_0;
+            RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
+
+            root_0 = (CommonTree)adaptor.nil();
+            // 225:48: -> ^( Bounds ( infNatural )+ )
+            {
+                // msc_grammar.g:225:51: ^( Bounds ( infNatural )+ )
+                {
+                CommonTree root_1 = (CommonTree)adaptor.nil();
+                root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Bounds, "Bounds"), root_1);
+
+                if ( !(stream_infNatural.hasNext()) ) {
+                    throw new RewriteEarlyExitException();
+                }
+                while ( stream_infNatural.hasNext() ) {
+                    adaptor.addChild(root_1, stream_infNatural.nextTree());
+
+                }
+                stream_infNatural.reset();
+
+                adaptor.addChild(root_0, root_1);
+                }
+
             }
-            switch (alt45) {
-                case 1 :
-                    // msc_grammar.g:228:26: ',' infNatural
-                    {
-                    char_literal173=(Token)match(input,62,FOLLOW_62_in_duration1521); 
-                    char_literal173_tree = (CommonTree)adaptor.create(char_literal173);
-                    adaptor.addChild(root_0, char_literal173_tree);
 
-                    pushFollow(FOLLOW_infNatural_in_duration1523);
-                    infNatural174=infNatural();
-
-                    state._fsp--;
-
-                    adaptor.addChild(root_0, infNatural174.getTree());
-
-                    }
-                    break;
-
-            }
-
-            char_literal175=(Token)match(input,97,FOLLOW_97_in_duration1528); 
-            char_literal175_tree = (CommonTree)adaptor.create(char_literal175);
-            adaptor.addChild(root_0, char_literal175_tree);
-
-
+            retval.tree = root_0;
             }
 
             retval.stop = input.LT(-1);
@@ -5692,300 +5632,62 @@ public class msc_grammarParser extends Parser {
     }
     // $ANTLR end "duration"
 
-    public static class resetTimer_return extends ParserRuleReturnScope {
-        CommonTree tree;
-        public Object getTree() { return tree; }
-    };
-
-    // $ANTLR start "resetTimer"
-    // msc_grammar.g:230:1: resetTimer : 'stoptimer' name ( ',' instanceName )? -> ^( StopTimer name ( instanceName )? ) ;
-    public final msc_grammarParser.resetTimer_return resetTimer() throws RecognitionException {
-        msc_grammarParser.resetTimer_return retval = new msc_grammarParser.resetTimer_return();
-        retval.start = input.LT(1);
-
-        CommonTree root_0 = null;
-
-        Token string_literal176=null;
-        Token char_literal178=null;
-        msc_grammarParser.name_return name177 = null;
-
-        msc_grammarParser.instanceName_return instanceName179 = null;
-
-
-        CommonTree string_literal176_tree=null;
-        CommonTree char_literal178_tree=null;
-        RewriteRuleTokenStream stream_98=new RewriteRuleTokenStream(adaptor,"token 98");
-        RewriteRuleTokenStream stream_62=new RewriteRuleTokenStream(adaptor,"token 62");
-        RewriteRuleSubtreeStream stream_instanceName=new RewriteRuleSubtreeStream(adaptor,"rule instanceName");
-        RewriteRuleSubtreeStream stream_name=new RewriteRuleSubtreeStream(adaptor,"rule name");
-        try {
-            // msc_grammar.g:231:2: ( 'stoptimer' name ( ',' instanceName )? -> ^( StopTimer name ( instanceName )? ) )
-            // msc_grammar.g:231:4: 'stoptimer' name ( ',' instanceName )?
-            {
-            string_literal176=(Token)match(input,98,FOLLOW_98_in_resetTimer1539);  
-            stream_98.add(string_literal176);
-
-            pushFollow(FOLLOW_name_in_resetTimer1541);
-            name177=name();
-
-            state._fsp--;
-
-            stream_name.add(name177.getTree());
-            // msc_grammar.g:231:21: ( ',' instanceName )?
-            int alt46=2;
-            int LA46_0 = input.LA(1);
-
-            if ( (LA46_0==62) ) {
-                alt46=1;
-            }
-            switch (alt46) {
-                case 1 :
-                    // msc_grammar.g:231:23: ',' instanceName
-                    {
-                    char_literal178=(Token)match(input,62,FOLLOW_62_in_resetTimer1545);  
-                    stream_62.add(char_literal178);
-
-                    pushFollow(FOLLOW_instanceName_in_resetTimer1547);
-                    instanceName179=instanceName();
-
-                    state._fsp--;
-
-                    stream_instanceName.add(instanceName179.getTree());
-
-                    }
-                    break;
-
-            }
-
-
-
-            // AST REWRITE
-            // elements: name, instanceName
-            // token labels: 
-            // rule labels: retval
-            // token list labels: 
-            // rule list labels: 
-            // wildcard labels: 
-            retval.tree = root_0;
-            RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
-
-            root_0 = (CommonTree)adaptor.nil();
-            // 231:43: -> ^( StopTimer name ( instanceName )? )
-            {
-                // msc_grammar.g:231:46: ^( StopTimer name ( instanceName )? )
-                {
-                CommonTree root_1 = (CommonTree)adaptor.nil();
-                root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(StopTimer, "StopTimer"), root_1);
-
-                adaptor.addChild(root_1, stream_name.nextTree());
-                // msc_grammar.g:231:64: ( instanceName )?
-                if ( stream_instanceName.hasNext() ) {
-                    adaptor.addChild(root_1, stream_instanceName.nextTree());
-
-                }
-                stream_instanceName.reset();
-
-                adaptor.addChild(root_0, root_1);
-                }
-
-            }
-
-            retval.tree = root_0;
-            }
-
-            retval.stop = input.LT(-1);
-
-            retval.tree = (CommonTree)adaptor.rulePostProcessing(root_0);
-            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-    	retval.tree = (CommonTree)adaptor.errorNode(input, retval.start, input.LT(-1), re);
-
-        }
-        finally {
-        }
-        return retval;
-    }
-    // $ANTLR end "resetTimer"
-
-    public static class timeout_return extends ParserRuleReturnScope {
-        CommonTree tree;
-        public Object getTree() { return tree; }
-    };
-
-    // $ANTLR start "timeout"
-    // msc_grammar.g:233:1: timeout : 'timeout' name ( ',' instanceName )? -> ^( Timeout name ( instanceName )? ) ;
-    public final msc_grammarParser.timeout_return timeout() throws RecognitionException {
-        msc_grammarParser.timeout_return retval = new msc_grammarParser.timeout_return();
-        retval.start = input.LT(1);
-
-        CommonTree root_0 = null;
-
-        Token string_literal180=null;
-        Token char_literal182=null;
-        msc_grammarParser.name_return name181 = null;
-
-        msc_grammarParser.instanceName_return instanceName183 = null;
-
-
-        CommonTree string_literal180_tree=null;
-        CommonTree char_literal182_tree=null;
-        RewriteRuleTokenStream stream_62=new RewriteRuleTokenStream(adaptor,"token 62");
-        RewriteRuleTokenStream stream_99=new RewriteRuleTokenStream(adaptor,"token 99");
-        RewriteRuleSubtreeStream stream_instanceName=new RewriteRuleSubtreeStream(adaptor,"rule instanceName");
-        RewriteRuleSubtreeStream stream_name=new RewriteRuleSubtreeStream(adaptor,"rule name");
-        try {
-            // msc_grammar.g:233:9: ( 'timeout' name ( ',' instanceName )? -> ^( Timeout name ( instanceName )? ) )
-            // msc_grammar.g:233:11: 'timeout' name ( ',' instanceName )?
-            {
-            string_literal180=(Token)match(input,99,FOLLOW_99_in_timeout1572);  
-            stream_99.add(string_literal180);
-
-            pushFollow(FOLLOW_name_in_timeout1574);
-            name181=name();
-
-            state._fsp--;
-
-            stream_name.add(name181.getTree());
-            // msc_grammar.g:233:26: ( ',' instanceName )?
-            int alt47=2;
-            int LA47_0 = input.LA(1);
-
-            if ( (LA47_0==62) ) {
-                alt47=1;
-            }
-            switch (alt47) {
-                case 1 :
-                    // msc_grammar.g:233:28: ',' instanceName
-                    {
-                    char_literal182=(Token)match(input,62,FOLLOW_62_in_timeout1578);  
-                    stream_62.add(char_literal182);
-
-                    pushFollow(FOLLOW_instanceName_in_timeout1580);
-                    instanceName183=instanceName();
-
-                    state._fsp--;
-
-                    stream_instanceName.add(instanceName183.getTree());
-
-                    }
-                    break;
-
-            }
-
-
-
-            // AST REWRITE
-            // elements: name, instanceName
-            // token labels: 
-            // rule labels: retval
-            // token list labels: 
-            // rule list labels: 
-            // wildcard labels: 
-            retval.tree = root_0;
-            RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
-
-            root_0 = (CommonTree)adaptor.nil();
-            // 233:48: -> ^( Timeout name ( instanceName )? )
-            {
-                // msc_grammar.g:233:51: ^( Timeout name ( instanceName )? )
-                {
-                CommonTree root_1 = (CommonTree)adaptor.nil();
-                root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Timeout, "Timeout"), root_1);
-
-                adaptor.addChild(root_1, stream_name.nextTree());
-                // msc_grammar.g:233:67: ( instanceName )?
-                if ( stream_instanceName.hasNext() ) {
-                    adaptor.addChild(root_1, stream_instanceName.nextTree());
-
-                }
-                stream_instanceName.reset();
-
-                adaptor.addChild(root_0, root_1);
-                }
-
-            }
-
-            retval.tree = root_0;
-            }
-
-            retval.stop = input.LT(-1);
-
-            retval.tree = (CommonTree)adaptor.rulePostProcessing(root_0);
-            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-    	retval.tree = (CommonTree)adaptor.errorNode(input, retval.start, input.LT(-1), re);
-
-        }
-        finally {
-        }
-        return retval;
-    }
-    // $ANTLR end "timeout"
-
     public static class mscGateInterface_return extends ParserRuleReturnScope {
         CommonTree tree;
         public Object getTree() { return tree; }
     };
 
     // $ANTLR start "mscGateInterface"
-    // msc_grammar.g:237:1: mscGateInterface : ( mscGateDef )+ ;
+    // msc_grammar.g:229:1: mscGateInterface : ( mscGateDef )+ ;
     public final msc_grammarParser.mscGateInterface_return mscGateInterface() throws RecognitionException {
         msc_grammarParser.mscGateInterface_return retval = new msc_grammarParser.mscGateInterface_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        msc_grammarParser.mscGateDef_return mscGateDef184 = null;
+        msc_grammarParser.mscGateDef_return mscGateDef170 = null;
 
 
 
         try {
-            // msc_grammar.g:238:2: ( ( mscGateDef )+ )
-            // msc_grammar.g:238:4: ( mscGateDef )+
+            // msc_grammar.g:230:2: ( ( mscGateDef )+ )
+            // msc_grammar.g:230:4: ( mscGateDef )+
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // msc_grammar.g:238:4: ( mscGateDef )+
-            int cnt48=0;
-            loop48:
+            // msc_grammar.g:230:4: ( mscGateDef )+
+            int cnt45=0;
+            loop45:
             do {
-                int alt48=2;
-                int LA48_0 = input.LA(1);
+                int alt45=2;
+                int LA45_0 = input.LA(1);
 
-                if ( (LA48_0==100) ) {
-                    alt48=1;
+                if ( (LA45_0==96) ) {
+                    alt45=1;
                 }
 
 
-                switch (alt48) {
+                switch (alt45) {
             	case 1 :
-            	    // msc_grammar.g:238:4: mscGateDef
+            	    // msc_grammar.g:230:4: mscGateDef
             	    {
-            	    pushFollow(FOLLOW_mscGateDef_in_mscGateInterface1610);
-            	    mscGateDef184=mscGateDef();
+            	    pushFollow(FOLLOW_mscGateDef_in_mscGateInterface1528);
+            	    mscGateDef170=mscGateDef();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, mscGateDef184.getTree());
+            	    adaptor.addChild(root_0, mscGateDef170.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    if ( cnt48 >= 1 ) break loop48;
+            	    if ( cnt45 >= 1 ) break loop45;
                         EarlyExitException eee =
-                            new EarlyExitException(48, input);
+                            new EarlyExitException(45, input);
                         throw eee;
                 }
-                cnt48++;
+                cnt45++;
             } while (true);
 
 
@@ -6015,96 +5717,96 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "mscGateDef"
-    // msc_grammar.g:240:1: mscGateDef : 'gate' ( msgGate | orderGate ) end ;
+    // msc_grammar.g:232:1: mscGateDef : 'gate' ( msgGate | orderGate ) end ;
     public final msc_grammarParser.mscGateDef_return mscGateDef() throws RecognitionException {
         msc_grammarParser.mscGateDef_return retval = new msc_grammarParser.mscGateDef_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token string_literal185=null;
-        msc_grammarParser.msgGate_return msgGate186 = null;
+        Token string_literal171=null;
+        msc_grammarParser.msgGate_return msgGate172 = null;
 
-        msc_grammarParser.orderGate_return orderGate187 = null;
+        msc_grammarParser.orderGate_return orderGate173 = null;
 
-        msc_grammarParser.end_return end188 = null;
+        msc_grammarParser.end_return end174 = null;
 
 
-        CommonTree string_literal185_tree=null;
+        CommonTree string_literal171_tree=null;
 
         try {
-            // msc_grammar.g:241:2: ( 'gate' ( msgGate | orderGate ) end )
-            // msc_grammar.g:241:4: 'gate' ( msgGate | orderGate ) end
+            // msc_grammar.g:233:2: ( 'gate' ( msgGate | orderGate ) end )
+            // msc_grammar.g:233:4: 'gate' ( msgGate | orderGate ) end
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            string_literal185=(Token)match(input,100,FOLLOW_100_in_mscGateDef1622); 
-            string_literal185_tree = (CommonTree)adaptor.create(string_literal185);
-            adaptor.addChild(root_0, string_literal185_tree);
+            string_literal171=(Token)match(input,96,FOLLOW_96_in_mscGateDef1540); 
+            string_literal171_tree = (CommonTree)adaptor.create(string_literal171);
+            adaptor.addChild(root_0, string_literal171_tree);
 
-            // msc_grammar.g:241:11: ( msgGate | orderGate )
-            int alt49=2;
-            int LA49_0 = input.LA(1);
+            // msc_grammar.g:233:11: ( msgGate | orderGate )
+            int alt46=2;
+            int LA46_0 = input.LA(1);
 
-            if ( (LA49_0==NAME) ) {
-                int LA49_1 = input.LA(2);
+            if ( (LA46_0==NAME) ) {
+                int LA46_1 = input.LA(2);
 
-                if ( (LA49_1==80||(LA49_1>=101 && LA49_1<=102)) ) {
-                    alt49=2;
+                if ( (LA46_1==78||(LA46_1>=97 && LA46_1<=98)) ) {
+                    alt46=2;
                 }
-                else if ( (LA49_1==64||LA49_1==66) ) {
-                    alt49=1;
+                else if ( (LA46_1==62||LA46_1==64) ) {
+                    alt46=1;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 49, 1, input);
+                        new NoViableAltException("", 46, 1, input);
 
                     throw nvae;
                 }
             }
-            else if ( (LA49_0==64||LA49_0==66) ) {
-                alt49=1;
+            else if ( (LA46_0==62||LA46_0==64) ) {
+                alt46=1;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 49, 0, input);
+                    new NoViableAltException("", 46, 0, input);
 
                 throw nvae;
             }
-            switch (alt49) {
+            switch (alt46) {
                 case 1 :
-                    // msc_grammar.g:241:13: msgGate
+                    // msc_grammar.g:233:13: msgGate
                     {
-                    pushFollow(FOLLOW_msgGate_in_mscGateDef1626);
-                    msgGate186=msgGate();
+                    pushFollow(FOLLOW_msgGate_in_mscGateDef1544);
+                    msgGate172=msgGate();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, msgGate186.getTree());
+                    adaptor.addChild(root_0, msgGate172.getTree());
 
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:241:23: orderGate
+                    // msc_grammar.g:233:23: orderGate
                     {
-                    pushFollow(FOLLOW_orderGate_in_mscGateDef1630);
-                    orderGate187=orderGate();
+                    pushFollow(FOLLOW_orderGate_in_mscGateDef1548);
+                    orderGate173=orderGate();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, orderGate187.getTree());
+                    adaptor.addChild(root_0, orderGate173.getTree());
 
                     }
                     break;
 
             }
 
-            pushFollow(FOLLOW_end_in_mscGateDef1634);
-            end188=end();
+            pushFollow(FOLLOW_end_in_mscGateDef1552);
+            end174=end();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, end188.getTree());
+            adaptor.addChild(root_0, end174.getTree());
 
             }
 
@@ -6132,84 +5834,84 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "msgGate"
-    // msc_grammar.g:243:1: msgGate : ( defInGate | defOutGate );
+    // msc_grammar.g:235:1: msgGate : ( defInGate | defOutGate );
     public final msc_grammarParser.msgGate_return msgGate() throws RecognitionException {
         msc_grammarParser.msgGate_return retval = new msc_grammarParser.msgGate_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        msc_grammarParser.defInGate_return defInGate189 = null;
+        msc_grammarParser.defInGate_return defInGate175 = null;
 
-        msc_grammarParser.defOutGate_return defOutGate190 = null;
+        msc_grammarParser.defOutGate_return defOutGate176 = null;
 
 
 
         try {
-            // msc_grammar.g:243:9: ( defInGate | defOutGate )
-            int alt50=2;
+            // msc_grammar.g:235:9: ( defInGate | defOutGate )
+            int alt47=2;
             switch ( input.LA(1) ) {
             case NAME:
                 {
-                int LA50_1 = input.LA(2);
+                int LA47_1 = input.LA(2);
 
-                if ( (LA50_1==66) ) {
-                    alt50=2;
+                if ( (LA47_1==62) ) {
+                    alt47=1;
                 }
-                else if ( (LA50_1==64) ) {
-                    alt50=1;
+                else if ( (LA47_1==64) ) {
+                    alt47=2;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 50, 1, input);
+                        new NoViableAltException("", 47, 1, input);
 
                     throw nvae;
                 }
                 }
                 break;
-            case 64:
+            case 62:
                 {
-                alt50=1;
+                alt47=1;
                 }
                 break;
-            case 66:
+            case 64:
                 {
-                alt50=2;
+                alt47=2;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 50, 0, input);
+                    new NoViableAltException("", 47, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt50) {
+            switch (alt47) {
                 case 1 :
-                    // msc_grammar.g:243:11: defInGate
+                    // msc_grammar.g:235:11: defInGate
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_defInGate_in_msgGate1643);
-                    defInGate189=defInGate();
+                    pushFollow(FOLLOW_defInGate_in_msgGate1561);
+                    defInGate175=defInGate();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, defInGate189.getTree());
+                    adaptor.addChild(root_0, defInGate175.getTree());
 
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:243:23: defOutGate
+                    // msc_grammar.g:235:23: defOutGate
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_defOutGate_in_msgGate1647);
-                    defOutGate190=defOutGate();
+                    pushFollow(FOLLOW_defOutGate_in_msgGate1565);
+                    defOutGate176=defOutGate();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, defOutGate190.getTree());
+                    adaptor.addChild(root_0, defOutGate176.getTree());
 
                     }
                     break;
@@ -6239,72 +5941,72 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "orderGate"
-    // msc_grammar.g:245:1: orderGate : ( defOrderInGate | defOrderOutGate );
+    // msc_grammar.g:237:1: orderGate : ( defOrderInGate | defOrderOutGate );
     public final msc_grammarParser.orderGate_return orderGate() throws RecognitionException {
         msc_grammarParser.orderGate_return retval = new msc_grammarParser.orderGate_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        msc_grammarParser.defOrderInGate_return defOrderInGate191 = null;
+        msc_grammarParser.defOrderInGate_return defOrderInGate177 = null;
 
-        msc_grammarParser.defOrderOutGate_return defOrderOutGate192 = null;
+        msc_grammarParser.defOrderOutGate_return defOrderOutGate178 = null;
 
 
 
         try {
-            // msc_grammar.g:246:2: ( defOrderInGate | defOrderOutGate )
-            int alt51=2;
-            int LA51_0 = input.LA(1);
+            // msc_grammar.g:238:2: ( defOrderInGate | defOrderOutGate )
+            int alt48=2;
+            int LA48_0 = input.LA(1);
 
-            if ( (LA51_0==NAME) ) {
-                int LA51_1 = input.LA(2);
+            if ( (LA48_0==NAME) ) {
+                int LA48_1 = input.LA(2);
 
-                if ( (LA51_1==80||LA51_1==102) ) {
-                    alt51=2;
+                if ( (LA48_1==78||LA48_1==98) ) {
+                    alt48=2;
                 }
-                else if ( (LA51_1==101) ) {
-                    alt51=1;
+                else if ( (LA48_1==97) ) {
+                    alt48=1;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 51, 1, input);
+                        new NoViableAltException("", 48, 1, input);
 
                     throw nvae;
                 }
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 51, 0, input);
+                    new NoViableAltException("", 48, 0, input);
 
                 throw nvae;
             }
-            switch (alt51) {
+            switch (alt48) {
                 case 1 :
-                    // msc_grammar.g:246:4: defOrderInGate
+                    // msc_grammar.g:238:4: defOrderInGate
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_defOrderInGate_in_orderGate1658);
-                    defOrderInGate191=defOrderInGate();
+                    pushFollow(FOLLOW_defOrderInGate_in_orderGate1576);
+                    defOrderInGate177=defOrderInGate();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, defOrderInGate191.getTree());
+                    adaptor.addChild(root_0, defOrderInGate177.getTree());
 
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:246:21: defOrderOutGate
+                    // msc_grammar.g:238:21: defOrderOutGate
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_defOrderOutGate_in_orderGate1662);
-                    defOrderOutGate192=defOrderOutGate();
+                    pushFollow(FOLLOW_defOrderOutGate_in_orderGate1580);
+                    defOrderOutGate178=defOrderOutGate();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, defOrderOutGate192.getTree());
+                    adaptor.addChild(root_0, defOrderOutGate178.getTree());
 
                     }
                     break;
@@ -6334,74 +6036,74 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "defInGate"
-    // msc_grammar.g:248:1: defInGate : ( gateName )? 'out' msgIdentification 'to' inputDest ;
+    // msc_grammar.g:240:1: defInGate : ( gateName )? 'out' msgIdentification 'to' inputDest ;
     public final msc_grammarParser.defInGate_return defInGate() throws RecognitionException {
         msc_grammarParser.defInGate_return retval = new msc_grammarParser.defInGate_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token string_literal194=null;
-        Token string_literal196=null;
-        msc_grammarParser.gateName_return gateName193 = null;
+        Token string_literal180=null;
+        Token string_literal182=null;
+        msc_grammarParser.gateName_return gateName179 = null;
 
-        msc_grammarParser.msgIdentification_return msgIdentification195 = null;
+        msc_grammarParser.msgIdentification_return msgIdentification181 = null;
 
-        msc_grammarParser.inputDest_return inputDest197 = null;
+        msc_grammarParser.inputDest_return inputDest183 = null;
 
 
-        CommonTree string_literal194_tree=null;
-        CommonTree string_literal196_tree=null;
+        CommonTree string_literal180_tree=null;
+        CommonTree string_literal182_tree=null;
 
         try {
-            // msc_grammar.g:249:2: ( ( gateName )? 'out' msgIdentification 'to' inputDest )
-            // msc_grammar.g:249:4: ( gateName )? 'out' msgIdentification 'to' inputDest
+            // msc_grammar.g:241:2: ( ( gateName )? 'out' msgIdentification 'to' inputDest )
+            // msc_grammar.g:241:4: ( gateName )? 'out' msgIdentification 'to' inputDest
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // msc_grammar.g:249:4: ( gateName )?
-            int alt52=2;
-            int LA52_0 = input.LA(1);
+            // msc_grammar.g:241:4: ( gateName )?
+            int alt49=2;
+            int LA49_0 = input.LA(1);
 
-            if ( (LA52_0==NAME) ) {
-                alt52=1;
+            if ( (LA49_0==NAME) ) {
+                alt49=1;
             }
-            switch (alt52) {
+            switch (alt49) {
                 case 1 :
-                    // msc_grammar.g:249:6: gateName
+                    // msc_grammar.g:241:6: gateName
                     {
-                    pushFollow(FOLLOW_gateName_in_defInGate1675);
-                    gateName193=gateName();
+                    pushFollow(FOLLOW_gateName_in_defInGate1593);
+                    gateName179=gateName();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, gateName193.getTree());
+                    adaptor.addChild(root_0, gateName179.getTree());
 
                     }
                     break;
 
             }
 
-            string_literal194=(Token)match(input,64,FOLLOW_64_in_defInGate1680); 
-            string_literal194_tree = (CommonTree)adaptor.create(string_literal194);
-            adaptor.addChild(root_0, string_literal194_tree);
+            string_literal180=(Token)match(input,62,FOLLOW_62_in_defInGate1598); 
+            string_literal180_tree = (CommonTree)adaptor.create(string_literal180);
+            adaptor.addChild(root_0, string_literal180_tree);
 
-            pushFollow(FOLLOW_msgIdentification_in_defInGate1682);
-            msgIdentification195=msgIdentification();
-
-            state._fsp--;
-
-            adaptor.addChild(root_0, msgIdentification195.getTree());
-            string_literal196=(Token)match(input,65,FOLLOW_65_in_defInGate1684); 
-            string_literal196_tree = (CommonTree)adaptor.create(string_literal196);
-            adaptor.addChild(root_0, string_literal196_tree);
-
-            pushFollow(FOLLOW_inputDest_in_defInGate1686);
-            inputDest197=inputDest();
+            pushFollow(FOLLOW_msgIdentification_in_defInGate1600);
+            msgIdentification181=msgIdentification();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, inputDest197.getTree());
+            adaptor.addChild(root_0, msgIdentification181.getTree());
+            string_literal182=(Token)match(input,63,FOLLOW_63_in_defInGate1602); 
+            string_literal182_tree = (CommonTree)adaptor.create(string_literal182);
+            adaptor.addChild(root_0, string_literal182_tree);
+
+            pushFollow(FOLLOW_inputDest_in_defInGate1604);
+            inputDest183=inputDest();
+
+            state._fsp--;
+
+            adaptor.addChild(root_0, inputDest183.getTree());
 
             }
 
@@ -6429,74 +6131,74 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "defOutGate"
-    // msc_grammar.g:251:1: defOutGate : ( gateName )? 'in' msgIdentification 'from' outputDest ;
+    // msc_grammar.g:243:1: defOutGate : ( gateName )? 'in' msgIdentification 'from' outputDest ;
     public final msc_grammarParser.defOutGate_return defOutGate() throws RecognitionException {
         msc_grammarParser.defOutGate_return retval = new msc_grammarParser.defOutGate_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token string_literal199=null;
-        Token string_literal201=null;
-        msc_grammarParser.gateName_return gateName198 = null;
+        Token string_literal185=null;
+        Token string_literal187=null;
+        msc_grammarParser.gateName_return gateName184 = null;
 
-        msc_grammarParser.msgIdentification_return msgIdentification200 = null;
+        msc_grammarParser.msgIdentification_return msgIdentification186 = null;
 
-        msc_grammarParser.outputDest_return outputDest202 = null;
+        msc_grammarParser.outputDest_return outputDest188 = null;
 
 
-        CommonTree string_literal199_tree=null;
-        CommonTree string_literal201_tree=null;
+        CommonTree string_literal185_tree=null;
+        CommonTree string_literal187_tree=null;
 
         try {
-            // msc_grammar.g:252:2: ( ( gateName )? 'in' msgIdentification 'from' outputDest )
-            // msc_grammar.g:252:4: ( gateName )? 'in' msgIdentification 'from' outputDest
+            // msc_grammar.g:244:2: ( ( gateName )? 'in' msgIdentification 'from' outputDest )
+            // msc_grammar.g:244:4: ( gateName )? 'in' msgIdentification 'from' outputDest
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // msc_grammar.g:252:4: ( gateName )?
-            int alt53=2;
-            int LA53_0 = input.LA(1);
+            // msc_grammar.g:244:4: ( gateName )?
+            int alt50=2;
+            int LA50_0 = input.LA(1);
 
-            if ( (LA53_0==NAME) ) {
-                alt53=1;
+            if ( (LA50_0==NAME) ) {
+                alt50=1;
             }
-            switch (alt53) {
+            switch (alt50) {
                 case 1 :
-                    // msc_grammar.g:252:6: gateName
+                    // msc_grammar.g:244:6: gateName
                     {
-                    pushFollow(FOLLOW_gateName_in_defOutGate1699);
-                    gateName198=gateName();
+                    pushFollow(FOLLOW_gateName_in_defOutGate1617);
+                    gateName184=gateName();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, gateName198.getTree());
+                    adaptor.addChild(root_0, gateName184.getTree());
 
                     }
                     break;
 
             }
 
-            string_literal199=(Token)match(input,66,FOLLOW_66_in_defOutGate1704); 
-            string_literal199_tree = (CommonTree)adaptor.create(string_literal199);
-            adaptor.addChild(root_0, string_literal199_tree);
+            string_literal185=(Token)match(input,64,FOLLOW_64_in_defOutGate1622); 
+            string_literal185_tree = (CommonTree)adaptor.create(string_literal185);
+            adaptor.addChild(root_0, string_literal185_tree);
 
-            pushFollow(FOLLOW_msgIdentification_in_defOutGate1706);
-            msgIdentification200=msgIdentification();
-
-            state._fsp--;
-
-            adaptor.addChild(root_0, msgIdentification200.getTree());
-            string_literal201=(Token)match(input,67,FOLLOW_67_in_defOutGate1708); 
-            string_literal201_tree = (CommonTree)adaptor.create(string_literal201);
-            adaptor.addChild(root_0, string_literal201_tree);
-
-            pushFollow(FOLLOW_outputDest_in_defOutGate1710);
-            outputDest202=outputDest();
+            pushFollow(FOLLOW_msgIdentification_in_defOutGate1624);
+            msgIdentification186=msgIdentification();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, outputDest202.getTree());
+            adaptor.addChild(root_0, msgIdentification186.getTree());
+            string_literal187=(Token)match(input,65,FOLLOW_65_in_defOutGate1626); 
+            string_literal187_tree = (CommonTree)adaptor.create(string_literal187);
+            adaptor.addChild(root_0, string_literal187_tree);
+
+            pushFollow(FOLLOW_outputDest_in_defOutGate1628);
+            outputDest188=outputDest();
+
+            state._fsp--;
+
+            adaptor.addChild(root_0, outputDest188.getTree());
 
             }
 
@@ -6524,43 +6226,43 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "defOrderInGate"
-    // msc_grammar.g:254:1: defOrderInGate : gateName 'before' orderDest ;
+    // msc_grammar.g:246:1: defOrderInGate : gateName 'before' orderDest ;
     public final msc_grammarParser.defOrderInGate_return defOrderInGate() throws RecognitionException {
         msc_grammarParser.defOrderInGate_return retval = new msc_grammarParser.defOrderInGate_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token string_literal204=null;
-        msc_grammarParser.gateName_return gateName203 = null;
+        Token string_literal190=null;
+        msc_grammarParser.gateName_return gateName189 = null;
 
-        msc_grammarParser.orderDest_return orderDest205 = null;
+        msc_grammarParser.orderDest_return orderDest191 = null;
 
 
-        CommonTree string_literal204_tree=null;
+        CommonTree string_literal190_tree=null;
 
         try {
-            // msc_grammar.g:255:2: ( gateName 'before' orderDest )
-            // msc_grammar.g:255:4: gateName 'before' orderDest
+            // msc_grammar.g:247:2: ( gateName 'before' orderDest )
+            // msc_grammar.g:247:4: gateName 'before' orderDest
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_gateName_in_defOrderInGate1721);
-            gateName203=gateName();
+            pushFollow(FOLLOW_gateName_in_defOrderInGate1639);
+            gateName189=gateName();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, gateName203.getTree());
-            string_literal204=(Token)match(input,101,FOLLOW_101_in_defOrderInGate1723); 
-            string_literal204_tree = (CommonTree)adaptor.create(string_literal204);
-            adaptor.addChild(root_0, string_literal204_tree);
+            adaptor.addChild(root_0, gateName189.getTree());
+            string_literal190=(Token)match(input,97,FOLLOW_97_in_defOrderInGate1641); 
+            string_literal190_tree = (CommonTree)adaptor.create(string_literal190);
+            adaptor.addChild(root_0, string_literal190_tree);
 
-            pushFollow(FOLLOW_orderDest_in_defOrderInGate1725);
-            orderDest205=orderDest();
+            pushFollow(FOLLOW_orderDest_in_defOrderInGate1643);
+            orderDest191=orderDest();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, orderDest205.getTree());
+            adaptor.addChild(root_0, orderDest191.getTree());
 
             }
 
@@ -6588,54 +6290,54 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "defOrderOutGate"
-    // msc_grammar.g:257:1: defOrderOutGate : gateName ( 'after' orderDestList )? ;
+    // msc_grammar.g:249:1: defOrderOutGate : gateName ( 'after' orderDestList )? ;
     public final msc_grammarParser.defOrderOutGate_return defOrderOutGate() throws RecognitionException {
         msc_grammarParser.defOrderOutGate_return retval = new msc_grammarParser.defOrderOutGate_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token string_literal207=null;
-        msc_grammarParser.gateName_return gateName206 = null;
+        Token string_literal193=null;
+        msc_grammarParser.gateName_return gateName192 = null;
 
-        msc_grammarParser.orderDestList_return orderDestList208 = null;
+        msc_grammarParser.orderDestList_return orderDestList194 = null;
 
 
-        CommonTree string_literal207_tree=null;
+        CommonTree string_literal193_tree=null;
 
         try {
-            // msc_grammar.g:258:2: ( gateName ( 'after' orderDestList )? )
-            // msc_grammar.g:258:4: gateName ( 'after' orderDestList )?
+            // msc_grammar.g:250:2: ( gateName ( 'after' orderDestList )? )
+            // msc_grammar.g:250:4: gateName ( 'after' orderDestList )?
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_gateName_in_defOrderOutGate1735);
-            gateName206=gateName();
+            pushFollow(FOLLOW_gateName_in_defOrderOutGate1653);
+            gateName192=gateName();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, gateName206.getTree());
-            // msc_grammar.g:258:13: ( 'after' orderDestList )?
-            int alt54=2;
-            int LA54_0 = input.LA(1);
+            adaptor.addChild(root_0, gateName192.getTree());
+            // msc_grammar.g:250:13: ( 'after' orderDestList )?
+            int alt51=2;
+            int LA51_0 = input.LA(1);
 
-            if ( (LA54_0==102) ) {
-                alt54=1;
+            if ( (LA51_0==98) ) {
+                alt51=1;
             }
-            switch (alt54) {
+            switch (alt51) {
                 case 1 :
-                    // msc_grammar.g:258:15: 'after' orderDestList
+                    // msc_grammar.g:250:15: 'after' orderDestList
                     {
-                    string_literal207=(Token)match(input,102,FOLLOW_102_in_defOrderOutGate1739); 
-                    string_literal207_tree = (CommonTree)adaptor.create(string_literal207);
-                    adaptor.addChild(root_0, string_literal207_tree);
+                    string_literal193=(Token)match(input,98,FOLLOW_98_in_defOrderOutGate1657); 
+                    string_literal193_tree = (CommonTree)adaptor.create(string_literal193);
+                    adaptor.addChild(root_0, string_literal193_tree);
 
-                    pushFollow(FOLLOW_orderDestList_in_defOrderOutGate1741);
-                    orderDestList208=orderDestList();
+                    pushFollow(FOLLOW_orderDestList_in_defOrderOutGate1659);
+                    orderDestList194=orderDestList();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, orderDestList208.getTree());
+                    adaptor.addChild(root_0, orderDestList194.getTree());
 
                     }
                     break;
@@ -6669,65 +6371,65 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "inputDest"
-    // msc_grammar.g:260:1: inputDest : ( 'lost' ( inputAddress )? | inputAddress );
+    // msc_grammar.g:252:1: inputDest : ( 'lost' ( inputAddress )? | inputAddress );
     public final msc_grammarParser.inputDest_return inputDest() throws RecognitionException {
         msc_grammarParser.inputDest_return retval = new msc_grammarParser.inputDest_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token string_literal209=null;
-        msc_grammarParser.inputAddress_return inputAddress210 = null;
+        Token string_literal195=null;
+        msc_grammarParser.inputAddress_return inputAddress196 = null;
 
-        msc_grammarParser.inputAddress_return inputAddress211 = null;
+        msc_grammarParser.inputAddress_return inputAddress197 = null;
 
 
-        CommonTree string_literal209_tree=null;
+        CommonTree string_literal195_tree=null;
 
         try {
-            // msc_grammar.g:261:2: ( 'lost' ( inputAddress )? | inputAddress )
-            int alt56=2;
-            int LA56_0 = input.LA(1);
+            // msc_grammar.g:253:2: ( 'lost' ( inputAddress )? | inputAddress )
+            int alt53=2;
+            int LA53_0 = input.LA(1);
 
-            if ( (LA56_0==68) ) {
-                alt56=1;
+            if ( (LA53_0==66) ) {
+                alt53=1;
             }
-            else if ( (LA56_0==NAME||LA56_0==70) ) {
-                alt56=2;
+            else if ( (LA53_0==NAME||LA53_0==68) ) {
+                alt53=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 56, 0, input);
+                    new NoViableAltException("", 53, 0, input);
 
                 throw nvae;
             }
-            switch (alt56) {
+            switch (alt53) {
                 case 1 :
-                    // msc_grammar.g:261:4: 'lost' ( inputAddress )?
+                    // msc_grammar.g:253:4: 'lost' ( inputAddress )?
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    string_literal209=(Token)match(input,68,FOLLOW_68_in_inputDest1756); 
-                    string_literal209_tree = (CommonTree)adaptor.create(string_literal209);
-                    adaptor.addChild(root_0, string_literal209_tree);
+                    string_literal195=(Token)match(input,66,FOLLOW_66_in_inputDest1674); 
+                    string_literal195_tree = (CommonTree)adaptor.create(string_literal195);
+                    adaptor.addChild(root_0, string_literal195_tree);
 
-                    // msc_grammar.g:261:11: ( inputAddress )?
-                    int alt55=2;
-                    int LA55_0 = input.LA(1);
+                    // msc_grammar.g:253:11: ( inputAddress )?
+                    int alt52=2;
+                    int LA52_0 = input.LA(1);
 
-                    if ( (LA55_0==NAME||LA55_0==70) ) {
-                        alt55=1;
+                    if ( (LA52_0==NAME||LA52_0==68) ) {
+                        alt52=1;
                     }
-                    switch (alt55) {
+                    switch (alt52) {
                         case 1 :
-                            // msc_grammar.g:261:13: inputAddress
+                            // msc_grammar.g:253:13: inputAddress
                             {
-                            pushFollow(FOLLOW_inputAddress_in_inputDest1760);
-                            inputAddress210=inputAddress();
+                            pushFollow(FOLLOW_inputAddress_in_inputDest1678);
+                            inputAddress196=inputAddress();
 
                             state._fsp--;
 
-                            adaptor.addChild(root_0, inputAddress210.getTree());
+                            adaptor.addChild(root_0, inputAddress196.getTree());
 
                             }
                             break;
@@ -6738,16 +6440,16 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:261:31: inputAddress
+                    // msc_grammar.g:253:31: inputAddress
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_inputAddress_in_inputDest1767);
-                    inputAddress211=inputAddress();
+                    pushFollow(FOLLOW_inputAddress_in_inputDest1685);
+                    inputAddress197=inputAddress();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, inputAddress211.getTree());
+                    adaptor.addChild(root_0, inputAddress197.getTree());
 
                     }
                     break;
@@ -6777,65 +6479,65 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "outputDest"
-    // msc_grammar.g:263:1: outputDest : ( 'found' ( outputAddress )? | outputAddress );
+    // msc_grammar.g:255:1: outputDest : ( 'found' ( outputAddress )? | outputAddress );
     public final msc_grammarParser.outputDest_return outputDest() throws RecognitionException {
         msc_grammarParser.outputDest_return retval = new msc_grammarParser.outputDest_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token string_literal212=null;
-        msc_grammarParser.outputAddress_return outputAddress213 = null;
+        Token string_literal198=null;
+        msc_grammarParser.outputAddress_return outputAddress199 = null;
 
-        msc_grammarParser.outputAddress_return outputAddress214 = null;
+        msc_grammarParser.outputAddress_return outputAddress200 = null;
 
 
-        CommonTree string_literal212_tree=null;
+        CommonTree string_literal198_tree=null;
 
         try {
-            // msc_grammar.g:264:2: ( 'found' ( outputAddress )? | outputAddress )
-            int alt58=2;
-            int LA58_0 = input.LA(1);
+            // msc_grammar.g:256:2: ( 'found' ( outputAddress )? | outputAddress )
+            int alt55=2;
+            int LA55_0 = input.LA(1);
 
-            if ( (LA58_0==69) ) {
-                alt58=1;
+            if ( (LA55_0==67) ) {
+                alt55=1;
             }
-            else if ( (LA58_0==NAME||LA58_0==70) ) {
-                alt58=2;
+            else if ( (LA55_0==NAME||LA55_0==68) ) {
+                alt55=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 58, 0, input);
+                    new NoViableAltException("", 55, 0, input);
 
                 throw nvae;
             }
-            switch (alt58) {
+            switch (alt55) {
                 case 1 :
-                    // msc_grammar.g:264:4: 'found' ( outputAddress )?
+                    // msc_grammar.g:256:4: 'found' ( outputAddress )?
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    string_literal212=(Token)match(input,69,FOLLOW_69_in_outputDest1778); 
-                    string_literal212_tree = (CommonTree)adaptor.create(string_literal212);
-                    adaptor.addChild(root_0, string_literal212_tree);
+                    string_literal198=(Token)match(input,67,FOLLOW_67_in_outputDest1696); 
+                    string_literal198_tree = (CommonTree)adaptor.create(string_literal198);
+                    adaptor.addChild(root_0, string_literal198_tree);
 
-                    // msc_grammar.g:264:12: ( outputAddress )?
-                    int alt57=2;
-                    int LA57_0 = input.LA(1);
+                    // msc_grammar.g:256:12: ( outputAddress )?
+                    int alt54=2;
+                    int LA54_0 = input.LA(1);
 
-                    if ( (LA57_0==NAME||LA57_0==70) ) {
-                        alt57=1;
+                    if ( (LA54_0==NAME||LA54_0==68) ) {
+                        alt54=1;
                     }
-                    switch (alt57) {
+                    switch (alt54) {
                         case 1 :
-                            // msc_grammar.g:264:14: outputAddress
+                            // msc_grammar.g:256:14: outputAddress
                             {
-                            pushFollow(FOLLOW_outputAddress_in_outputDest1782);
-                            outputAddress213=outputAddress();
+                            pushFollow(FOLLOW_outputAddress_in_outputDest1700);
+                            outputAddress199=outputAddress();
 
                             state._fsp--;
 
-                            adaptor.addChild(root_0, outputAddress213.getTree());
+                            adaptor.addChild(root_0, outputAddress199.getTree());
 
                             }
                             break;
@@ -6846,16 +6548,16 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:264:33: outputAddress
+                    // msc_grammar.g:256:33: outputAddress
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_outputAddress_in_outputDest1789);
-                    outputAddress214=outputAddress();
+                    pushFollow(FOLLOW_outputAddress_in_outputDest1707);
+                    outputAddress200=outputAddress();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, outputAddress214.getTree());
+                    adaptor.addChild(root_0, outputAddress200.getTree());
 
                     }
                     break;
@@ -6885,72 +6587,72 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "orderDest"
-    // msc_grammar.g:266:1: orderDest : ( eventName | 'env' 'via' gateName -> ^( MsgGate gateName ) );
+    // msc_grammar.g:258:1: orderDest : ( eventName | 'env' 'via' gateName -> ^( MsgGate gateName ) );
     public final msc_grammarParser.orderDest_return orderDest() throws RecognitionException {
         msc_grammarParser.orderDest_return retval = new msc_grammarParser.orderDest_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token string_literal216=null;
-        Token string_literal217=null;
-        msc_grammarParser.eventName_return eventName215 = null;
+        Token string_literal202=null;
+        Token string_literal203=null;
+        msc_grammarParser.eventName_return eventName201 = null;
 
-        msc_grammarParser.gateName_return gateName218 = null;
+        msc_grammarParser.gateName_return gateName204 = null;
 
 
-        CommonTree string_literal216_tree=null;
-        CommonTree string_literal217_tree=null;
-        RewriteRuleTokenStream stream_70=new RewriteRuleTokenStream(adaptor,"token 70");
-        RewriteRuleTokenStream stream_71=new RewriteRuleTokenStream(adaptor,"token 71");
+        CommonTree string_literal202_tree=null;
+        CommonTree string_literal203_tree=null;
+        RewriteRuleTokenStream stream_69=new RewriteRuleTokenStream(adaptor,"token 69");
+        RewriteRuleTokenStream stream_68=new RewriteRuleTokenStream(adaptor,"token 68");
         RewriteRuleSubtreeStream stream_gateName=new RewriteRuleSubtreeStream(adaptor,"rule gateName");
         try {
-            // msc_grammar.g:267:2: ( eventName | 'env' 'via' gateName -> ^( MsgGate gateName ) )
-            int alt59=2;
-            int LA59_0 = input.LA(1);
+            // msc_grammar.g:259:2: ( eventName | 'env' 'via' gateName -> ^( MsgGate gateName ) )
+            int alt56=2;
+            int LA56_0 = input.LA(1);
 
-            if ( (LA59_0==NAME) ) {
-                alt59=1;
+            if ( (LA56_0==NAME) ) {
+                alt56=1;
             }
-            else if ( (LA59_0==70) ) {
-                alt59=2;
+            else if ( (LA56_0==68) ) {
+                alt56=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 59, 0, input);
+                    new NoViableAltException("", 56, 0, input);
 
                 throw nvae;
             }
-            switch (alt59) {
+            switch (alt56) {
                 case 1 :
-                    // msc_grammar.g:267:4: eventName
+                    // msc_grammar.g:259:4: eventName
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_eventName_in_orderDest1800);
-                    eventName215=eventName();
+                    pushFollow(FOLLOW_eventName_in_orderDest1718);
+                    eventName201=eventName();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, eventName215.getTree());
+                    adaptor.addChild(root_0, eventName201.getTree());
 
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:268:4: 'env' 'via' gateName
+                    // msc_grammar.g:260:4: 'env' 'via' gateName
                     {
-                    string_literal216=(Token)match(input,70,FOLLOW_70_in_orderDest1805);  
-                    stream_70.add(string_literal216);
+                    string_literal202=(Token)match(input,68,FOLLOW_68_in_orderDest1723);  
+                    stream_68.add(string_literal202);
 
-                    string_literal217=(Token)match(input,71,FOLLOW_71_in_orderDest1807);  
-                    stream_71.add(string_literal217);
+                    string_literal203=(Token)match(input,69,FOLLOW_69_in_orderDest1725);  
+                    stream_69.add(string_literal203);
 
-                    pushFollow(FOLLOW_gateName_in_orderDest1809);
-                    gateName218=gateName();
+                    pushFollow(FOLLOW_gateName_in_orderDest1727);
+                    gateName204=gateName();
 
                     state._fsp--;
 
-                    stream_gateName.add(gateName218.getTree());
+                    stream_gateName.add(gateName204.getTree());
 
 
                     // AST REWRITE
@@ -6964,9 +6666,9 @@ public class msc_grammarParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 268:25: -> ^( MsgGate gateName )
+                    // 260:25: -> ^( MsgGate gateName )
                     {
-                        // msc_grammar.g:268:28: ^( MsgGate gateName )
+                        // msc_grammar.g:260:28: ^( MsgGate gateName )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(MsgGate, "MsgGate"), root_1);
@@ -7007,53 +6709,53 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "orderDestList"
-    // msc_grammar.g:270:1: orderDestList : orderDest ( ',' orderDestList )? -> orderDest ( orderDestList )? ;
+    // msc_grammar.g:262:1: orderDestList : orderDest ( ',' orderDestList )? -> orderDest ( orderDestList )? ;
     public final msc_grammarParser.orderDestList_return orderDestList() throws RecognitionException {
         msc_grammarParser.orderDestList_return retval = new msc_grammarParser.orderDestList_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token char_literal220=null;
-        msc_grammarParser.orderDest_return orderDest219 = null;
+        Token char_literal206=null;
+        msc_grammarParser.orderDest_return orderDest205 = null;
 
-        msc_grammarParser.orderDestList_return orderDestList221 = null;
+        msc_grammarParser.orderDestList_return orderDestList207 = null;
 
 
-        CommonTree char_literal220_tree=null;
-        RewriteRuleTokenStream stream_62=new RewriteRuleTokenStream(adaptor,"token 62");
+        CommonTree char_literal206_tree=null;
+        RewriteRuleTokenStream stream_60=new RewriteRuleTokenStream(adaptor,"token 60");
         RewriteRuleSubtreeStream stream_orderDestList=new RewriteRuleSubtreeStream(adaptor,"rule orderDestList");
         RewriteRuleSubtreeStream stream_orderDest=new RewriteRuleSubtreeStream(adaptor,"rule orderDest");
         try {
-            // msc_grammar.g:271:2: ( orderDest ( ',' orderDestList )? -> orderDest ( orderDestList )? )
-            // msc_grammar.g:271:4: orderDest ( ',' orderDestList )?
+            // msc_grammar.g:263:2: ( orderDest ( ',' orderDestList )? -> orderDest ( orderDestList )? )
+            // msc_grammar.g:263:4: orderDest ( ',' orderDestList )?
             {
-            pushFollow(FOLLOW_orderDest_in_orderDestList1830);
-            orderDest219=orderDest();
+            pushFollow(FOLLOW_orderDest_in_orderDestList1748);
+            orderDest205=orderDest();
 
             state._fsp--;
 
-            stream_orderDest.add(orderDest219.getTree());
-            // msc_grammar.g:271:14: ( ',' orderDestList )?
-            int alt60=2;
-            int LA60_0 = input.LA(1);
+            stream_orderDest.add(orderDest205.getTree());
+            // msc_grammar.g:263:14: ( ',' orderDestList )?
+            int alt57=2;
+            int LA57_0 = input.LA(1);
 
-            if ( (LA60_0==62) ) {
-                alt60=1;
+            if ( (LA57_0==60) ) {
+                alt57=1;
             }
-            switch (alt60) {
+            switch (alt57) {
                 case 1 :
-                    // msc_grammar.g:271:16: ',' orderDestList
+                    // msc_grammar.g:263:16: ',' orderDestList
                     {
-                    char_literal220=(Token)match(input,62,FOLLOW_62_in_orderDestList1834);  
-                    stream_62.add(char_literal220);
+                    char_literal206=(Token)match(input,60,FOLLOW_60_in_orderDestList1752);  
+                    stream_60.add(char_literal206);
 
-                    pushFollow(FOLLOW_orderDestList_in_orderDestList1836);
-                    orderDestList221=orderDestList();
+                    pushFollow(FOLLOW_orderDestList_in_orderDestList1754);
+                    orderDestList207=orderDestList();
 
                     state._fsp--;
 
-                    stream_orderDestList.add(orderDestList221.getTree());
+                    stream_orderDestList.add(orderDestList207.getTree());
 
                     }
                     break;
@@ -7063,7 +6765,7 @@ public class msc_grammarParser extends Parser {
 
 
             // AST REWRITE
-            // elements: orderDest, orderDestList
+            // elements: orderDestList, orderDest
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -7073,10 +6775,10 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 271:37: -> orderDest ( orderDestList )?
+            // 263:37: -> orderDest ( orderDestList )?
             {
                 adaptor.addChild(root_0, stream_orderDest.nextTree());
-                // msc_grammar.g:271:50: ( orderDestList )?
+                // msc_grammar.g:263:50: ( orderDestList )?
                 if ( stream_orderDestList.hasNext() ) {
                     adaptor.addChild(root_0, stream_orderDestList.nextTree());
 
@@ -7112,71 +6814,71 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "coregion"
-    // msc_grammar.g:275:1: coregion : 'concurrent' end ( coevent )* 'endconcurrent' -> ^( Coregion ( coevent )* ) ;
+    // msc_grammar.g:267:1: coregion : 'concurrent' end ( coevent )* 'endconcurrent' -> ^( Coregion ( coevent )* ) ;
     public final msc_grammarParser.coregion_return coregion() throws RecognitionException {
         msc_grammarParser.coregion_return retval = new msc_grammarParser.coregion_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token string_literal222=null;
-        Token string_literal225=null;
-        msc_grammarParser.end_return end223 = null;
+        Token string_literal208=null;
+        Token string_literal211=null;
+        msc_grammarParser.end_return end209 = null;
 
-        msc_grammarParser.coevent_return coevent224 = null;
+        msc_grammarParser.coevent_return coevent210 = null;
 
 
-        CommonTree string_literal222_tree=null;
-        CommonTree string_literal225_tree=null;
-        RewriteRuleTokenStream stream_104=new RewriteRuleTokenStream(adaptor,"token 104");
-        RewriteRuleTokenStream stream_103=new RewriteRuleTokenStream(adaptor,"token 103");
+        CommonTree string_literal208_tree=null;
+        CommonTree string_literal211_tree=null;
+        RewriteRuleTokenStream stream_99=new RewriteRuleTokenStream(adaptor,"token 99");
+        RewriteRuleTokenStream stream_100=new RewriteRuleTokenStream(adaptor,"token 100");
         RewriteRuleSubtreeStream stream_coevent=new RewriteRuleSubtreeStream(adaptor,"rule coevent");
         RewriteRuleSubtreeStream stream_end=new RewriteRuleSubtreeStream(adaptor,"rule end");
         try {
-            // msc_grammar.g:276:2: ( 'concurrent' end ( coevent )* 'endconcurrent' -> ^( Coregion ( coevent )* ) )
-            // msc_grammar.g:276:4: 'concurrent' end ( coevent )* 'endconcurrent'
+            // msc_grammar.g:268:2: ( 'concurrent' end ( coevent )* 'endconcurrent' -> ^( Coregion ( coevent )* ) )
+            // msc_grammar.g:268:4: 'concurrent' end ( coevent )* 'endconcurrent'
             {
-            string_literal222=(Token)match(input,103,FOLLOW_103_in_coregion1859);  
-            stream_103.add(string_literal222);
+            string_literal208=(Token)match(input,99,FOLLOW_99_in_coregion1777);  
+            stream_99.add(string_literal208);
 
-            pushFollow(FOLLOW_end_in_coregion1861);
-            end223=end();
+            pushFollow(FOLLOW_end_in_coregion1779);
+            end209=end();
 
             state._fsp--;
 
-            stream_end.add(end223.getTree());
-            // msc_grammar.g:276:21: ( coevent )*
-            loop61:
+            stream_end.add(end209.getTree());
+            // msc_grammar.g:268:21: ( coevent )*
+            loop58:
             do {
-                int alt61=2;
-                int LA61_0 = input.LA(1);
+                int alt58=2;
+                int LA58_0 = input.LA(1);
 
-                if ( (LA61_0==NAME||(LA61_0>=63 && LA61_0<=64)||LA61_0==66||LA61_0==72||LA61_0==91||LA61_0==95||(LA61_0>=98 && LA61_0<=99)) ) {
-                    alt61=1;
+                if ( (LA58_0==NAME||(LA58_0>=61 && LA58_0<=62)||LA58_0==64||LA58_0==70||LA58_0==87||(LA58_0>=91 && LA58_0<=93)) ) {
+                    alt58=1;
                 }
 
 
-                switch (alt61) {
+                switch (alt58) {
             	case 1 :
-            	    // msc_grammar.g:276:21: coevent
+            	    // msc_grammar.g:268:21: coevent
             	    {
-            	    pushFollow(FOLLOW_coevent_in_coregion1863);
-            	    coevent224=coevent();
+            	    pushFollow(FOLLOW_coevent_in_coregion1781);
+            	    coevent210=coevent();
 
             	    state._fsp--;
 
-            	    stream_coevent.add(coevent224.getTree());
+            	    stream_coevent.add(coevent210.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop61;
+            	    break loop58;
                 }
             } while (true);
 
-            string_literal225=(Token)match(input,104,FOLLOW_104_in_coregion1866);  
-            stream_104.add(string_literal225);
+            string_literal211=(Token)match(input,100,FOLLOW_100_in_coregion1784);  
+            stream_100.add(string_literal211);
 
 
 
@@ -7191,14 +6893,14 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 276:46: -> ^( Coregion ( coevent )* )
+            // 268:46: -> ^( Coregion ( coevent )* )
             {
-                // msc_grammar.g:276:49: ^( Coregion ( coevent )* )
+                // msc_grammar.g:268:49: ^( Coregion ( coevent )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Coregion, "Coregion"), root_1);
 
-                // msc_grammar.g:276:61: ( coevent )*
+                // msc_grammar.g:268:61: ( coevent )*
                 while ( stream_coevent.hasNext() ) {
                     adaptor.addChild(root_1, stream_coevent.nextTree());
 
@@ -7237,36 +6939,36 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "coevent"
-    // msc_grammar.g:278:1: coevent : orderableEvent end -> orderableEvent ;
+    // msc_grammar.g:270:1: coevent : orderableEvent end -> orderableEvent ;
     public final msc_grammarParser.coevent_return coevent() throws RecognitionException {
         msc_grammarParser.coevent_return retval = new msc_grammarParser.coevent_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        msc_grammarParser.orderableEvent_return orderableEvent226 = null;
+        msc_grammarParser.orderableEvent_return orderableEvent212 = null;
 
-        msc_grammarParser.end_return end227 = null;
+        msc_grammarParser.end_return end213 = null;
 
 
         RewriteRuleSubtreeStream stream_orderableEvent=new RewriteRuleSubtreeStream(adaptor,"rule orderableEvent");
         RewriteRuleSubtreeStream stream_end=new RewriteRuleSubtreeStream(adaptor,"rule end");
         try {
-            // msc_grammar.g:278:9: ( orderableEvent end -> orderableEvent )
-            // msc_grammar.g:278:11: orderableEvent end
+            // msc_grammar.g:270:9: ( orderableEvent end -> orderableEvent )
+            // msc_grammar.g:270:11: orderableEvent end
             {
-            pushFollow(FOLLOW_orderableEvent_in_coevent1886);
-            orderableEvent226=orderableEvent();
+            pushFollow(FOLLOW_orderableEvent_in_coevent1804);
+            orderableEvent212=orderableEvent();
 
             state._fsp--;
 
-            stream_orderableEvent.add(orderableEvent226.getTree());
-            pushFollow(FOLLOW_end_in_coevent1888);
-            end227=end();
+            stream_orderableEvent.add(orderableEvent212.getTree());
+            pushFollow(FOLLOW_end_in_coevent1806);
+            end213=end();
 
             state._fsp--;
 
-            stream_end.add(end227.getTree());
+            stream_end.add(end213.getTree());
 
 
             // AST REWRITE
@@ -7280,7 +6982,7 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 278:30: -> orderableEvent
+            // 270:30: -> orderableEvent
             {
                 adaptor.addChild(root_0, stream_orderableEvent.nextTree());
 
@@ -7313,67 +7015,67 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "generalOrdering"
-    // msc_grammar.g:282:1: generalOrdering : ( before ( after )? | after );
+    // msc_grammar.g:274:1: generalOrdering : ( before ( after )? | after );
     public final msc_grammarParser.generalOrdering_return generalOrdering() throws RecognitionException {
         msc_grammarParser.generalOrdering_return retval = new msc_grammarParser.generalOrdering_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        msc_grammarParser.before_return before228 = null;
+        msc_grammarParser.before_return before214 = null;
 
-        msc_grammarParser.after_return after229 = null;
+        msc_grammarParser.after_return after215 = null;
 
-        msc_grammarParser.after_return after230 = null;
+        msc_grammarParser.after_return after216 = null;
 
 
 
         try {
-            // msc_grammar.g:283:2: ( before ( after )? | after )
-            int alt63=2;
-            int LA63_0 = input.LA(1);
+            // msc_grammar.g:275:2: ( before ( after )? | after )
+            int alt60=2;
+            int LA60_0 = input.LA(1);
 
-            if ( (LA63_0==101) ) {
-                alt63=1;
+            if ( (LA60_0==97) ) {
+                alt60=1;
             }
-            else if ( (LA63_0==102) ) {
-                alt63=2;
+            else if ( (LA60_0==98) ) {
+                alt60=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 63, 0, input);
+                    new NoViableAltException("", 60, 0, input);
 
                 throw nvae;
             }
-            switch (alt63) {
+            switch (alt60) {
                 case 1 :
-                    // msc_grammar.g:283:4: before ( after )?
+                    // msc_grammar.g:275:4: before ( after )?
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_before_in_generalOrdering1904);
-                    before228=before();
+                    pushFollow(FOLLOW_before_in_generalOrdering1822);
+                    before214=before();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, before228.getTree());
-                    // msc_grammar.g:283:11: ( after )?
-                    int alt62=2;
-                    int LA62_0 = input.LA(1);
+                    adaptor.addChild(root_0, before214.getTree());
+                    // msc_grammar.g:275:11: ( after )?
+                    int alt59=2;
+                    int LA59_0 = input.LA(1);
 
-                    if ( (LA62_0==102) ) {
-                        alt62=1;
+                    if ( (LA59_0==98) ) {
+                        alt59=1;
                     }
-                    switch (alt62) {
+                    switch (alt59) {
                         case 1 :
-                            // msc_grammar.g:283:11: after
+                            // msc_grammar.g:275:11: after
                             {
-                            pushFollow(FOLLOW_after_in_generalOrdering1906);
-                            after229=after();
+                            pushFollow(FOLLOW_after_in_generalOrdering1824);
+                            after215=after();
 
                             state._fsp--;
 
-                            adaptor.addChild(root_0, after229.getTree());
+                            adaptor.addChild(root_0, after215.getTree());
 
                             }
                             break;
@@ -7384,16 +7086,16 @@ public class msc_grammarParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:284:4: after
+                    // msc_grammar.g:276:4: after
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_after_in_generalOrdering1912);
-                    after230=after();
+                    pushFollow(FOLLOW_after_in_generalOrdering1830);
+                    after216=after();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, after230.getTree());
+                    adaptor.addChild(root_0, after216.getTree());
 
                     }
                     break;
@@ -7423,33 +7125,33 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "before"
-    // msc_grammar.g:286:1: before : 'before' orderDestList -> ^( Before orderDestList ) ;
+    // msc_grammar.g:278:1: before : 'before' orderDestList -> ^( Before orderDestList ) ;
     public final msc_grammarParser.before_return before() throws RecognitionException {
         msc_grammarParser.before_return retval = new msc_grammarParser.before_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token string_literal231=null;
-        msc_grammarParser.orderDestList_return orderDestList232 = null;
+        Token string_literal217=null;
+        msc_grammarParser.orderDestList_return orderDestList218 = null;
 
 
-        CommonTree string_literal231_tree=null;
-        RewriteRuleTokenStream stream_101=new RewriteRuleTokenStream(adaptor,"token 101");
+        CommonTree string_literal217_tree=null;
+        RewriteRuleTokenStream stream_97=new RewriteRuleTokenStream(adaptor,"token 97");
         RewriteRuleSubtreeStream stream_orderDestList=new RewriteRuleSubtreeStream(adaptor,"rule orderDestList");
         try {
-            // msc_grammar.g:286:9: ( 'before' orderDestList -> ^( Before orderDestList ) )
-            // msc_grammar.g:286:11: 'before' orderDestList
+            // msc_grammar.g:278:9: ( 'before' orderDestList -> ^( Before orderDestList ) )
+            // msc_grammar.g:278:11: 'before' orderDestList
             {
-            string_literal231=(Token)match(input,101,FOLLOW_101_in_before1922);  
-            stream_101.add(string_literal231);
+            string_literal217=(Token)match(input,97,FOLLOW_97_in_before1840);  
+            stream_97.add(string_literal217);
 
-            pushFollow(FOLLOW_orderDestList_in_before1924);
-            orderDestList232=orderDestList();
+            pushFollow(FOLLOW_orderDestList_in_before1842);
+            orderDestList218=orderDestList();
 
             state._fsp--;
 
-            stream_orderDestList.add(orderDestList232.getTree());
+            stream_orderDestList.add(orderDestList218.getTree());
 
 
             // AST REWRITE
@@ -7463,9 +7165,9 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 286:34: -> ^( Before orderDestList )
+            // 278:34: -> ^( Before orderDestList )
             {
-                // msc_grammar.g:286:37: ^( Before orderDestList )
+                // msc_grammar.g:278:37: ^( Before orderDestList )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Before, "Before"), root_1);
@@ -7504,33 +7206,33 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "after"
-    // msc_grammar.g:288:1: after : 'after' orderDestList -> ^( After orderDestList ) ;
+    // msc_grammar.g:280:1: after : 'after' orderDestList -> ^( After orderDestList ) ;
     public final msc_grammarParser.after_return after() throws RecognitionException {
         msc_grammarParser.after_return retval = new msc_grammarParser.after_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token string_literal233=null;
-        msc_grammarParser.orderDestList_return orderDestList234 = null;
+        Token string_literal219=null;
+        msc_grammarParser.orderDestList_return orderDestList220 = null;
 
 
-        CommonTree string_literal233_tree=null;
-        RewriteRuleTokenStream stream_102=new RewriteRuleTokenStream(adaptor,"token 102");
+        CommonTree string_literal219_tree=null;
+        RewriteRuleTokenStream stream_98=new RewriteRuleTokenStream(adaptor,"token 98");
         RewriteRuleSubtreeStream stream_orderDestList=new RewriteRuleSubtreeStream(adaptor,"rule orderDestList");
         try {
-            // msc_grammar.g:288:8: ( 'after' orderDestList -> ^( After orderDestList ) )
-            // msc_grammar.g:288:10: 'after' orderDestList
+            // msc_grammar.g:280:8: ( 'after' orderDestList -> ^( After orderDestList ) )
+            // msc_grammar.g:280:10: 'after' orderDestList
             {
-            string_literal233=(Token)match(input,102,FOLLOW_102_in_after1944);  
-            stream_102.add(string_literal233);
+            string_literal219=(Token)match(input,98,FOLLOW_98_in_after1862);  
+            stream_98.add(string_literal219);
 
-            pushFollow(FOLLOW_orderDestList_in_after1946);
-            orderDestList234=orderDestList();
+            pushFollow(FOLLOW_orderDestList_in_after1864);
+            orderDestList220=orderDestList();
 
             state._fsp--;
 
-            stream_orderDestList.add(orderDestList234.getTree());
+            stream_orderDestList.add(orderDestList220.getTree());
 
 
             // AST REWRITE
@@ -7544,9 +7246,9 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 288:32: -> ^( After orderDestList )
+            // 280:32: -> ^( After orderDestList )
             {
-                // msc_grammar.g:288:35: ^( After orderDestList )
+                // msc_grammar.g:280:35: ^( After orderDestList )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(After, "After"), root_1);
@@ -7585,33 +7287,33 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "mscReference"
-    // msc_grammar.g:292:1: mscReference : 'reference' mscRefExpr -> ^( Ref mscRefExpr ) ;
+    // msc_grammar.g:284:1: mscReference : 'reference' mscRefExpr -> ^( Ref mscRefExpr ) ;
     public final msc_grammarParser.mscReference_return mscReference() throws RecognitionException {
         msc_grammarParser.mscReference_return retval = new msc_grammarParser.mscReference_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token string_literal235=null;
-        msc_grammarParser.mscRefExpr_return mscRefExpr236 = null;
+        Token string_literal221=null;
+        msc_grammarParser.mscRefExpr_return mscRefExpr222 = null;
 
 
-        CommonTree string_literal235_tree=null;
-        RewriteRuleTokenStream stream_105=new RewriteRuleTokenStream(adaptor,"token 105");
+        CommonTree string_literal221_tree=null;
+        RewriteRuleTokenStream stream_101=new RewriteRuleTokenStream(adaptor,"token 101");
         RewriteRuleSubtreeStream stream_mscRefExpr=new RewriteRuleSubtreeStream(adaptor,"rule mscRefExpr");
         try {
-            // msc_grammar.g:293:2: ( 'reference' mscRefExpr -> ^( Ref mscRefExpr ) )
-            // msc_grammar.g:293:4: 'reference' mscRefExpr
+            // msc_grammar.g:285:2: ( 'reference' mscRefExpr -> ^( Ref mscRefExpr ) )
+            // msc_grammar.g:285:4: 'reference' mscRefExpr
             {
-            string_literal235=(Token)match(input,105,FOLLOW_105_in_mscReference1970);  
-            stream_105.add(string_literal235);
+            string_literal221=(Token)match(input,101,FOLLOW_101_in_mscReference1888);  
+            stream_101.add(string_literal221);
 
-            pushFollow(FOLLOW_mscRefExpr_in_mscReference1972);
-            mscRefExpr236=mscRefExpr();
+            pushFollow(FOLLOW_mscRefExpr_in_mscReference1890);
+            mscRefExpr222=mscRefExpr();
 
             state._fsp--;
 
-            stream_mscRefExpr.add(mscRefExpr236.getTree());
+            stream_mscRefExpr.add(mscRefExpr222.getTree());
 
 
             // AST REWRITE
@@ -7625,9 +7327,9 @@ public class msc_grammarParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 293:27: -> ^( Ref mscRefExpr )
+            // 285:27: -> ^( Ref mscRefExpr )
             {
-                // msc_grammar.g:293:30: ^( Ref mscRefExpr )
+                // msc_grammar.g:285:30: ^( Ref mscRefExpr )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(Ref, "Ref"), root_1);
@@ -7666,62 +7368,62 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "mscRefExpr"
-    // msc_grammar.g:295:1: mscRefExpr : ( name | characterString );
+    // msc_grammar.g:287:1: mscRefExpr : ( name | characterString );
     public final msc_grammarParser.mscRefExpr_return mscRefExpr() throws RecognitionException {
         msc_grammarParser.mscRefExpr_return retval = new msc_grammarParser.mscRefExpr_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        msc_grammarParser.name_return name237 = null;
+        msc_grammarParser.name_return name223 = null;
 
-        msc_grammarParser.characterString_return characterString238 = null;
+        msc_grammarParser.characterString_return characterString224 = null;
 
 
 
         try {
-            // msc_grammar.g:296:2: ( name | characterString )
-            int alt64=2;
-            int LA64_0 = input.LA(1);
+            // msc_grammar.g:288:2: ( name | characterString )
+            int alt61=2;
+            int LA61_0 = input.LA(1);
 
-            if ( (LA64_0==NAME) ) {
-                alt64=1;
+            if ( (LA61_0==NAME) ) {
+                alt61=1;
             }
-            else if ( (LA64_0==CHARACTERSTRING) ) {
-                alt64=2;
+            else if ( (LA61_0==CHARACTERSTRING) ) {
+                alt61=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 64, 0, input);
+                    new NoViableAltException("", 61, 0, input);
 
                 throw nvae;
             }
-            switch (alt64) {
+            switch (alt61) {
                 case 1 :
-                    // msc_grammar.g:296:4: name
+                    // msc_grammar.g:288:4: name
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_name_in_mscRefExpr1993);
-                    name237=name();
+                    pushFollow(FOLLOW_name_in_mscRefExpr1911);
+                    name223=name();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, name237.getTree());
+                    adaptor.addChild(root_0, name223.getTree());
 
                     }
                     break;
                 case 2 :
-                    // msc_grammar.g:296:11: characterString
+                    // msc_grammar.g:288:11: characterString
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_characterString_in_mscRefExpr1997);
-                    characterString238=characterString();
+                    pushFollow(FOLLOW_characterString_in_mscRefExpr1915);
+                    characterString224=characterString();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, characterString238.getTree());
+                    adaptor.addChild(root_0, characterString224.getTree());
 
                     }
                     break;
@@ -7751,26 +7453,26 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "mscName"
-    // msc_grammar.g:299:1: mscName : NAME ;
+    // msc_grammar.g:291:1: mscName : NAME ;
     public final msc_grammarParser.mscName_return mscName() throws RecognitionException {
         msc_grammarParser.mscName_return retval = new msc_grammarParser.mscName_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token NAME239=null;
+        Token NAME225=null;
 
-        CommonTree NAME239_tree=null;
+        CommonTree NAME225_tree=null;
 
         try {
-            // msc_grammar.g:299:9: ( NAME )
-            // msc_grammar.g:299:11: NAME
+            // msc_grammar.g:291:9: ( NAME )
+            // msc_grammar.g:291:11: NAME
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            NAME239=(Token)match(input,NAME,FOLLOW_NAME_in_mscName2008); 
-            NAME239_tree = (CommonTree)adaptor.create(NAME239);
-            adaptor.addChild(root_0, NAME239_tree);
+            NAME225=(Token)match(input,NAME,FOLLOW_NAME_in_mscName1926); 
+            NAME225_tree = (CommonTree)adaptor.create(NAME225);
+            adaptor.addChild(root_0, NAME225_tree);
 
 
             }
@@ -7799,26 +7501,26 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "labelName"
-    // msc_grammar.g:300:1: labelName : NAME ;
+    // msc_grammar.g:292:1: labelName : NAME ;
     public final msc_grammarParser.labelName_return labelName() throws RecognitionException {
         msc_grammarParser.labelName_return retval = new msc_grammarParser.labelName_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token NAME240=null;
+        Token NAME226=null;
 
-        CommonTree NAME240_tree=null;
+        CommonTree NAME226_tree=null;
 
         try {
-            // msc_grammar.g:301:2: ( NAME )
-            // msc_grammar.g:301:4: NAME
+            // msc_grammar.g:293:2: ( NAME )
+            // msc_grammar.g:293:4: NAME
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            NAME240=(Token)match(input,NAME,FOLLOW_NAME_in_labelName2017); 
-            NAME240_tree = (CommonTree)adaptor.create(NAME240);
-            adaptor.addChild(root_0, NAME240_tree);
+            NAME226=(Token)match(input,NAME,FOLLOW_NAME_in_labelName1935); 
+            NAME226_tree = (CommonTree)adaptor.create(NAME226);
+            adaptor.addChild(root_0, NAME226_tree);
 
 
             }
@@ -7847,26 +7549,26 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "name"
-    // msc_grammar.g:302:1: name : NAME ;
+    // msc_grammar.g:294:1: name : NAME ;
     public final msc_grammarParser.name_return name() throws RecognitionException {
         msc_grammarParser.name_return retval = new msc_grammarParser.name_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token NAME241=null;
+        Token NAME227=null;
 
-        CommonTree NAME241_tree=null;
+        CommonTree NAME227_tree=null;
 
         try {
-            // msc_grammar.g:302:7: ( NAME )
-            // msc_grammar.g:302:9: NAME
+            // msc_grammar.g:294:7: ( NAME )
+            // msc_grammar.g:294:9: NAME
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            NAME241=(Token)match(input,NAME,FOLLOW_NAME_in_name2025); 
-            NAME241_tree = (CommonTree)adaptor.create(NAME241);
-            adaptor.addChild(root_0, NAME241_tree);
+            NAME227=(Token)match(input,NAME,FOLLOW_NAME_in_name1943); 
+            NAME227_tree = (CommonTree)adaptor.create(NAME227);
+            adaptor.addChild(root_0, NAME227_tree);
 
 
             }
@@ -7895,26 +7597,26 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "instanceName"
-    // msc_grammar.g:303:1: instanceName : NAME ;
+    // msc_grammar.g:295:1: instanceName : NAME ;
     public final msc_grammarParser.instanceName_return instanceName() throws RecognitionException {
         msc_grammarParser.instanceName_return retval = new msc_grammarParser.instanceName_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token NAME242=null;
+        Token NAME228=null;
 
-        CommonTree NAME242_tree=null;
+        CommonTree NAME228_tree=null;
 
         try {
-            // msc_grammar.g:304:2: ( NAME )
-            // msc_grammar.g:304:4: NAME
+            // msc_grammar.g:296:2: ( NAME )
+            // msc_grammar.g:296:4: NAME
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            NAME242=(Token)match(input,NAME,FOLLOW_NAME_in_instanceName2034); 
-            NAME242_tree = (CommonTree)adaptor.create(NAME242);
-            adaptor.addChild(root_0, NAME242_tree);
+            NAME228=(Token)match(input,NAME,FOLLOW_NAME_in_instanceName1952); 
+            NAME228_tree = (CommonTree)adaptor.create(NAME228);
+            adaptor.addChild(root_0, NAME228_tree);
 
 
             }
@@ -7943,26 +7645,26 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "messageName"
-    // msc_grammar.g:305:1: messageName : NAME ;
+    // msc_grammar.g:297:1: messageName : NAME ;
     public final msc_grammarParser.messageName_return messageName() throws RecognitionException {
         msc_grammarParser.messageName_return retval = new msc_grammarParser.messageName_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token NAME243=null;
+        Token NAME229=null;
 
-        CommonTree NAME243_tree=null;
+        CommonTree NAME229_tree=null;
 
         try {
-            // msc_grammar.g:306:2: ( NAME )
-            // msc_grammar.g:306:4: NAME
+            // msc_grammar.g:298:2: ( NAME )
+            // msc_grammar.g:298:4: NAME
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            NAME243=(Token)match(input,NAME,FOLLOW_NAME_in_messageName2043); 
-            NAME243_tree = (CommonTree)adaptor.create(NAME243);
-            adaptor.addChild(root_0, NAME243_tree);
+            NAME229=(Token)match(input,NAME,FOLLOW_NAME_in_messageName1961); 
+            NAME229_tree = (CommonTree)adaptor.create(NAME229);
+            adaptor.addChild(root_0, NAME229_tree);
 
 
             }
@@ -7991,26 +7693,26 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "gateName"
-    // msc_grammar.g:307:1: gateName : NAME ;
+    // msc_grammar.g:299:1: gateName : NAME ;
     public final msc_grammarParser.gateName_return gateName() throws RecognitionException {
         msc_grammarParser.gateName_return retval = new msc_grammarParser.gateName_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token NAME244=null;
+        Token NAME230=null;
 
-        CommonTree NAME244_tree=null;
+        CommonTree NAME230_tree=null;
 
         try {
-            // msc_grammar.g:308:2: ( NAME )
-            // msc_grammar.g:308:4: NAME
+            // msc_grammar.g:300:2: ( NAME )
+            // msc_grammar.g:300:4: NAME
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            NAME244=(Token)match(input,NAME,FOLLOW_NAME_in_gateName2052); 
-            NAME244_tree = (CommonTree)adaptor.create(NAME244);
-            adaptor.addChild(root_0, NAME244_tree);
+            NAME230=(Token)match(input,NAME,FOLLOW_NAME_in_gateName1970); 
+            NAME230_tree = (CommonTree)adaptor.create(NAME230);
+            adaptor.addChild(root_0, NAME230_tree);
 
 
             }
@@ -8039,26 +7741,26 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "eventName"
-    // msc_grammar.g:309:1: eventName : NAME ;
+    // msc_grammar.g:301:1: eventName : NAME ;
     public final msc_grammarParser.eventName_return eventName() throws RecognitionException {
         msc_grammarParser.eventName_return retval = new msc_grammarParser.eventName_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token NAME245=null;
+        Token NAME231=null;
 
-        CommonTree NAME245_tree=null;
+        CommonTree NAME231_tree=null;
 
         try {
-            // msc_grammar.g:310:2: ( NAME )
-            // msc_grammar.g:310:4: NAME
+            // msc_grammar.g:302:2: ( NAME )
+            // msc_grammar.g:302:4: NAME
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            NAME245=(Token)match(input,NAME,FOLLOW_NAME_in_eventName2061); 
-            NAME245_tree = (CommonTree)adaptor.create(NAME245);
-            adaptor.addChild(root_0, NAME245_tree);
+            NAME231=(Token)match(input,NAME,FOLLOW_NAME_in_eventName1979); 
+            NAME231_tree = (CommonTree)adaptor.create(NAME231);
+            adaptor.addChild(root_0, NAME231_tree);
 
 
             }
@@ -8087,26 +7789,26 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "characterString"
-    // msc_grammar.g:311:1: characterString : CHARACTERSTRING ;
+    // msc_grammar.g:303:1: characterString : CHARACTERSTRING ;
     public final msc_grammarParser.characterString_return characterString() throws RecognitionException {
         msc_grammarParser.characterString_return retval = new msc_grammarParser.characterString_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token CHARACTERSTRING246=null;
+        Token CHARACTERSTRING232=null;
 
-        CommonTree CHARACTERSTRING246_tree=null;
+        CommonTree CHARACTERSTRING232_tree=null;
 
         try {
-            // msc_grammar.g:312:2: ( CHARACTERSTRING )
-            // msc_grammar.g:312:4: CHARACTERSTRING
+            // msc_grammar.g:304:2: ( CHARACTERSTRING )
+            // msc_grammar.g:304:4: CHARACTERSTRING
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            CHARACTERSTRING246=(Token)match(input,CHARACTERSTRING,FOLLOW_CHARACTERSTRING_in_characterString2070); 
-            CHARACTERSTRING246_tree = (CommonTree)adaptor.create(CHARACTERSTRING246);
-            adaptor.addChild(root_0, CHARACTERSTRING246_tree);
+            CHARACTERSTRING232=(Token)match(input,CHARACTERSTRING,FOLLOW_CHARACTERSTRING_in_characterString1988); 
+            CHARACTERSTRING232_tree = (CommonTree)adaptor.create(CHARACTERSTRING232);
+            adaptor.addChild(root_0, CHARACTERSTRING232_tree);
 
 
             }
@@ -8135,26 +7837,26 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "identifier"
-    // msc_grammar.g:314:1: identifier : NAME ;
+    // msc_grammar.g:306:1: identifier : NAME ;
     public final msc_grammarParser.identifier_return identifier() throws RecognitionException {
         msc_grammarParser.identifier_return retval = new msc_grammarParser.identifier_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token NAME247=null;
+        Token NAME233=null;
 
-        CommonTree NAME247_tree=null;
+        CommonTree NAME233_tree=null;
 
         try {
-            // msc_grammar.g:315:2: ( NAME )
-            // msc_grammar.g:315:4: NAME
+            // msc_grammar.g:307:2: ( NAME )
+            // msc_grammar.g:307:4: NAME
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            NAME247=(Token)match(input,NAME,FOLLOW_NAME_in_identifier2080); 
-            NAME247_tree = (CommonTree)adaptor.create(NAME247);
-            adaptor.addChild(root_0, NAME247_tree);
+            NAME233=(Token)match(input,NAME,FOLLOW_NAME_in_identifier1998); 
+            NAME233_tree = (CommonTree)adaptor.create(NAME233);
+            adaptor.addChild(root_0, NAME233_tree);
 
 
             }
@@ -8183,26 +7885,26 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "expressionString"
-    // msc_grammar.g:319:1: expressionString : NAME ;
+    // msc_grammar.g:311:1: expressionString : NAME ;
     public final msc_grammarParser.expressionString_return expressionString() throws RecognitionException {
         msc_grammarParser.expressionString_return retval = new msc_grammarParser.expressionString_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token NAME248=null;
+        Token NAME234=null;
 
-        CommonTree NAME248_tree=null;
+        CommonTree NAME234_tree=null;
 
         try {
-            // msc_grammar.g:320:2: ( NAME )
-            // msc_grammar.g:320:4: NAME
+            // msc_grammar.g:312:2: ( NAME )
+            // msc_grammar.g:312:4: NAME
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            NAME248=(Token)match(input,NAME,FOLLOW_NAME_in_expressionString2094); 
-            NAME248_tree = (CommonTree)adaptor.create(NAME248);
-            adaptor.addChild(root_0, NAME248_tree);
+            NAME234=(Token)match(input,NAME,FOLLOW_NAME_in_expressionString2012); 
+            NAME234_tree = (CommonTree)adaptor.create(NAME234);
+            adaptor.addChild(root_0, NAME234_tree);
 
 
             }
@@ -8231,26 +7933,26 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "dataTypeName"
-    // msc_grammar.g:325:1: dataTypeName : NAME ;
+    // msc_grammar.g:317:1: dataTypeName : NAME ;
     public final msc_grammarParser.dataTypeName_return dataTypeName() throws RecognitionException {
         msc_grammarParser.dataTypeName_return retval = new msc_grammarParser.dataTypeName_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token NAME249=null;
+        Token NAME235=null;
 
-        CommonTree NAME249_tree=null;
+        CommonTree NAME235_tree=null;
 
         try {
-            // msc_grammar.g:326:2: ( NAME )
-            // msc_grammar.g:326:4: NAME
+            // msc_grammar.g:318:2: ( NAME )
+            // msc_grammar.g:318:4: NAME
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            NAME249=(Token)match(input,NAME,FOLLOW_NAME_in_dataTypeName2107); 
-            NAME249_tree = (CommonTree)adaptor.create(NAME249);
-            adaptor.addChild(root_0, NAME249_tree);
+            NAME235=(Token)match(input,NAME,FOLLOW_NAME_in_dataTypeName2025); 
+            NAME235_tree = (CommonTree)adaptor.create(NAME235);
+            adaptor.addChild(root_0, NAME235_tree);
 
 
             }
@@ -8279,26 +7981,26 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "datatypeTypeExpression"
-    // msc_grammar.g:327:1: datatypeTypeExpression : NAME ;
+    // msc_grammar.g:319:1: datatypeTypeExpression : NAME ;
     public final msc_grammarParser.datatypeTypeExpression_return datatypeTypeExpression() throws RecognitionException {
         msc_grammarParser.datatypeTypeExpression_return retval = new msc_grammarParser.datatypeTypeExpression_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token NAME250=null;
+        Token NAME236=null;
 
-        CommonTree NAME250_tree=null;
+        CommonTree NAME236_tree=null;
 
         try {
-            // msc_grammar.g:328:2: ( NAME )
-            // msc_grammar.g:328:4: NAME
+            // msc_grammar.g:320:2: ( NAME )
+            // msc_grammar.g:320:4: NAME
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            NAME250=(Token)match(input,NAME,FOLLOW_NAME_in_datatypeTypeExpression2115); 
-            NAME250_tree = (CommonTree)adaptor.create(NAME250);
-            adaptor.addChild(root_0, NAME250_tree);
+            NAME236=(Token)match(input,NAME,FOLLOW_NAME_in_datatypeTypeExpression2033); 
+            NAME236_tree = (CommonTree)adaptor.create(NAME236);
+            adaptor.addChild(root_0, NAME236_tree);
 
 
             }
@@ -8327,26 +8029,26 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "literalNameOrNumber"
-    // msc_grammar.g:329:1: literalNameOrNumber : NAME ;
+    // msc_grammar.g:321:1: literalNameOrNumber : NAME ;
     public final msc_grammarParser.literalNameOrNumber_return literalNameOrNumber() throws RecognitionException {
         msc_grammarParser.literalNameOrNumber_return retval = new msc_grammarParser.literalNameOrNumber_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token NAME251=null;
+        Token NAME237=null;
 
-        CommonTree NAME251_tree=null;
+        CommonTree NAME237_tree=null;
 
         try {
-            // msc_grammar.g:330:2: ( NAME )
-            // msc_grammar.g:330:4: NAME
+            // msc_grammar.g:322:2: ( NAME )
+            // msc_grammar.g:322:4: NAME
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            NAME251=(Token)match(input,NAME,FOLLOW_NAME_in_literalNameOrNumber2123); 
-            NAME251_tree = (CommonTree)adaptor.create(NAME251);
-            adaptor.addChild(root_0, NAME251_tree);
+            NAME237=(Token)match(input,NAME,FOLLOW_NAME_in_literalNameOrNumber2041); 
+            NAME237_tree = (CommonTree)adaptor.create(NAME237);
+            adaptor.addChild(root_0, NAME237_tree);
 
 
             }
@@ -8375,26 +8077,26 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "naturalSimpleExpression"
-    // msc_grammar.g:331:1: naturalSimpleExpression : NAME ;
+    // msc_grammar.g:323:1: naturalSimpleExpression : NAME ;
     public final msc_grammarParser.naturalSimpleExpression_return naturalSimpleExpression() throws RecognitionException {
         msc_grammarParser.naturalSimpleExpression_return retval = new msc_grammarParser.naturalSimpleExpression_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token NAME252=null;
+        Token NAME238=null;
 
-        CommonTree NAME252_tree=null;
+        CommonTree NAME238_tree=null;
 
         try {
-            // msc_grammar.g:332:2: ( NAME )
-            // msc_grammar.g:332:4: NAME
+            // msc_grammar.g:324:2: ( NAME )
+            // msc_grammar.g:324:4: NAME
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            NAME252=(Token)match(input,NAME,FOLLOW_NAME_in_naturalSimpleExpression2131); 
-            NAME252_tree = (CommonTree)adaptor.create(NAME252);
-            adaptor.addChild(root_0, NAME252_tree);
+            NAME238=(Token)match(input,NAME,FOLLOW_NAME_in_naturalSimpleExpression2049); 
+            NAME238_tree = (CommonTree)adaptor.create(NAME238);
+            adaptor.addChild(root_0, NAME238_tree);
 
 
             }
@@ -8423,26 +8125,26 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "fieldName"
-    // msc_grammar.g:333:1: fieldName : NAME ;
+    // msc_grammar.g:325:1: fieldName : NAME ;
     public final msc_grammarParser.fieldName_return fieldName() throws RecognitionException {
         msc_grammarParser.fieldName_return retval = new msc_grammarParser.fieldName_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token NAME253=null;
+        Token NAME239=null;
 
-        CommonTree NAME253_tree=null;
+        CommonTree NAME239_tree=null;
 
         try {
-            // msc_grammar.g:334:2: ( NAME )
-            // msc_grammar.g:334:4: NAME
+            // msc_grammar.g:326:2: ( NAME )
+            // msc_grammar.g:326:4: NAME
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            NAME253=(Token)match(input,NAME,FOLLOW_NAME_in_fieldName2139); 
-            NAME253_tree = (CommonTree)adaptor.create(NAME253);
-            adaptor.addChild(root_0, NAME253_tree);
+            NAME239=(Token)match(input,NAME,FOLLOW_NAME_in_fieldName2057); 
+            NAME239_tree = (CommonTree)adaptor.create(NAME239);
+            adaptor.addChild(root_0, NAME239_tree);
 
 
             }
@@ -8471,26 +8173,26 @@ public class msc_grammarParser extends Parser {
     };
 
     // $ANTLR start "constantExpression"
-    // msc_grammar.g:336:1: constantExpression : NAME ;
+    // msc_grammar.g:328:1: constantExpression : NAME ;
     public final msc_grammarParser.constantExpression_return constantExpression() throws RecognitionException {
         msc_grammarParser.constantExpression_return retval = new msc_grammarParser.constantExpression_return();
         retval.start = input.LT(1);
 
         CommonTree root_0 = null;
 
-        Token NAME254=null;
+        Token NAME240=null;
 
-        CommonTree NAME254_tree=null;
+        CommonTree NAME240_tree=null;
 
         try {
-            // msc_grammar.g:337:2: ( NAME )
-            // msc_grammar.g:337:4: NAME
+            // msc_grammar.g:329:2: ( NAME )
+            // msc_grammar.g:329:4: NAME
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            NAME254=(Token)match(input,NAME,FOLLOW_NAME_in_constantExpression2149); 
-            NAME254_tree = (CommonTree)adaptor.create(NAME254);
-            adaptor.addChild(root_0, NAME254_tree);
+            NAME240=(Token)match(input,NAME,FOLLOW_NAME_in_constantExpression2067); 
+            NAME240_tree = (CommonTree)adaptor.create(NAME240);
+            adaptor.addChild(root_0, NAME240_tree);
 
 
             }
@@ -8518,259 +8220,245 @@ public class msc_grammarParser extends Parser {
 
  
 
-    public static final BitSet FOLLOW_messageSequenceChart_in_msc182 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_messageSequenceChart194 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_mscHead_in_messageSequenceChart196 = new BitSet(new long[]{0x0000420000000000L});
-    public static final BitSet FOLLOW_body_in_messageSequenceChart198 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_60_in_messageSequenceChart200 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_end_in_messageSequenceChart202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_mscName_in_mscHead225 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_end_in_mscHead227 = new BitSet(new long[]{0x0000000000000002L,0x0000001000000800L});
-    public static final BitSet FOLLOW_mscInterface_in_mscHead231 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_mscBody_in_body261 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_mscStatement_in_mscBody274 = new BitSet(new long[]{0x0000420000000002L});
-    public static final BitSet FOLLOW_eventDefinition_in_mscStatement299 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_instanceName_in_eventDefinition311 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_61_in_eventDefinition313 = new BitSet(new long[]{0x8000400000000000L,0x0000008CC8000705L});
-    public static final BitSet FOLLOW_instanceEventList_in_eventDefinition315 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_instanceNameList_in_eventDefinition333 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_61_in_eventDefinition335 = new BitSet(new long[]{0x0000000000000000L,0x00000200007E0000L});
-    public static final BitSet FOLLOW_multiInstanceEventList_in_eventDefinition337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_instanceEvent_in_instanceEventList364 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_end_in_instanceEventList366 = new BitSet(new long[]{0x8000400000000002L,0x0000008CC8000705L});
-    public static final BitSet FOLLOW_orderableEvent_in_instanceEvent387 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_nonOrderableEvent_in_instanceEvent391 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_label_in_orderableEvent403 = new BitSet(new long[]{0x8000400000000000L,0x0000000C88000105L});
-    public static final BitSet FOLLOW_messageEvent_in_orderableEvent408 = new BitSet(new long[]{0x0000000000000002L,0x0000006000000000L});
-    public static final BitSet FOLLOW_action_in_orderableEvent412 = new BitSet(new long[]{0x0000000000000002L,0x0000006000000000L});
-    public static final BitSet FOLLOW_create_in_orderableEvent416 = new BitSet(new long[]{0x0000000000000002L,0x0000006000000000L});
-    public static final BitSet FOLLOW_timerStatement_in_orderableEvent420 = new BitSet(new long[]{0x0000000000000002L,0x0000006000000000L});
-    public static final BitSet FOLLOW_generalOrdering_in_orderableEvent424 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_instanceHeadStatement_in_nonOrderableEvent437 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_instanceEndStatement_in_nonOrderableEvent441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_stop_in_nonOrderableEvent445 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_coregion_in_nonOrderableEvent449 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_instanceName_in_instanceNameList462 = new BitSet(new long[]{0x4000000000000002L});
-    public static final BitSet FOLLOW_62_in_instanceNameList466 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_instanceName_in_instanceNameList468 = new BitSet(new long[]{0x4000000000000002L});
-    public static final BitSet FOLLOW_ALL_in_instanceNameList488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_multiInstanceEvent_in_multiInstanceEventList513 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_end_in_multiInstanceEventList515 = new BitSet(new long[]{0x0000000000000002L,0x00000200007E0000L});
-    public static final BitSet FOLLOW_condition_in_multiInstanceEvent536 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_mscReference_in_multiInstanceEvent540 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_inlineExpr_in_multiInstanceEvent544 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_eventName_in_label558 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_label562 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_eventName_in_label564 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_end_in_label566 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_messageEvent591 = new BitSet(new long[]{0x0000C00000000000L});
-    public static final BitSet FOLLOW_msgIdentification_in_messageEvent593 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
-    public static final BitSet FOLLOW_65_in_messageEvent595 = new BitSet(new long[]{0x0000400000000000L,0x0000000000000050L});
-    public static final BitSet FOLLOW_messageReceiver_in_messageEvent597 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_messageEvent614 = new BitSet(new long[]{0x0000C00000000000L});
-    public static final BitSet FOLLOW_msgIdentification_in_messageEvent616 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
-    public static final BitSet FOLLOW_67_in_messageEvent618 = new BitSet(new long[]{0x0000400000000000L,0x0000000000000060L});
-    public static final BitSet FOLLOW_messageSender_in_messageEvent620 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_inputAddress_in_messageReceiver646 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_messageReceiver657 = new BitSet(new long[]{0x0000400000000002L,0x0000000000000040L});
-    public static final BitSet FOLLOW_inputAddress_in_messageReceiver661 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_outputAddress_in_messageSender683 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_messageSender694 = new BitSet(new long[]{0x0000400000000002L,0x0000000000000040L});
-    public static final BitSet FOLLOW_outputAddress_in_messageSender698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_messageName_in_msgIdentification721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_characterString_in_msgIdentification725 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_instanceName_in_outputAddress737 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_outputAddress742 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000080L});
-    public static final BitSet FOLLOW_71_in_outputAddress746 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_gateName_in_outputAddress748 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_instanceName_in_inputAddress775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_inputAddress780 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000080L});
-    public static final BitSet FOLLOW_71_in_inputAddress784 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_gateName_in_inputAddress786 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_72_in_action812 = new BitSet(new long[]{0x0000C00000000000L});
-    public static final BitSet FOLLOW_actionStatement_in_action814 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_informalAction_in_actionStatement829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_name_in_informalAction850 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_characterString_in_informalAction854 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_73_in_instanceHeadStatement867 = new BitSet(new long[]{0x0000400000000002L,0x000000000000F000L});
-    public static final BitSet FOLLOW_instanceKind_in_instanceHeadStatement871 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_74_in_instanceEndStatement887 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_mscInstInterface_in_mscInterface899 = new BitSet(new long[]{0x0000000000000002L,0x0000001000000800L});
-    public static final BitSet FOLLOW_mscGateInterface_in_mscInterface903 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_mscGateInterface_in_mscInterface910 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_75_in_mscInstInterface923 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_instanceList_in_mscInstInterface925 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_end_in_mscInstInterface927 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_instanceName_in_instanceList940 = new BitSet(new long[]{0x6000000000000002L});
-    public static final BitSet FOLLOW_61_in_instanceList944 = new BitSet(new long[]{0x0000400000000000L,0x000000000000F000L});
-    public static final BitSet FOLLOW_instanceKind_in_instanceList946 = new BitSet(new long[]{0x4000000000000002L});
-    public static final BitSet FOLLOW_62_in_instanceList953 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_instanceList_in_instanceList955 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_kindDenominator_in_instanceKind973 = new BitSet(new long[]{0x0000400000000000L,0x000000000000F000L});
-    public static final BitSet FOLLOW_identifier_in_instanceKind978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_messageSequenceChart_in_msc174 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_messageSequenceChart186 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_mscHead_in_messageSequenceChart188 = new BitSet(new long[]{0x0000108000000000L});
+    public static final BitSet FOLLOW_body_in_messageSequenceChart190 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_58_in_messageSequenceChart192 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_end_in_messageSequenceChart194 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_mscName_in_mscHead217 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_end_in_mscHead219 = new BitSet(new long[]{0x0000000000000002L,0x0000000100000200L});
+    public static final BitSet FOLLOW_mscInterface_in_mscHead223 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_mscBody_in_body253 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_mscStatement_in_mscBody266 = new BitSet(new long[]{0x0000108000000002L});
+    public static final BitSet FOLLOW_eventDefinition_in_mscStatement291 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_instanceName_in_eventDefinition303 = new BitSet(new long[]{0x0800000000000000L});
+    public static final BitSet FOLLOW_59_in_eventDefinition305 = new BitSet(new long[]{0x6000100000000000L,0x000000083C8001C1L});
+    public static final BitSet FOLLOW_instanceEventList_in_eventDefinition307 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_instanceNameList_in_eventDefinition325 = new BitSet(new long[]{0x0800000000000000L});
+    public static final BitSet FOLLOW_59_in_eventDefinition327 = new BitSet(new long[]{0x0000000000000000L,0x00000020001F8000L});
+    public static final BitSet FOLLOW_multiInstanceEventList_in_eventDefinition329 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_instanceEvent_in_instanceEventList356 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_end_in_instanceEventList358 = new BitSet(new long[]{0x6000100000000002L,0x000000083C8001C1L});
+    public static final BitSet FOLLOW_orderableEvent_in_instanceEvent379 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_nonOrderableEvent_in_instanceEvent383 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_label_in_orderableEvent395 = new BitSet(new long[]{0x6000100000000000L,0x0000000038800041L});
+    public static final BitSet FOLLOW_messageEvent_in_orderableEvent400 = new BitSet(new long[]{0x0000000000000002L,0x0000000600000000L});
+    public static final BitSet FOLLOW_action_in_orderableEvent404 = new BitSet(new long[]{0x0000000000000002L,0x0000000600000000L});
+    public static final BitSet FOLLOW_create_in_orderableEvent408 = new BitSet(new long[]{0x0000000000000002L,0x0000000600000000L});
+    public static final BitSet FOLLOW_timerStatement_in_orderableEvent412 = new BitSet(new long[]{0x0000000000000002L,0x0000000600000000L});
+    public static final BitSet FOLLOW_generalOrdering_in_orderableEvent416 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_instanceHeadStatement_in_nonOrderableEvent429 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_instanceEndStatement_in_nonOrderableEvent433 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_stop_in_nonOrderableEvent437 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_coregion_in_nonOrderableEvent441 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_instanceName_in_instanceNameList454 = new BitSet(new long[]{0x1000000000000002L});
+    public static final BitSet FOLLOW_60_in_instanceNameList458 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_instanceName_in_instanceNameList460 = new BitSet(new long[]{0x1000000000000002L});
+    public static final BitSet FOLLOW_ALL_in_instanceNameList480 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_multiInstanceEvent_in_multiInstanceEventList505 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_end_in_multiInstanceEventList507 = new BitSet(new long[]{0x0000000000000002L,0x00000020001F8000L});
+    public static final BitSet FOLLOW_condition_in_multiInstanceEvent528 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_mscReference_in_multiInstanceEvent532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_inlineExpr_in_multiInstanceEvent536 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_eventName_in_label550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_label554 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_eventName_in_label556 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_end_in_label558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_62_in_messageEvent583 = new BitSet(new long[]{0x0000300000000000L});
+    public static final BitSet FOLLOW_msgIdentification_in_messageEvent585 = new BitSet(new long[]{0x8000000000000000L});
+    public static final BitSet FOLLOW_63_in_messageEvent587 = new BitSet(new long[]{0x0000100000000000L,0x0000000000000014L});
+    public static final BitSet FOLLOW_messageReceiver_in_messageEvent589 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_messageEvent606 = new BitSet(new long[]{0x0000300000000000L});
+    public static final BitSet FOLLOW_msgIdentification_in_messageEvent608 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_messageEvent610 = new BitSet(new long[]{0x0000100000000000L,0x0000000000000018L});
+    public static final BitSet FOLLOW_messageSender_in_messageEvent612 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_inputAddress_in_messageReceiver638 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_messageReceiver649 = new BitSet(new long[]{0x0000100000000002L,0x0000000000000010L});
+    public static final BitSet FOLLOW_inputAddress_in_messageReceiver653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_outputAddress_in_messageSender675 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_messageSender686 = new BitSet(new long[]{0x0000100000000002L,0x0000000000000010L});
+    public static final BitSet FOLLOW_outputAddress_in_messageSender690 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_messageName_in_msgIdentification713 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_characterString_in_msgIdentification717 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_instanceName_in_outputAddress729 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_outputAddress734 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000020L});
+    public static final BitSet FOLLOW_69_in_outputAddress738 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_gateName_in_outputAddress740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_instanceName_in_inputAddress767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_inputAddress772 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000020L});
+    public static final BitSet FOLLOW_69_in_inputAddress776 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_gateName_in_inputAddress778 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_action804 = new BitSet(new long[]{0x0000300000000000L});
+    public static final BitSet FOLLOW_actionStatement_in_action806 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_informalAction_in_actionStatement821 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_name_in_informalAction842 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_characterString_in_informalAction846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_instanceHeadStatement859 = new BitSet(new long[]{0x0000100000000002L,0x0000000000003C00L});
+    public static final BitSet FOLLOW_instanceKind_in_instanceHeadStatement863 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_72_in_instanceEndStatement879 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_mscInstInterface_in_mscInterface891 = new BitSet(new long[]{0x0000000000000002L,0x0000000100000200L});
+    public static final BitSet FOLLOW_mscGateInterface_in_mscInterface895 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_mscGateInterface_in_mscInterface902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_73_in_mscInstInterface915 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_instanceList_in_mscInstInterface917 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_end_in_mscInstInterface919 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_instanceName_in_instanceList932 = new BitSet(new long[]{0x1800000000000002L});
+    public static final BitSet FOLLOW_59_in_instanceList936 = new BitSet(new long[]{0x0000100000000000L,0x0000000000003C00L});
+    public static final BitSet FOLLOW_instanceKind_in_instanceList938 = new BitSet(new long[]{0x1000000000000002L});
+    public static final BitSet FOLLOW_60_in_instanceList945 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_instanceList_in_instanceList947 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_kindDenominator_in_instanceKind965 = new BitSet(new long[]{0x0000100000000000L,0x0000000000003C00L});
+    public static final BitSet FOLLOW_identifier_in_instanceKind970 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_74_in_kindDenominator983 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_75_in_kindDenominator987 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_76_in_kindDenominator991 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_77_in_kindDenominator995 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_78_in_kindDenominator999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_79_in_kindDenominator1003 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_name_in_kindDenominator1007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_80_in_end1018 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_conditionIdentification_in_condition1031 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_81_in_conditionIdentification1042 = new BitSet(new long[]{0x0000CC0000000000L});
-    public static final BitSet FOLLOW_conditionText_in_conditionIdentification1044 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_conditionNameList_in_conditionText1065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_WHEN_in_conditionText1077 = new BitSet(new long[]{0x0000C00000000000L});
-    public static final BitSet FOLLOW_conditionNameList_in_conditionText1079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_OTHERWISE_in_conditionText1091 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_name_in_conditionNameList1108 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_characterString_in_conditionNameList1112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_loopExpr_in_inlineExpr1125 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_optExpr_in_inlineExpr1129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_altExpr_in_inlineExpr1133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_parExpr_in_inlineExpr1137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_excExpr_in_inlineExpr1141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_82_in_loopExpr1152 = new BitSet(new long[]{0x0000100000000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_loopBoundary_in_loopExpr1156 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_BEGIN_in_loopExpr1161 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_end_in_loopExpr1163 = new BitSet(new long[]{0x0000420000000000L,0x0000000000040000L});
-    public static final BitSet FOLLOW_mscBody_in_loopExpr1165 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
-    public static final BitSet FOLLOW_82_in_loopExpr1167 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_END_in_loopExpr1169 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_optExpr1191 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_BEGIN_in_optExpr1193 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_end_in_optExpr1195 = new BitSet(new long[]{0x0000420000000000L,0x0000000000080000L});
-    public static final BitSet FOLLOW_mscBody_in_optExpr1197 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-    public static final BitSet FOLLOW_83_in_optExpr1199 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_END_in_optExpr1201 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_84_in_excExpr1220 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_BEGIN_in_excExpr1222 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_end_in_excExpr1224 = new BitSet(new long[]{0x0000420000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_mscBody_in_excExpr1226 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_84_in_excExpr1228 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_END_in_excExpr1230 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_85_in_altExpr1249 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_BEGIN_in_altExpr1251 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_end_in_altExpr1253 = new BitSet(new long[]{0x0000420000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_mscBody_in_altExpr1255 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_85_in_altExpr1259 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_end_in_altExpr1261 = new BitSet(new long[]{0x0000420000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_mscBody_in_altExpr1263 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_85_in_altExpr1268 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_END_in_altExpr1270 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_86_in_parExpr1290 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_BEGIN_in_parExpr1292 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_end_in_parExpr1294 = new BitSet(new long[]{0x0000420000000000L,0x0000000000400000L});
-    public static final BitSet FOLLOW_mscBody_in_parExpr1296 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-    public static final BitSet FOLLOW_86_in_parExpr1300 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_end_in_parExpr1302 = new BitSet(new long[]{0x0000420000000000L,0x0000000000400000L});
-    public static final BitSet FOLLOW_mscBody_in_parExpr1304 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-    public static final BitSet FOLLOW_86_in_parExpr1309 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_END_in_parExpr1311 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_87_in_loopBoundary1332 = new BitSet(new long[]{0x0000000000000000L,0x0000000006000000L});
-    public static final BitSet FOLLOW_infNatural_in_loopBoundary1334 = new BitSet(new long[]{0x4000000000000000L,0x0000000001000000L});
-    public static final BitSet FOLLOW_62_in_loopBoundary1338 = new BitSet(new long[]{0x0000000000000000L,0x0000000006000000L});
-    public static final BitSet FOLLOW_infNatural_in_loopBoundary1340 = new BitSet(new long[]{0x0000000000000000L,0x0000000001000000L});
-    public static final BitSet FOLLOW_88_in_loopBoundary1345 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_89_in_infNatural1367 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_90_in_infNatural1371 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_expressionString_in_infNatural1373 = new BitSet(new long[]{0x0000000000000000L,0x0000000004000000L});
-    public static final BitSet FOLLOW_90_in_infNatural1375 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_91_in_create1388 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_instanceName_in_create1390 = new BitSet(new long[]{0x0000000000000002L,0x0000000010000000L});
-    public static final BitSet FOLLOW_92_in_create1394 = new BitSet(new long[]{0x0000C00000000000L});
-    public static final BitSet FOLLOW_msgIdentification_in_create1395 = new BitSet(new long[]{0x0000000000000000L,0x0000000020000000L});
-    public static final BitSet FOLLOW_93_in_create1397 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_94_in_stop1427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_setTimer_in_timerStatement1443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_resetTimer_in_timerStatement1447 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_timeout_in_timerStatement1451 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_95_in_setTimer1462 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_name_in_setTimer1464 = new BitSet(new long[]{0x4000000000000000L,0x0000000100000000L});
-    public static final BitSet FOLLOW_62_in_setTimer1468 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_instanceName_in_setTimer1470 = new BitSet(new long[]{0x4000000000000000L,0x0000000100000000L});
-    public static final BitSet FOLLOW_duration_in_setTimer1477 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_96_in_duration1510 = new BitSet(new long[]{0x4000000000000000L,0x0000000206000000L});
-    public static final BitSet FOLLOW_infNatural_in_duration1514 = new BitSet(new long[]{0x4000000000000000L,0x0000000200000000L});
-    public static final BitSet FOLLOW_62_in_duration1521 = new BitSet(new long[]{0x0000000000000000L,0x0000000006000000L});
-    public static final BitSet FOLLOW_infNatural_in_duration1523 = new BitSet(new long[]{0x0000000000000000L,0x0000000200000000L});
-    public static final BitSet FOLLOW_97_in_duration1528 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_98_in_resetTimer1539 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_name_in_resetTimer1541 = new BitSet(new long[]{0x4000000000000002L});
-    public static final BitSet FOLLOW_62_in_resetTimer1545 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_instanceName_in_resetTimer1547 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_99_in_timeout1572 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_name_in_timeout1574 = new BitSet(new long[]{0x4000000000000002L});
-    public static final BitSet FOLLOW_62_in_timeout1578 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_instanceName_in_timeout1580 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_mscGateDef_in_mscGateInterface1610 = new BitSet(new long[]{0x0000000000000002L,0x0000001000000800L});
-    public static final BitSet FOLLOW_100_in_mscGateDef1622 = new BitSet(new long[]{0x0000400000000000L,0x0000000000000005L});
-    public static final BitSet FOLLOW_msgGate_in_mscGateDef1626 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_orderGate_in_mscGateDef1630 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_end_in_mscGateDef1634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_defInGate_in_msgGate1643 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_defOutGate_in_msgGate1647 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_defOrderInGate_in_orderGate1658 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_defOrderOutGate_in_orderGate1662 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_gateName_in_defInGate1675 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_64_in_defInGate1680 = new BitSet(new long[]{0x0000C00000000000L});
-    public static final BitSet FOLLOW_msgIdentification_in_defInGate1682 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
-    public static final BitSet FOLLOW_65_in_defInGate1684 = new BitSet(new long[]{0x0000400000000000L,0x0000000000000050L});
-    public static final BitSet FOLLOW_inputDest_in_defInGate1686 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_gateName_in_defOutGate1699 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_66_in_defOutGate1704 = new BitSet(new long[]{0x0000C00000000000L});
-    public static final BitSet FOLLOW_msgIdentification_in_defOutGate1706 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
-    public static final BitSet FOLLOW_67_in_defOutGate1708 = new BitSet(new long[]{0x0000400000000000L,0x0000000000000060L});
-    public static final BitSet FOLLOW_outputDest_in_defOutGate1710 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_gateName_in_defOrderInGate1721 = new BitSet(new long[]{0x0000000000000000L,0x0000002000000000L});
-    public static final BitSet FOLLOW_101_in_defOrderInGate1723 = new BitSet(new long[]{0x0000400000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_orderDest_in_defOrderInGate1725 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_gateName_in_defOrderOutGate1735 = new BitSet(new long[]{0x0000000000000002L,0x0000004000000000L});
-    public static final BitSet FOLLOW_102_in_defOrderOutGate1739 = new BitSet(new long[]{0x0000400000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_orderDestList_in_defOrderOutGate1741 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_inputDest1756 = new BitSet(new long[]{0x0000400000000002L,0x0000000000000040L});
-    public static final BitSet FOLLOW_inputAddress_in_inputDest1760 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_inputAddress_in_inputDest1767 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_outputDest1778 = new BitSet(new long[]{0x0000400000000002L,0x0000000000000040L});
-    public static final BitSet FOLLOW_outputAddress_in_outputDest1782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_outputAddress_in_outputDest1789 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_eventName_in_orderDest1800 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_orderDest1805 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_71_in_orderDest1807 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_gateName_in_orderDest1809 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_orderDest_in_orderDestList1830 = new BitSet(new long[]{0x4000000000000002L});
-    public static final BitSet FOLLOW_62_in_orderDestList1834 = new BitSet(new long[]{0x0000400000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_orderDestList_in_orderDestList1836 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_103_in_coregion1859 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_end_in_coregion1861 = new BitSet(new long[]{0x8000400000000000L,0x0000010C88000105L});
-    public static final BitSet FOLLOW_coevent_in_coregion1863 = new BitSet(new long[]{0x8000400000000000L,0x0000010C88000105L});
-    public static final BitSet FOLLOW_104_in_coregion1866 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_orderableEvent_in_coevent1886 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_end_in_coevent1888 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_before_in_generalOrdering1904 = new BitSet(new long[]{0x0000000000000002L,0x0000006000000000L});
-    public static final BitSet FOLLOW_after_in_generalOrdering1906 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_after_in_generalOrdering1912 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_101_in_before1922 = new BitSet(new long[]{0x0000400000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_orderDestList_in_before1924 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_102_in_after1944 = new BitSet(new long[]{0x0000400000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_orderDestList_in_after1946 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_105_in_mscReference1970 = new BitSet(new long[]{0x0000C00000000000L});
-    public static final BitSet FOLLOW_mscRefExpr_in_mscReference1972 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_name_in_mscRefExpr1993 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_characterString_in_mscRefExpr1997 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_mscName2008 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_labelName2017 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_name2025 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_instanceName2034 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_messageName2043 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_gateName2052 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_eventName2061 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARACTERSTRING_in_characterString2070 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_identifier2080 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_expressionString2094 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_dataTypeName2107 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_datatypeTypeExpression2115 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_literalNameOrNumber2123 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_naturalSimpleExpression2131 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_fieldName2139 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_constantExpression2149 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_name_in_kindDenominator999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_78_in_end1010 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_conditionIdentification_in_condition1023 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_79_in_conditionIdentification1034 = new BitSet(new long[]{0x0000330000000000L});
+    public static final BitSet FOLLOW_conditionText_in_conditionIdentification1036 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_conditionNameList_in_conditionText1057 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_WHEN_in_conditionText1069 = new BitSet(new long[]{0x0000300000000000L});
+    public static final BitSet FOLLOW_conditionNameList_in_conditionText1071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_OTHERWISE_in_conditionText1083 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_name_in_conditionNameList1100 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_characterString_in_conditionNameList1104 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_loopExpr_in_inlineExpr1117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_optExpr_in_inlineExpr1121 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_altExpr_in_inlineExpr1125 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_parExpr_in_inlineExpr1129 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_excExpr_in_inlineExpr1133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_80_in_loopExpr1144 = new BitSet(new long[]{0x0000040000000000L,0x0000000000200000L});
+    public static final BitSet FOLLOW_loopBoundary_in_loopExpr1148 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_BEGIN_in_loopExpr1153 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_end_in_loopExpr1155 = new BitSet(new long[]{0x0000108000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_mscBody_in_loopExpr1157 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_80_in_loopExpr1159 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_END_in_loopExpr1161 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_81_in_optExpr1183 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_BEGIN_in_optExpr1185 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_end_in_optExpr1187 = new BitSet(new long[]{0x0000108000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_mscBody_in_optExpr1189 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_81_in_optExpr1191 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_END_in_optExpr1193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_82_in_excExpr1212 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_BEGIN_in_excExpr1214 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_end_in_excExpr1216 = new BitSet(new long[]{0x0000108000000000L,0x0000000000040000L});
+    public static final BitSet FOLLOW_mscBody_in_excExpr1218 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
+    public static final BitSet FOLLOW_82_in_excExpr1220 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_END_in_excExpr1222 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_altExpr1241 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_BEGIN_in_altExpr1243 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_end_in_altExpr1245 = new BitSet(new long[]{0x0000108000000000L,0x0000000000080000L});
+    public static final BitSet FOLLOW_mscBody_in_altExpr1247 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
+    public static final BitSet FOLLOW_83_in_altExpr1251 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_end_in_altExpr1253 = new BitSet(new long[]{0x0000108000000000L,0x0000000000080000L});
+    public static final BitSet FOLLOW_mscBody_in_altExpr1255 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
+    public static final BitSet FOLLOW_83_in_altExpr1260 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_END_in_altExpr1262 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_84_in_parExpr1282 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_BEGIN_in_parExpr1284 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_end_in_parExpr1286 = new BitSet(new long[]{0x0000108000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_mscBody_in_parExpr1288 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_84_in_parExpr1292 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_end_in_parExpr1294 = new BitSet(new long[]{0x0000108000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_mscBody_in_parExpr1296 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_84_in_parExpr1301 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_END_in_parExpr1303 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_85_in_loopBoundary1324 = new BitSet(new long[]{0x0000300000000000L});
+    public static final BitSet FOLLOW_infNatural_in_loopBoundary1326 = new BitSet(new long[]{0x1000000000000000L,0x0000000000400000L});
+    public static final BitSet FOLLOW_60_in_loopBoundary1330 = new BitSet(new long[]{0x0000300000000000L});
+    public static final BitSet FOLLOW_infNatural_in_loopBoundary1332 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+    public static final BitSet FOLLOW_86_in_loopBoundary1337 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_name_in_infNatural1359 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_characterString_in_infNatural1363 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_87_in_create1376 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_instanceName_in_create1378 = new BitSet(new long[]{0x0000000000000002L,0x0000000001000000L});
+    public static final BitSet FOLLOW_88_in_create1382 = new BitSet(new long[]{0x0000300000000000L});
+    public static final BitSet FOLLOW_msgIdentification_in_create1383 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
+    public static final BitSet FOLLOW_89_in_create1385 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_90_in_stop1415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_timerType_in_timerStatement1431 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_name_in_timerStatement1433 = new BitSet(new long[]{0x0000000000000002L,0x0000000040000000L});
+    public static final BitSet FOLLOW_duration_in_timerStatement1437 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_timerType0 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_94_in_duration1485 = new BitSet(new long[]{0x1000300000000000L,0x0000000080000000L});
+    public static final BitSet FOLLOW_infNatural_in_duration1489 = new BitSet(new long[]{0x1000000000000000L,0x0000000080000000L});
+    public static final BitSet FOLLOW_60_in_duration1496 = new BitSet(new long[]{0x0000300000000000L});
+    public static final BitSet FOLLOW_infNatural_in_duration1498 = new BitSet(new long[]{0x0000000000000000L,0x0000000080000000L});
+    public static final BitSet FOLLOW_95_in_duration1503 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_mscGateDef_in_mscGateInterface1528 = new BitSet(new long[]{0x0000000000000002L,0x0000000100000200L});
+    public static final BitSet FOLLOW_96_in_mscGateDef1540 = new BitSet(new long[]{0x4000100000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_msgGate_in_mscGateDef1544 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_orderGate_in_mscGateDef1548 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_end_in_mscGateDef1552 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_defInGate_in_msgGate1561 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_defOutGate_in_msgGate1565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_defOrderInGate_in_orderGate1576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_defOrderOutGate_in_orderGate1580 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_gateName_in_defInGate1593 = new BitSet(new long[]{0x4000000000000000L});
+    public static final BitSet FOLLOW_62_in_defInGate1598 = new BitSet(new long[]{0x0000300000000000L});
+    public static final BitSet FOLLOW_msgIdentification_in_defInGate1600 = new BitSet(new long[]{0x8000000000000000L});
+    public static final BitSet FOLLOW_63_in_defInGate1602 = new BitSet(new long[]{0x0000100000000000L,0x0000000000000014L});
+    public static final BitSet FOLLOW_inputDest_in_defInGate1604 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_gateName_in_defOutGate1617 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_64_in_defOutGate1622 = new BitSet(new long[]{0x0000300000000000L});
+    public static final BitSet FOLLOW_msgIdentification_in_defOutGate1624 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_defOutGate1626 = new BitSet(new long[]{0x0000100000000000L,0x0000000000000018L});
+    public static final BitSet FOLLOW_outputDest_in_defOutGate1628 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_gateName_in_defOrderInGate1639 = new BitSet(new long[]{0x0000000000000000L,0x0000000200000000L});
+    public static final BitSet FOLLOW_97_in_defOrderInGate1641 = new BitSet(new long[]{0x0000100000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_orderDest_in_defOrderInGate1643 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_gateName_in_defOrderOutGate1653 = new BitSet(new long[]{0x0000000000000002L,0x0000000400000000L});
+    public static final BitSet FOLLOW_98_in_defOrderOutGate1657 = new BitSet(new long[]{0x0000100000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_orderDestList_in_defOrderOutGate1659 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_inputDest1674 = new BitSet(new long[]{0x0000100000000002L,0x0000000000000010L});
+    public static final BitSet FOLLOW_inputAddress_in_inputDest1678 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_inputAddress_in_inputDest1685 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_outputDest1696 = new BitSet(new long[]{0x0000100000000002L,0x0000000000000010L});
+    public static final BitSet FOLLOW_outputAddress_in_outputDest1700 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_outputAddress_in_outputDest1707 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_eventName_in_orderDest1718 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_orderDest1723 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_69_in_orderDest1725 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_gateName_in_orderDest1727 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_orderDest_in_orderDestList1748 = new BitSet(new long[]{0x1000000000000002L});
+    public static final BitSet FOLLOW_60_in_orderDestList1752 = new BitSet(new long[]{0x0000100000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_orderDestList_in_orderDestList1754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_99_in_coregion1777 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_end_in_coregion1779 = new BitSet(new long[]{0x6000100000000000L,0x0000001038800041L});
+    public static final BitSet FOLLOW_coevent_in_coregion1781 = new BitSet(new long[]{0x6000100000000000L,0x0000001038800041L});
+    public static final BitSet FOLLOW_100_in_coregion1784 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_orderableEvent_in_coevent1804 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_end_in_coevent1806 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_before_in_generalOrdering1822 = new BitSet(new long[]{0x0000000000000002L,0x0000000600000000L});
+    public static final BitSet FOLLOW_after_in_generalOrdering1824 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_after_in_generalOrdering1830 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_97_in_before1840 = new BitSet(new long[]{0x0000100000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_orderDestList_in_before1842 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_98_in_after1862 = new BitSet(new long[]{0x0000100000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_orderDestList_in_after1864 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_101_in_mscReference1888 = new BitSet(new long[]{0x0000300000000000L});
+    public static final BitSet FOLLOW_mscRefExpr_in_mscReference1890 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_name_in_mscRefExpr1911 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_characterString_in_mscRefExpr1915 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_mscName1926 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_labelName1935 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_name1943 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_instanceName1952 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_messageName1961 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_gateName1970 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_eventName1979 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARACTERSTRING_in_characterString1988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_identifier1998 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_expressionString2012 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_dataTypeName2025 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_datatypeTypeExpression2033 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_literalNameOrNumber2041 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_naturalSimpleExpression2049 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_fieldName2057 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_constantExpression2067 = new BitSet(new long[]{0x0000000000000002L});
 
 }
