@@ -24,7 +24,7 @@ public class MscParser {
         
         msc_grammarParser parser = new msc_grammarParser( tokens );
         CommonTree tree = (CommonTree) parser.messageSequenceChart().getTree();
-        System.out.println(tree.toStringTree());
+        //System.out.println(tree.toStringTree());
         
         // get MSC name
         String mscName = tree.getChild(0).getChild(0).toString();
@@ -39,6 +39,7 @@ public class MscParser {
         parseTree( tree.getChild(1), null, tab );
         
         outStream.close();
+        System.out.println("Output file '" + outFileName + "' is created!");
     }
     
     private void parseTree(Tree tree, List<String> instList, String indentLevel) {
